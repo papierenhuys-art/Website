@@ -90,7 +90,7 @@ ul { list-style: none; }
 
 .sectie-ondertitel {
   font-size: 1.125rem;
-  color: var(--grijs-tekst);
+  color: #4a5568;
   max-width: 640px;
   margin-bottom: 48px;
 }
