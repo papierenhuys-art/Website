@@ -141,7 +141,7 @@ ul { list-style: none; }
 .navbar__logo-icoon svg { fill: var(--wit); }
 
 .navbar__logo-img {
-  height: 44px;
+  height: 28px;
   width: auto;
   display: block;
 }
