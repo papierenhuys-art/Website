@@ -140,6 +140,12 @@ ul { list-style: none; }
 
 .navbar__logo-icoon svg { fill: var(--wit); }
 
+.navbar__logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
 .navbar__menu {
   display: flex;
   gap: 8px;
