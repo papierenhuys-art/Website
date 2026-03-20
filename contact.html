@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Drukkerij Van der Herik</title>
+  <meta name="description" content="Neem contact op met Drukkerij Van der Herik. Vraag een offerte aan, stel uw vraag of kom langs op ons adres in Rotterdam." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATIE ===== -->
+  <nav class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <span class="navbar__logo-icoon">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+        </span>
+        Van der Herik
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="diensten.html">Wat wij doen</a></li>
+        <li><a href="over-ons.html">Over ons</a></li>
+        <li><a href="contact.html" class="actief knop--nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGINAKOP ===== -->
+  <header class="paginakop">
+    <div class="container">
+      <p class="paginakop__broodkruimel">
+        <a href="index.html">Home</a> &rsaquo; Contact
+      </p>
+      <h1 class="paginakop__titel">Contact</h1>
+      <p class="paginakop__ondertitel">
+        Heeft u een vraag of wilt u een offerte? Wij staan voor u klaar.
+        U ontvangt altijd binnen één werkdag een reactie.
+      </p>
+    </div>
+  </header>
+
+  <!-- ===== CONTACT SECTIE ===== -->
+  <section class="sectie">
+    <div class="container">
+      <div class="contact-raster">
+
+        <!-- Formulier -->
+        <div>
+          <div class="streep"></div>
+          <h2 class="sectie-titel">Stuur ons een bericht</h2>
+          <p style="color:var(--grijs-tekst); margin-bottom:32px; line-height:1.8;">
+            Vul het formulier in en wij nemen zo snel mogelijk contact met u op.
+            Voor spoedeisende zaken kunt u ons ook bellen.
+          </p>
+
+          <form class="formulier" id="contact-formulier" novalidate>
+            <div class="formulier-rij">
+              <div class="formulier-groep">
+                <label for="voornaam">Voornaam *</label>
+                <input type="text" id="voornaam" name="voornaam" placeholder="Jan" required />
+              </div>
+              <div class="formulier-groep">
+                <label for="achternaam">Achternaam *</label>
+                <input type="text" id="achternaam" name="achternaam" placeholder="Jansen" required />
+              </div>
+            </div>
+
+            <div class="formulier-groep">
+              <label for="email">E-mailadres *</label>
+              <input type="email" id="email" name="email" placeholder="jan@bedrijf.nl" required />
+            </div>
+
+            <div class="formulier-groep">
+              <label for="telefoon">Telefoonnummer</label>
+              <input type="tel" id="telefoon" name="telefoon" placeholder="06 – 12 34 56 78" />
+            </div>
+
+            <div class="formulier-groep">
+              <label for="bedrijf">Bedrijfsnaam</label>
+              <input type="text" id="bedrijf" name="bedrijf" placeholder="Uw bedrijf BV" />
+            </div>
+
+            <div class="formulier-groep">
+              <label for="onderwerp">Onderwerp *</label>
+              <select id="onderwerp" name="onderwerp" required>
+                <option value="" disabled selected>Selecteer een onderwerp</option>
+                <option value="offerte">Offerte aanvragen</option>
+                <option value="informatie">Informatie over diensten</option>
+                <option value="bestelling">Bestaande bestelling</option>
+                <option value="klacht">Klacht of terugkoppeling</option>
+                <option value="overig">Overig</option>
+              </select>
+            </div>
+
+            <div class="formulier-groep">
+              <label for="bericht">Uw bericht *</label>
+              <textarea
+                id="bericht"
+                name="bericht"
+                placeholder="Vertel ons meer over uw opdracht: gewenst formaat, oplage, materiaal, gewenste levertijd..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="formulier-groep">
+              <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-weight:400;color:var(--grijs-tekst);">
+                <input type="checkbox" id="akkoord" name="akkoord" required
+                  style="width:18px;height:18px;margin-top:2px;flex-shrink:0;" />
+                Ik ga akkoord met de <a href="#" style="color:var(--blauw-licht);">privacyverklaring</a> van Drukkerij Van der Herik.
+              </label>
+            </div>
+
+            <div class="formulier-bericht" id="formulier-succes" role="alert">
+              Bedankt voor uw bericht! Wij nemen binnen één werkdag contact met u op.
+            </div>
+
+            <button type="submit" class="knop knop--primair" style="width:100%; justify-content:center;">
+              Verstuur bericht
+            </button>
+          </form>
+        </div>
+
+        <!-- Contactgegevens -->
+        <div>
+          <div class="streep"></div>
+          <h2 class="sectie-titel">Onze gegevens</h2>
+          <p style="color:var(--grijs-tekst); margin-bottom:32px; line-height:1.8;">
+            Kom gerust langs op ons adres in Rotterdam. Wij zijn op werkdagen
+            geopend van 08:00 tot 17:30.
+          </p>
+
+          <div class="contact-info-blok">
+            <div class="contact-info-item">
+              <div class="contact-info-item__icoon">📍</div>
+              <div>
+                <div class="contact-info-item__label">Bezoekadres</div>
+                <div class="contact-info-item__waarde">
+                  Nijverheidsweg 14<br />
+                  3044 AE Rotterdam
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icoon">📞</div>
+              <div>
+                <div class="contact-info-item__label">Telefoon</div>
+                <div class="contact-info-item__waarde">
+                  <a href="tel:+31102345678" style="color:inherit;">010 – 234 56 78</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icoon">✉️</div>
+              <div>
+                <div class="contact-info-item__label">E-mail</div>
+                <div class="contact-info-item__waarde">
+                  <a href="mailto:info@vdherik.nl" style="color:inherit;">info@vdherik.nl</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icoon">🕐</div>
+              <div>
+                <div class="contact-info-item__label">Openingstijden</div>
+                <div class="contact-info-item__waarde">
+                  Maandag – vrijdag: 08:00 – 17:30<br />
+                  Zaterdag: 09:00 – 13:00<br />
+                  Zondag: Gesloten
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icoon">🏢</div>
+              <div>
+                <div class="contact-info-item__label">KvK-nummer</div>
+                <div class="contact-info-item__waarde">24112345</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icoon">💳</div>
+              <div>
+                <div class="contact-info-item__label">BTW-nummer</div>
+                <div class="contact-info-item__waarde">NL001234567B01</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kaart-placeholder -->
+      <div class="kaart-wrapper">
+        <div class="kaart-placeholder">
+          <div style="font-size:2.5rem; margin-bottom:12px;">🗺️</div>
+          <div style="font-weight:600; color:var(--blauw-donker); margin-bottom:6px;">Nijverheidsweg 14, Rotterdam</div>
+          <p style="font-size:0.875rem;">
+            Eenvoudig te bereiken via de A20 (afrit Kleinpolderplein), openbaar vervoer lijn 37 (halte Nijverheidsweg).
+            Gratis parkeren voor de deur.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="sectie sectie--grijs">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:48px;">
+        <div class="streep" style="margin:0 auto 16px;"></div>
+        <h2 class="sectie-titel">Veelgestelde vragen</h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; max-width:900px; margin:0 auto;">
+        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
+          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
+            Wat is de levertijd voor mijn drukwerk?
+          </h3>
+          <p style="color:var(--grijs-tekst); font-size:0.9rem; line-height:1.7;">
+            De standaard levertijd is 3–5 werkdagen. Spoed is mogelijk: wij leveren
+            veel producten binnen 24–48 uur tegen een kleine toeslag.
+          </p>
+        </div>
+        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
+          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
+            Welke bestandsformaten accepteren jullie?
+          </h3>
+          <p style="color:var(--grijs-tekst); font-size:0.9rem; line-height:1.7;">
+            Wij werken bij voorkeur met PDF (print-ready), maar ook AI, EPS en InDesign-bestanden
+            worden verwerkt. Vraag naar onze bestandsspecificaties.
+          </p>
+        </div>
+        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
+          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
+            Kan ik een drukproef ontvangen?
+          </h3>
+          <p style="color:var(--grijs-tekst); font-size:0.9rem; line-height:1.7;">
+            Ja. Wij kunnen een digitale PDF-proef of fysieke drukproef leveren. Vraag dit
+            bij uw offerte-aanvraag aan.
+          </p>
+        </div>
+        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
+          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
+            Leveren jullie door heel Nederland?
+          </h3>
+          <p style="color:var(--grijs-tekst); font-size:0.9rem; line-height:1.7;">
+            Ja. Wij verzenden via PostNL en DHL door heel Nederland en België.
+            Grote opdrachten kunnen ook door onze eigen chauffeur worden afgeleverd.
+          </p>
+        </div>
+        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
+          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
+            Hebben jullie een minimum oplage?
+          </h3>
+          <p style="color:var(--grijs-tekst); font-size:0.9rem; line-height:1.7;">
+            Nee. Dankzij onze digitale pers drukken wij al vanaf één exemplaar.
+            Bij grotere oplagen daalt de prijs per stuk aanzienlijk.
+          </p>
+        </div>
+        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
+          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
+            Bieden jullie ook ontwerpdiensten aan?
+          </h3>
+          <p style="color:var(--grijs-tekst); font-size:0.9rem; line-height:1.7;">
+            Ja. Onze interne grafisch ontwerpers helpen u graag met het ontwerp van uw drukwerk.
+            Vraag naar de mogelijkheden bij uw offerte.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__raster">
+        <div>
+          <div class="footer__merk">Drukkerij Van der Herik</div>
+          <p class="footer__beschrijving">
+            Kwaliteitsdrukwerk voor elk budget. Al meer dan 45 jaar de vertrouwde drukkerij
+            van Rotterdam en omgeving.
+          </p>
+        </div>
+        <div>
+          <div class="footer__koptekst">Navigatie</div>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="diensten.html">Wat wij doen</a></li>
+            <li><a href="over-ons.html">Over ons</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__koptekst">Contact</div>
+          <ul class="footer__links">
+            <li>Nijverheidsweg 14</li>
+            <li>3044 AE Rotterdam</li>
+            <li><a href="tel:+31102345678">010 – 234 56 78</a></li>
+            <li><a href="mailto:info@vdherik.nl">info@vdherik.nl</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bodem">
+        &copy; 2024 Drukkerij Van der Herik — KvK 24112345 — Alle rechten voorbehouden
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
