@@ -147,6 +147,7 @@ ul { list-style: none; }
   width: auto;
   display: block;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .navbar__menu {
