@@ -799,4 +799,67 @@ ul { list-style: none; }
   .formulier-rij { grid-template-columns: 1fr; }
   .footer__raster { grid-template-columns: 1fr; gap: 32px; }
   .tellers-rij { grid-template-columns: 1fr 1fr; }
+  .duurzaamheid-raster { grid-template-columns: 1fr; }
+}
+
+/* ——— Duurzaamheid ——— */
+.duurzaamheid-sectie {
+  background: linear-gradient(160deg, #f0f7f0 0%, #e8f4f8 100%);
+}
+
+.duurzaamheid-raster {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.duurzaamheid-kaart {
+  background: var(--wit);
+  border-radius: var(--radius-groot);
+  padding: 32px 28px;
+  box-shadow: var(--schaduw);
+  border-top: 4px solid #3a9b5c;
+  transition: transform var(--transitie), box-shadow var(--transitie);
+}
+.duurzaamheid-kaart:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--schaduw-hover);
+}
+
+.duurzaamheid-kaart__icoon {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+}
+
+.duurzaamheid-kaart h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--blauw-donker);
+  margin-bottom: 10px;
+}
+
+.duurzaamheid-kaart p {
+  font-size: 0.92rem;
+  color: var(--grijs-tekst);
+  line-height: 1.7;
+}
+
+.duurzaamheid-certificaten {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.cert-badge {
+  background: var(--wit);
+  border: 2px solid #3a9b5c;
+  color: #2a7a46;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 10px 20px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(58,155,92,0.12);
 }
