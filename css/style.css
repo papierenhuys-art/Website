@@ -763,6 +763,215 @@ ul { list-style: none; }
   max-width: 560px;
 }
 
+.paginakop__badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--wit);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.paginakop--groen {
+  background: linear-gradient(135deg, #1a4a2e 0%, #2d8a55 100%);
+}
+
+/* ——— Groene streep ——— */
+.streep--groen {
+  background: #3a9b5c;
+}
+
+/* ——— Duurzaamheid intro ——— */
+.duurz-intro-rij {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.duurz-intro-tekst p {
+  color: var(--grijs-tekst);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.duurz-intro-stats {
+  display: grid;
+  gap: 24px;
+}
+
+.duurz-stat {
+  background: var(--grijs-licht);
+  border-left: 4px solid #3a9b5c;
+  padding: 20px 24px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.duurz-stat__getal {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2a7a46;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.duurz-stat__label {
+  font-size: 0.9rem;
+  color: var(--grijs-tekst);
+  line-height: 1.4;
+}
+
+/* ——— Certificering kaarten ——— */
+.cert-raster {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.cert-kaart {
+  background: var(--wit);
+  border-radius: var(--radius-groot);
+  padding: 36px 28px;
+  box-shadow: var(--schaduw);
+  border-top: 4px solid #3a9b5c;
+}
+
+.cert-kaart__logo {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.cert-kaart__naam {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a4a2e;
+  margin-bottom: 4px;
+}
+
+.cert-kaart__voluit {
+  font-size: 0.8rem;
+  color: var(--grijs-tekst);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.cert-kaart__tekst {
+  font-size: 0.92rem;
+  color: var(--grijs-tekst);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.cert-kaart__punten {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.cert-kaart__punten li {
+  font-size: 0.88rem;
+  color: #2a7a46;
+  font-weight: 600;
+}
+
+/* ——— Materialen ——— */
+.materiaal-raster {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.materiaal-blok {
+  display: flex;
+  gap: 20px;
+  background: var(--grijs-licht);
+  border-radius: var(--radius-groot);
+  padding: 28px;
+}
+
+.materiaal-blok__icoon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.materiaal-blok__inhoud h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--blauw-donker);
+  margin-bottom: 10px;
+}
+
+.materiaal-blok__inhoud p {
+  font-size: 0.9rem;
+  color: var(--grijs-tekst);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+/* ——— Energie kaarten ——— */
+.energie-rij {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.energie-kaart {
+  background: var(--wit);
+  border-radius: var(--radius-groot);
+  padding: 28px 22px;
+  box-shadow: var(--schaduw);
+  text-align: center;
+}
+
+.energie-kaart__icoon {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.energie-kaart h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blauw-donker);
+  margin-bottom: 10px;
+}
+
+.energie-kaart p {
+  font-size: 0.88rem;
+  color: var(--grijs-tekst);
+  line-height: 1.6;
+}
+
+/* ——— Groene knoppen ——— */
+.knop--groen {
+  background: #3a9b5c;
+  color: var(--wit);
+}
+.knop--groen:hover {
+  background: #2a7a46;
+  color: var(--wit);
+  box-shadow: 0 8px 30px rgba(58,155,92,0.3);
+  transform: translateY(-2px);
+}
+
+.knop--groen-omlijnd {
+  background: transparent;
+  color: #1a4a2e;
+  border-color: #3a9b5c;
+}
+.knop--groen-omlijnd:hover {
+  background: #3a9b5c;
+  color: var(--wit);
+  transform: translateY(-2px);
+}
+
 /* ——— Responsive ——— */
 @media (max-width: 900px) {
   .dienst-detail {
@@ -800,6 +1009,10 @@ ul { list-style: none; }
   .footer__raster { grid-template-columns: 1fr; gap: 32px; }
   .tellers-rij { grid-template-columns: 1fr 1fr; }
   .duurzaamheid-raster { grid-template-columns: 1fr; }
+  .cert-raster { grid-template-columns: 1fr; }
+  .materiaal-raster { grid-template-columns: 1fr; }
+  .energie-rij { grid-template-columns: 1fr 1fr; }
+  .duurz-intro-rij { grid-template-columns: 1fr; gap: 40px; }
 }
 
 /* ——— Duurzaamheid ——— */
