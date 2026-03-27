@@ -324,9 +324,10 @@ ul { list-style: none; }
   background: var(--wit);
   border: 1px solid var(--grijs-middel);
   border-radius: var(--radius-groot);
-  padding: 36px 28px;
+  padding: 0;
   transition: box-shadow var(--transitie), transform var(--transitie), border-color var(--transitie);
 }
+.dienst-kaart.uitklap-kaart { border-top: 4px solid var(--blauw-licht); }
 
 .dienst-kaart:hover {
   box-shadow: var(--schaduw-hover);
