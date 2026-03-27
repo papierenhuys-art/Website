@@ -741,6 +741,8 @@ ul { list-style: none; }
   background: linear-gradient(135deg, var(--blauw-donker) 0%, var(--blauw-middel) 100%);
   color: var(--wit);
   padding: 64px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .paginakop__broodkruimel {
@@ -1090,6 +1092,25 @@ ul { list-style: none; }
   background: #3a9b5c;
   color: var(--wit);
   transform: translateY(-2px);
+}
+
+/* ——— Logo in gekleurde headers ——— */
+.kop-logo {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+  max-height: 56px;
+  max-width: 220px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.45;
+  pointer-events: none;
+  user-select: none;
+}
+@media (max-width: 768px) {
+  .kop-logo { display: none; }
 }
 
 /* ——— Responsive ——— */
