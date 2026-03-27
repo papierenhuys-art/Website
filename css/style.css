@@ -1113,6 +1113,11 @@ ul { list-style: none; }
   user-select: none;
 }
 
+.hero .kop-logo {
+  max-height: 64px;
+  max-width: 260px;
+}
+
 @media (max-width: 768px) {
   .kop-logo { display: none; }
 }
