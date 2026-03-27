@@ -1095,20 +1095,24 @@ ul { list-style: none; }
 }
 
 /* ——— Logo in gekleurde headers ——— */
+.kop-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
 .kop-logo {
-  position: absolute;
-  right: 60px;
-  top: 50%;
-  transform: translateY(-50%);
   height: auto;
-  max-height: 56px;
-  max-width: 220px;
+  max-height: 44px;
+  max-width: 180px;
   width: auto;
+  flex-shrink: 0;
   filter: brightness(0) invert(1);
-  opacity: 0.45;
   pointer-events: none;
   user-select: none;
 }
+
 @media (max-width: 768px) {
   .kop-logo { display: none; }
 }
