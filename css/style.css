@@ -948,7 +948,7 @@ ul { list-style: none; }
   padding: 0 20px 0 52px;
 }
 .uitklap-rij.open .uitklap-kaart__lichaam {
-  max-height: 400px;
+  max-height: 600px;
   padding: 0 20px 18px 52px;
 }
 
