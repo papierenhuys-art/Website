@@ -74,6 +74,32 @@ if (form) {
   });
 }
 
+// ——— Cookie-melding ———
+(function() {
+  if (localStorage.getItem('cookie-akkoord')) return;
+
+  const banner = document.createElement('div');
+  banner.className = 'cookie-banner';
+  banner.innerHTML = `
+    <div class="cookie-banner__inhoud">
+      <p>🍪 Wij gebruiken functionele cookies om de website goed te laten werken. Er worden geen tracking- of advertentiecookies geplaatst.</p>
+      <div class="cookie-banner__knoppen">
+        <button class="knop knop--primair cookie-akkoord">Begrepen</button>
+        <a href="#" class="cookie-meer">Meer info</a>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(banner);
+
+  setTimeout(() => banner.classList.add('cookie-banner--zichtbaar'), 300);
+
+  banner.querySelector('.cookie-akkoord').addEventListener('click', () => {
+    localStorage.setItem('cookie-akkoord', '1');
+    banner.classList.remove('cookie-banner--zichtbaar');
+    setTimeout(() => banner.remove(), 400);
+  });
+})();
+
 // ——— Scroll-animatie voor kaarten ———
 if ('IntersectionObserver' in window) {
   const elementen = document.querySelectorAll(

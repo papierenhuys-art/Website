@@ -1094,6 +1094,143 @@ ul { list-style: none; }
   transform: translateY(-2px);
 }
 
+/* ——— Bestandsspecificaties ——— */
+.spec-raster {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.spec-kaart {
+  background: var(--wit);
+  border-radius: var(--radius-groot);
+  padding: 28px 24px;
+  box-shadow: var(--schaduw);
+  border-top: 4px solid var(--blauw-licht);
+}
+
+.spec-kaart__icoon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.spec-kaart h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blauw-donker);
+  margin-bottom: 10px;
+}
+
+.spec-kaart p {
+  font-size: 0.9rem;
+  color: var(--grijs-tekst);
+  line-height: 1.7;
+}
+
+.spec-hulp {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: linear-gradient(135deg, var(--blauw-donker) 0%, var(--blauw-middel) 100%);
+  border-radius: var(--radius-groot);
+  padding: 40px 48px;
+  margin-top: 40px;
+  color: var(--wit);
+}
+
+.spec-hulp__tekst { flex: 1; }
+
+.spec-hulp__tekst h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--wit);
+}
+
+.spec-hulp__tekst p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+}
+
+.spec-hulp__tekst .knop--primair {
+  background: var(--wit);
+  color: var(--blauw-donker);
+}
+.spec-hulp__tekst .knop--primair:hover {
+  background: var(--grijs-licht);
+  color: var(--blauw-donker);
+}
+
+.spec-hulp__icoon {
+  font-size: 5rem;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+/* ——— Cookie-banner ——— */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--blauw-donker);
+  color: var(--wit);
+  z-index: 9999;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+}
+
+.cookie-banner--zichtbaar {
+  transform: translateY(0);
+}
+
+.cookie-banner__inhoud {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cookie-banner__inhoud p {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+  min-width: 200px;
+}
+
+.cookie-banner__knoppen {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.cookie-banner__knoppen .knop--primair {
+  padding: 10px 24px;
+  font-size: 0.9rem;
+}
+
+.cookie-meer {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+  text-decoration: underline;
+}
+.cookie-meer:hover { color: var(--wit); }
+
+@media (max-width: 600px) {
+  .spec-raster { grid-template-columns: 1fr; }
+  .spec-hulp { flex-direction: column; padding: 28px 24px; }
+  .spec-hulp__icoon { font-size: 3rem; }
+}
+
 /* ——— Logo in gekleurde headers ——— */
 .kop-flex {
   display: flex;
@@ -1163,6 +1300,7 @@ ul { list-style: none; }
   .materiaal-raster { grid-template-columns: 1fr; }
   .energie-rij { grid-template-columns: 1fr 1fr; }
   .duurz-intro-rij { grid-template-columns: 1fr; gap: 40px; }
+  .spec-raster { grid-template-columns: 1fr 1fr; }
 }
 
 /* ——— Duurzaamheid ——— */
