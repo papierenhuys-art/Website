@@ -829,8 +829,126 @@ ul { list-style: none; }
 .cert-raster {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 20px;
   margin-top: 48px;
+}
+
+/* ——— Uitklap kaarten (certificeringen) ——— */
+.uitklap-kaart {
+  background: var(--wit);
+  border-radius: var(--radius-groot);
+  box-shadow: var(--schaduw);
+  border-top: 4px solid #3a9b5c;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow var(--transitie), transform var(--transitie);
+  user-select: none;
+}
+.uitklap-kaart:hover {
+  box-shadow: var(--schaduw-hover);
+  transform: translateY(-2px);
+}
+.uitklap-kaart__hoofd {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 24px;
+}
+.uitklap-kaart__icoon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+.uitklap-kaart__titels {
+  flex: 1;
+}
+.uitklap-kaart__naam {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1a4a2e;
+  margin: 0;
+}
+.uitklap-kaart__sub {
+  font-size: 0.78rem;
+  color: var(--grijs-tekst);
+  font-style: italic;
+  margin: 2px 0 0;
+}
+.uitklap-kaart__pijl {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #3a9b5c;
+  transition: transform 0.3s ease;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.uitklap-kaart.open .uitklap-kaart__pijl {
+  transform: rotate(45deg);
+}
+.uitklap-kaart__lichaam {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 24px;
+}
+.uitklap-kaart__lichaam p,
+.uitklap-kaart__lichaam ul {
+  font-size: 0.92rem;
+  color: var(--grijs-tekst);
+  line-height: 1.7;
+}
+.uitklap-kaart.open .uitklap-kaart__lichaam {
+  max-height: 500px;
+  padding: 0 24px 24px;
+}
+
+/* ——— Uitklap lijst (materialen & energie) ——— */
+.uitklap-lijst {
+  display: grid;
+  gap: 12px;
+  margin-top: 48px;
+}
+.uitklap-rij {
+  background: var(--wit);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(13,45,107,0.08);
+  border-left: 4px solid #3a9b5c;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow var(--transitie);
+  user-select: none;
+}
+.uitklap-rij:hover {
+  box-shadow: 0 4px 16px rgba(13,45,107,0.14);
+}
+.uitklap-rij__hoofd {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+}
+.uitklap-rij__icoon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.uitklap-rij__titel {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blauw-donker);
+  margin: 0;
+}
+.uitklap-rij .uitklap-kaart__pijl {
+  font-size: 1.4rem;
+}
+.uitklap-rij.open .uitklap-kaart__pijl {
+  transform: rotate(45deg);
+}
+.uitklap-rij .uitklap-kaart__lichaam {
+  padding: 0 20px 0 52px;
+}
+.uitklap-rij.open .uitklap-kaart__lichaam {
+  max-height: 400px;
+  padding: 0 20px 18px 52px;
 }
 
 .cert-kaart {
