@@ -203,7 +203,7 @@ ul { list-style: none; }
 /* ——— Hero ——— */
 .hero {
   position: relative;
-  background: linear-gradient(135deg, #071a42 0%, var(--blauw-donker) 25%, var(--blauw-middel) 60%, var(--blauw-licht) 85%, #5aaff0 100%);
+  background: linear-gradient(135deg, var(--blauw-donker) 0%, var(--blauw-middel) 60%, var(--blauw-licht) 100%);
   color: var(--wit);
   padding: 120px 0 100px;
   overflow: hidden;
