@@ -258,26 +258,7 @@ ul { list-style: none; }
   gap: 16px;
 }
 
-.hero__decoratie {
-  position: absolute;
-  right: -60px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 420px;
-  height: 420px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-.hero__decoratie::after {
-  content: '';
-  position: absolute;
-  inset: 40px;
-  background: rgba(255,255,255,0.04);
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.08);
-}
+.hero__decoratie { display: none; }
 
 /* ——— USP-balk ——— */
 .usp-balk {
