@@ -894,6 +894,39 @@ ul { list-style: none; }
   padding: 0 24px 24px;
 }
 
+/* ——— Categorie kop (diensten) ——— */
+.categorie-kop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 52px 0 4px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--blauw-licht);
+}
+.categorie-kop:first-of-type {
+  margin-top: 0;
+}
+.categorie-kop__label {
+  background: var(--blauw-donker);
+  color: var(--wit);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.categorie-kop h3 {
+  color: var(--blauw-donker);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+}
+.uitklap-rij--blauw {
+  border-left-color: var(--blauw-licht);
+}
+
 /* ——— Uitklap lijst (materialen & energie) ——— */
 .uitklap-lijst {
   display: grid;
