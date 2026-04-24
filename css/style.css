@@ -314,6 +314,25 @@ ul { list-style: none; }
   transform: translateY(-6px);
   border-color: var(--blauw-accent);
 }
+.dienst-kaart--link {
+  text-decoration: none;
+  display: block;
+  border-top: 4px solid var(--blauw-licht);
+  cursor: pointer;
+}
+.dienst-kaart--link .uitklap-kaart__hoofd {
+  padding: 20px 24px 12px;
+}
+.dienst-kaart__pijl {
+  margin-left: auto;
+  font-size: 1.2rem;
+  color: var(--blauw-licht);
+  font-weight: 600;
+  transition: transform var(--transitie);
+}
+.dienst-kaart--link:hover .dienst-kaart__pijl {
+  transform: translateX(4px);
+}
 
 .dienst-kaart__icoon {
   width: 64px;
