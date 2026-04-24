@@ -1,5 +1,5 @@
 /* =========================================
-   Drukkerij Van der Herik — JavaScript
+   Drukkerij Van den Herik — JavaScript
    ========================================= */
 
 // ——— Mobiel hamburger-menu ———
