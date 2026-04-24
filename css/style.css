@@ -840,6 +840,16 @@ ul { list-style: none; }
 .uitklap-kaart__icoon {
   font-size: 2rem;
   flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uitklap-kaart__icoon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 .uitklap-kaart__titels {
   flex: 1;
@@ -912,6 +922,16 @@ ul { list-style: none; }
 .uitklap-rij__icoon {
   font-size: 1.5rem;
   flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uitklap-rij__icoon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
 }
 .uitklap-rij__titel {
   flex: 1;
