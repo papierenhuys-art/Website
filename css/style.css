@@ -1885,3 +1885,56 @@ ul { list-style: none; }
     transition: none;
   }
 }
+
+/* =========================================
+   GSAP scroll-ervaring — aanvullingen
+   ========================================= */
+
+/* Als GSAP actief is, neemt het de reveals volledig over:
+   de CSS-fallback wordt geneutraliseerd zodat beide systemen
+   elkaar niet in de weg zitten. */
+body.gsap-actief .reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* GSAP stuurt de marquee aan (snelheid + richting volgen de scroll) */
+body.gsap-actief .usp-marquee__baan {
+  animation: none;
+}
+
+/* Woord-voor-woord tekstopbouw */
+.bouw-woord {
+  display: inline-block;
+  will-change: opacity;
+}
+
+/* Cursor-spotlight in de hero */
+.hero--premium::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    600px circle at var(--mx, 70%) var(--my, 40%),
+    rgba(120, 170, 255, 0.13),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.hero--premium.spot-actief::after {
+  opacity: 1;
+}
+
+/* Zachtere overgang van hero naar de marquee-balk */
+.usp-balk {
+  position: relative;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero--premium::after { display: none; }
+  .bouw-woord { opacity: 1 !important; }
+}

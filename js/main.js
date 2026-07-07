@@ -101,7 +101,8 @@ if (form) {
 })();
 
 // ——— Scroll-animatie voor kaarten ———
-if ('IntersectionObserver' in window) {
+// (op pagina's met GSAP neemt js/hero.js dit over)
+if (!window.gsap && 'IntersectionObserver' in window) {
   const elementen = document.querySelectorAll(
     '.dienst-kaart, .team-kaart, .waarde-kaart, .tijdlijn-item, .teller'
   );
