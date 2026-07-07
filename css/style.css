@@ -1419,3 +1419,469 @@ ul { list-style: none; }
   border-radius: 999px;
   box-shadow: 0 2px 8px rgba(58,155,92,0.12);
 }
+
+/* =========================================
+   Premium hero & scroll-ervaring (homepagina)
+   ========================================= */
+
+/* ——— Scroll-voortgangsbalk ——— */
+#scroll-voortgang {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blauw-accent), #8fd0ff);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* ——— Navbar-status bij scrollen ——— */
+.navbar {
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+}
+.navbar--gescrold {
+  background: rgba(10, 33, 80, 0.88);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  backdrop-filter: blur(14px) saturate(150%);
+  box-shadow: 0 8px 28px rgba(4, 16, 44, 0.45);
+}
+
+/* ——— Hero: lay-out & achtergrond ——— */
+.hero--premium {
+  min-height: clamp(560px, calc(100vh - 72px), 880px);
+  display: flex;
+  align-items: center;
+  padding: 90px 0 110px;
+  background:
+    radial-gradient(900px 600px at 85% 12%, rgba(45, 111, 212, 0.5), transparent 62%),
+    radial-gradient(700px 520px at 8% 92%, rgba(26, 77, 160, 0.65), transparent 60%),
+    linear-gradient(135deg, #081d49 0%, var(--blauw-donker) 45%, var(--blauw-middel) 100%);
+}
+
+.hero__achtergrond {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.5;
+}
+.hero__blob--1 {
+  width: 520px;
+  height: 520px;
+  top: -160px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(74, 144, 217, 0.55), transparent 70%);
+  animation: blob-drijf-1 22s ease-in-out infinite alternate;
+}
+.hero__blob--2 {
+  width: 440px;
+  height: 440px;
+  bottom: -180px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(45, 111, 212, 0.45), transparent 70%);
+  animation: blob-drijf-2 26s ease-in-out infinite alternate;
+}
+@keyframes blob-drijf-1 {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to   { transform: translate3d(-70px, 60px, 0) scale(1.12); }
+}
+@keyframes blob-drijf-2 {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to   { transform: translate3d(80px, -50px, 0) scale(1.08); }
+}
+
+.hero__raster-lijnen {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 60% 40%, #000 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 90% 80% at 60% 40%, #000 30%, transparent 75%);
+}
+
+.hero__ruis {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.05;
+}
+
+.hero__watermerk {
+  position: absolute;
+  right: -140px;
+  bottom: -70px;
+  width: 560px;
+  max-width: none;
+  filter: brightness(0) invert(1);
+  opacity: 0.04;
+  transform: rotate(-8deg);
+}
+
+.hero__binnen {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 430px;
+  gap: 48px;
+  align-items: center;
+  width: 100%;
+}
+
+/* ——— Hero: inhoud ——— */
+.hero--premium .hero__inhoud {
+  max-width: 640px;
+  will-change: transform, opacity;
+}
+
+.hero--premium .hero__badge {
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  animation: hero-fade 0.8s ease 0.1s both;
+}
+.hero__badge-punt {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6fe3a5;
+  flex-shrink: 0;
+  animation: badge-puls 2.4s ease-out infinite;
+}
+@keyframes badge-puls {
+  0%   { box-shadow: 0 0 0 0 rgba(111, 227, 165, 0.55); }
+  70%  { box-shadow: 0 0 0 10px rgba(111, 227, 165, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(111, 227, 165, 0); }
+}
+
+.hero--premium .hero__titel {
+  font-family: 'Sora', 'Segoe UI', system-ui, sans-serif;
+  font-size: clamp(2.6rem, 6vw, 4.35rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-bottom: 28px;
+}
+.hero__regel {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.1em;
+  margin-bottom: -0.1em;
+}
+.hero__regel > span {
+  display: inline-block;
+  transform: translateY(115%);
+  animation: hero-onthul 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero__regel:nth-child(1) > span { animation-delay: 0.25s; }
+.hero__regel:nth-child(2) > span { animation-delay: 0.4s; }
+@keyframes hero-onthul {
+  to { transform: translateY(0); }
+}
+.hero__accent {
+  background: linear-gradient(92deg, #7ab0ff 0%, #bcd8ff 55%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero--premium .hero__intro {
+  font-size: 1.15rem;
+  animation: hero-fade 0.8s ease 0.55s both;
+}
+.hero--premium .hero__knoppen {
+  animation: hero-fade 0.8s ease 0.7s both;
+}
+@keyframes hero-fade {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ——— Hero: knoppen ——— */
+.knop--hero-primair {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--wit);
+  color: var(--blauw-donker);
+  font-weight: 700;
+  padding: 16px 34px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 34px rgba(3, 14, 40, 0.4);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+.knop--hero-primair::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(45, 111, 212, 0.14) 50%, transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+.knop--hero-primair:hover {
+  color: var(--blauw-donker);
+  box-shadow: 0 18px 44px rgba(3, 14, 40, 0.55);
+}
+.knop--hero-primair:hover::after { left: 130%; }
+.knop__pijl {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.knop--hero-primair:hover .knop__pijl { transform: translateX(5px); }
+
+.knop--hero-omlijnd {
+  display: inline-flex;
+  align-items: center;
+  color: var(--wit);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 16px 34px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.3s ease, border-color 0.3s ease;
+}
+.knop--hero-omlijnd:hover {
+  color: var(--wit);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ——— Hero: bewijsregel ——— */
+.hero__bewijs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+  font-weight: 500;
+  animation: hero-fade 0.8s ease 0.85s both;
+}
+.hero__bewijs-scheiding {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ——— Hero: zwevende kaarten ——— */
+.hero__visueel {
+  position: relative;
+  height: 480px;
+  will-change: transform;
+}
+.hero__glans {
+  position: absolute;
+  inset: 8% 4%;
+  background: radial-gradient(closest-side, rgba(96, 156, 255, 0.3), transparent 72%);
+  filter: blur(12px);
+}
+.zweef-kaart {
+  position: absolute;
+  will-change: transform;
+}
+.zweef-kaart__binnen {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  padding: 14px 20px 14px 14px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 40px rgba(3, 14, 40, 0.35);
+  color: var(--wit);
+  font-weight: 600;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  animation:
+    kaart-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--intree, 0.6s) both,
+    kaart-zweven var(--zweefduur, 7s) ease-in-out calc(var(--intree, 0.6s) + 0.9s) infinite alternate;
+}
+.zweef-kaart__binnen img {
+  width: 46px;
+  height: 46px;
+  padding: 8px;
+  background: var(--wit);
+  border-radius: 12px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+@keyframes kaart-in {
+  from { opacity: 0; transform: translateY(30px) scale(0.92); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes kaart-zweven {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-14px); }
+}
+
+.zweef-kaart--1 { top: 5%;    left: 0;    --intree: 0.55s; --zweefduur: 6.4s; }
+.zweef-kaart--2 { top: 0;     right: 5%;  --intree: 0.7s;  --zweefduur: 7.6s; }
+.zweef-kaart--3 { bottom: 7%; left: 6%;   --intree: 0.85s; --zweefduur: 6.9s; }
+.zweef-kaart--4 { bottom: 0;  right: 0;   --intree: 1s;    --zweefduur: 8.3s; }
+.zweef-kaart--stat { top: 36%; left: 25%; --intree: 0.45s; --zweefduur: 9s; }
+
+.zweef-kaart--stat .zweef-kaart__binnen {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 22px 28px;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  white-space: normal;
+}
+.zweef-stat__getal {
+  font-family: 'Sora', 'Segoe UI', system-ui, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(92deg, #8fc0ff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.zweef-stat__label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.45;
+}
+
+/* ——— Hero: scroll-hint ——— */
+.hero__scrollhint {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  animation: hero-fade 1s ease 1.3s both;
+}
+.hero__scrollhint:hover { color: var(--wit); }
+.hero__scrollhint-lijn {
+  width: 1.5px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.hero__scrollhint-lijn span {
+  position: absolute;
+  top: -40%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(180deg, transparent, #fff);
+  animation: scroll-druppel 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes scroll-druppel {
+  0%        { top: -40%; }
+  60%, 100% { top: 110%; }
+}
+
+/* ——— USP-marquee ——— */
+.usp-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.usp-marquee__baan {
+  display: flex;
+  width: max-content;
+  animation: usp-schuif 36s linear infinite;
+}
+.usp-balk:hover .usp-marquee__baan { animation-play-state: paused; }
+.usp-marquee__groep {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding-right: 56px;
+}
+.usp-marquee .usp-item { white-space: nowrap; }
+@keyframes usp-schuif {
+  to { transform: translateX(-50%); }
+}
+
+/* ——— Onthul-animaties (reveal) ——— */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal--zichtbaar {
+  opacity: 1;
+  transform: none;
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 980px) {
+  .hero__binnen { grid-template-columns: 1fr; }
+  .hero__visueel { display: none; }
+  .hero--premium { min-height: 0; padding: 80px 0 96px; }
+  .hero__scrollhint { display: none; }
+  .hero__watermerk { width: 400px; right: -120px; }
+}
+
+@media (max-width: 680px) {
+  .hero--premium .hero__knoppen .knop {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero__bewijs { gap: 10px; font-size: 0.8rem; }
+}
+
+/* ——— Beperkte beweging ——— */
+@media (prefers-reduced-motion: reduce) {
+  #scroll-voortgang { display: none; }
+  .hero__blob,
+  .hero__badge-punt,
+  .hero__scrollhint-lijn span,
+  .usp-marquee__baan,
+  .zweef-kaart__binnen {
+    animation: none !important;
+  }
+  .hero--premium .hero__badge,
+  .hero__regel > span,
+  .hero--premium .hero__intro,
+  .hero--premium .hero__knoppen,
+  .hero__bewijs,
+  .hero__scrollhint {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
