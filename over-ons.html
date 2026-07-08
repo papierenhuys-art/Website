@@ -3,12 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Over ons — Drukkerij Van den Herik</title>
-  <meta name="description" content="Drukkerij Van den Herik staat al meer dan 63 jaar voor kwaliteit, eerlijke prijzen en persoonlijke service. Leer meer over wie wij zijn en wat ons drijft." />
+  <title>Over ons — Drukkerij Van den Herik | Al meer dan 60 jaar vakmanschap</title>
+  <meta name="description" content="Al meer dan 60 jaar vakmanschap in drukwerk. Ontdek het verhaal van Drukkerij Van den Herik: een familiebedrijf uit 's-Gravendeel waar traditie, moderne techniek en persoonlijke service samenkomen." />
   <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Over Drukkerij Van den Herik",
+    "description": "Al meer dan 60 jaar vakmanschap in drukwerk uit 's-Gravendeel.",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "Drukkerij Van den Herik",
+      "foundingDate": "1961",
+      "telephone": "+31786731266",
+      "email": "info@drukkerijherik.nl",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mijlweg 9i",
+        "postalCode": "3295 KG",
+        "addressLocality": "'s-Gravendeel",
+        "addressCountry": "NL"
+      }
+    }
+  }
+  </script>
 </head>
 <body>
+
+  <div id="scroll-voortgang" aria-hidden="true"></div>
 
   <!-- ===== NAVIGATIE ===== -->
   <nav class="navbar">
@@ -29,237 +56,412 @@
     </div>
   </nav>
 
-  <!-- ===== PAGINAKOP ===== -->
-  <header class="paginakop">
-    <div class="container kop-flex">
-      <div>
-        <p class="paginakop__broodkruimel">
-          <a href="/">Home</a> &rsaquo; Over ons
-        </p>
-        <h1 class="paginakop__titel">Over ons</h1>
-        <p class="paginakop__ondertitel">
-          Al meer dan 63 jaar drukken wij met passie. Van kleine oplage tot grote serie — altijd met kwaliteit en eerlijke prijzen.
-        </p>
+  <!-- ===== HERO ===== -->
+  <header class="op-hero" id="op-hero">
+    <div class="op-hero__achtergrond" aria-hidden="true">
+      <div class="op-hero__vel op-hero__vel--1" data-parallax="0.35"></div>
+      <div class="op-hero__vel op-hero__vel--2" data-parallax="0.6"></div>
+      <div class="op-hero__vel op-hero__vel--3" data-parallax="0.9"></div>
+      <div class="op-hero__jaartal" data-parallax="0.2">1961</div>
+      <div class="op-hero__raster"></div>
+      <div class="op-hero__ruis"></div>
+    </div>
+    <div class="container op-hero__inhoud">
+      <span class="op-hero__kicker">Over ons — familiebedrijf uit 's-Gravendeel</span>
+      <h1 class="op-hero__titel">
+        <span class="op-hero__regel"><span>Al meer dan 60 jaar</span></span>
+        <span class="op-hero__regel"><span class="op-hero__accent">vakmanschap in drukwerk.</span></span>
+      </h1>
+      <p class="op-hero__intro">
+        Sinds 1961 drukken wij met hart voor het vak. Persoonlijke service,
+        hoogwaardige kwaliteit en moderne productietechnieken — onder één dak,
+        van het eerste advies tot het eindresultaat dat u in handen houdt.
+      </p>
+      <div class="op-hero__knoppen">
+        <a href="#op-verhaal" class="knop knop--hero-primair">Lees ons verhaal <span class="knop__pijl">→</span></a>
+        <a href="contact.html" class="knop knop--hero-omlijnd">Neem contact op</a>
       </div>
-      <img src="logo.png" alt="" class="kop-logo" aria-hidden="true" />
+    </div>
+    <div class="hero__scrollhint op-hero__scrollhint" aria-hidden="true">
+      <span class="hero__scrollhint-lijn"><span></span></span>
+      <span class="hero__scrollhint-tekst">Scroll</span>
     </div>
   </header>
 
-  <!-- ===== INTRO ===== -->
-  <section class="sectie">
-    <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
-      <div>
-        <div class="streep"></div>
-        <h2 class="sectie-titel">Wie zijn wij?</h2>
-        <p style="color:#4a5568; margin-bottom:16px; line-height:1.8;">
-          Drukkerij Van den Herik is sinds 1961 gevestigd in 's-Gravendeel en onderdeel van 't Papierenhuys.
-          Wij zijn een drukkerij met een grote passie voor het vak: van het eerste ontwerp tot het eindproduct
-          dat u in handen houdt, zetten wij ons volledig in voor het beste resultaat.
-        </p>
-        <p style="color:#4a5568; margin-bottom:16px; line-height:1.8;">
-          Of u nu één exemplaar nodig heeft of een oplage van duizenden — wij helpen u verder.
-          Wij werken voor particulieren, mkb-bedrijven en grote organisaties door heel Nederland.
-          Geen opdracht is te klein of te groot.
-        </p>
-        <p style="color:#4a5568; margin-bottom:0; line-height:1.8;">
-          Wat ons onderscheidt? Wij geloven in transparantie: u betaalt wat u ziet.
-          Geen verborgen kosten, geen verrassingen achteraf. Gewoon eerlijk drukwerk
-          van mensen die er dagelijks hun hart en ziel in steken.
-        </p>
-      </div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
-        <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-          <img src="Flyers.png" style="width:40px;height:40px;object-fit:contain;" alt="Flyers">
-          <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Flyers</div>
-        </div>
-        <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-          <img src="Folders.png" style="width:40px;height:40px;object-fit:contain;" alt="Folders">
-          <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Folders</div>
-        </div>
-        <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-          <img src="Brochures.png" style="width:40px;height:40px;object-fit:contain;" alt="Brochures">
-          <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Brochures</div>
-        </div>
-        <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-          <img src="Posters.png" style="width:40px;height:40px;object-fit:contain;" alt="Posters">
-          <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Posters</div>
-        </div>
-        <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-          <img src="Stickers.png" style="width:40px;height:40px;object-fit:contain;" alt="Stickers">
-          <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Stickers</div>
-        </div>
-        <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-          <img src="Spandoeken.png" style="width:40px;height:40px;object-fit:contain;" alt="Spandoeken">
-          <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Spandoeken</div>
-        </div>
-        <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-          <img src="Huisstijl.png" style="width:40px;height:40px;object-fit:contain;" alt="Visitekaartjes">
-          <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Visitekaartjes</div>
-        </div>
-        <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-          <img src="Canvas.png" style="width:40px;height:40px;object-fit:contain;" alt="Canvas">
-          <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Canvas</div>
-        </div>
-        <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-          <img src="Stempels.png" style="width:40px;height:40px;object-fit:contain;" alt="Stempels">
-          <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Stempels</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WAARDEN ===== -->
-  <section class="sectie sectie--grijs">
+  <!-- ===== STATEMENT ===== -->
+  <section class="op-statement">
     <div class="container">
-      <div style="text-align:center; margin-bottom:48px;">
-        <div class="streep" style="margin:0 auto 16px;"></div>
-        <h2 class="sectie-titel">Wat ons drijft</h2>
-        <p class="sectie-ondertitel" style="margin:0 auto;">
-          Deze kernwaarden staan centraal in alles wat wij doen.
-        </p>
-      </div>
-      <div class="waarden-raster">
-        <div class="waarde-kaart">
-          <div class="waarde-kaart__icoon" style="background:var(--blauw-donker);color:var(--wit);border-radius:50%;width:48px;height:48px;display:grid;place-items:center;font-size:1.2rem;font-weight:800;">1</div>
-          <div class="waarde-kaart__titel">Passie voor het vak</div>
-          <p class="waarde-kaart__tekst">Drukken is ons vak én onze passie. Wij gaan voor het mooiste eindresultaat, elke keer weer.</p>
-        </div>
-        <div class="waarde-kaart">
-          <div class="waarde-kaart__icoon" style="background:var(--blauw-donker);color:var(--wit);border-radius:50%;width:48px;height:48px;display:grid;place-items:center;font-size:1.2rem;font-weight:800;">2</div>
-          <div class="waarde-kaart__titel">Vaste, eerlijke prijzen</div>
-          <p class="waarde-kaart__tekst">Geen verborgen kosten. U weet vooraf precies wat u betaalt — zo simpel is het.</p>
-        </div>
-        <div class="waarde-kaart">
-          <div class="waarde-kaart__icoon" style="background:var(--blauw-donker);color:var(--wit);border-radius:50%;width:48px;height:48px;display:grid;place-items:center;font-size:1.2rem;font-weight:800;">3</div>
-          <div class="waarde-kaart__titel">Elke oplage welkom</div>
-          <p class="waarde-kaart__tekst">Van één exemplaar tot een grote serie: wij drukken alles, ongeacht de hoeveelheid.</p>
-        </div>
-        <div class="waarde-kaart">
-          <div class="waarde-kaart__icoon" style="background:var(--blauw-donker);color:var(--wit);border-radius:50%;width:48px;height:48px;display:grid;place-items:center;font-size:1.2rem;font-weight:800;">4</div>
-          <div class="waarde-kaart__titel">Snel &amp; flexibel</div>
-          <p class="waarde-kaart__tekst">Snel ophalen bij ons in 's-Gravendeel of laten bezorgen — u kiest wat het beste uitkomt.</p>
-        </div>
-        <div class="waarde-kaart">
-          <div class="waarde-kaart__icoon" style="background:var(--blauw-donker);color:var(--wit);border-radius:50%;width:48px;height:48px;display:grid;place-items:center;font-size:1.2rem;font-weight:800;">5</div>
-          <div class="waarde-kaart__titel">Kwaliteit voorop</div>
-          <p class="waarde-kaart__tekst">Elk product verlaat ons pand perfect. Kwaliteitscontrole zit in ons DNA.</p>
-        </div>
-        <div class="waarde-kaart">
-          <div class="waarde-kaart__icoon" style="background:var(--blauw-donker);color:var(--wit);border-radius:50%;width:48px;height:48px;display:grid;place-items:center;font-size:1.2rem;font-weight:800;">6</div>
-          <div class="waarde-kaart__titel">Persoonlijk contact</div>
-          <p class="waarde-kaart__tekst">U wordt geholpen door mensen die verstand van zaken hebben en echt meedenken.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WAT WIJ MAKEN ===== -->
-  <section class="sectie">
-    <div class="container">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
-        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
-          <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-            <img src="Mailings.png" style="width:40px;height:40px;object-fit:contain;" alt="Mailings">
-            <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Mailings</div>
-          </div>
-          <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-            <img src="Fotoboeken.png" style="width:40px;height:40px;object-fit:contain;" alt="Fotoboeken">
-            <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Fotoboeken</div>
-          </div>
-          <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-            <img src="Roll-banners.png" style="width:40px;height:40px;object-fit:contain;" alt="Roll-banners">
-            <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Roll-banners</div>
-          </div>
-          <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-            <img src="Mappen.png" style="width:40px;height:40px;object-fit:contain;" alt="Mappen">
-            <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Mappen</div>
-          </div>
-          <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-            <img src="Displays.png" style="width:40px;height:40px;object-fit:contain;" alt="Displays">
-            <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Displays</div>
-          </div>
-          <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-            <img src="Afwerking.png" style="width:40px;height:40px;object-fit:contain;" alt="Afwerking">
-            <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Afwerking</div>
-          </div>
-          <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-            <img src="Geboorte.png" style="width:40px;height:40px;object-fit:contain;" alt="Geboortekaarten">
-            <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Geboortekaarten</div>
-          </div>
-          <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-            <img src="Belettering.png" style="width:40px;height:40px;object-fit:contain;" alt="Belettering">
-            <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Belettering</div>
-          </div>
-          <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px; text-align:center;">
-            <img src="Sets-&-bloks.png" style="width:40px;height:40px;object-fit:contain;" alt="Sets en bloks">
-            <div style="font-size:0.75rem;color:#4a5568;margin-top:8px;font-weight:600;">Sets &amp; Bloks</div>
-          </div>
-        </div>
-        <div>
-          <div class="streep"></div>
-          <h2 class="sectie-titel">Wij maken alles</h2>
-          <p style="color:#4a5568; margin-bottom:20px; line-height:1.8;">
-            Van een enkel visitekaartje tot duizenden flyers, van een kleine sticker tot een groot
-            spandoek — bij Drukkerij Van den Herik is alles mogelijk. Wij beschikken over moderne
-            apparatuur voor zowel digitale als offsetdruk, en kunnen vrijwel elk formaat en materiaal verwerken.
-          </p>
-          <p style="color:#4a5568; margin-bottom:24px; line-height:1.8;">
-            Heeft u een specifieke wens die u nergens anders kwijt kunt? Kom gerust langs of bel ons.
-            Wij denken graag met u mee en vinden altijd een oplossing.
-          </p>
-          <div class="dienst-detail__kenmerken">
-            <div class="kenmerk-item">Visitekaartjes, flyers, folders en brochures</div>
-            <div class="kenmerk-item">Banners, spandoeken en groot formaat drukwerk</div>
-            <div class="kenmerk-item">Stickers, etiketten en verpakkingen</div>
-            <div class="kenmerk-item">Gepersonaliseerd drukwerk op aanvraag</div>
-            <div class="kenmerk-item">Kleine én grote oplagen, altijd scherp geprijsd</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== LEVERING ===== -->
-  <section class="sectie sectie--grijs">
-    <div class="container" style="text-align:center;">
-      <div class="streep" style="margin:0 auto 16px;"></div>
-      <h2 class="sectie-titel">Ophalen of laten bezorgen</h2>
-      <p class="sectie-ondertitel" style="margin:0 auto 48px;">
-        U bepaalt hoe u uw drukwerk ontvangt.
+      <p class="op-statement__tekst" data-woorden>
+        Drukwerk maak je niet zomaar. Het vraagt om vakmensen die papier voelen,
+        kleuren begrijpen en pas tevreden zijn als elk detail klopt. Dat is wie
+        wij zijn — al meer dan zestig jaar lang.
       </p>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:28px; max-width:800px; margin:0 auto;">
-        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:40px 28px;">
-          <div style="margin-bottom:16px;"><img src="Afwerking.png" style="width:52px;height:52px;object-fit:contain;" alt="Ophalen"></div>
-          <h3 style="color:var(--blauw-donker); font-size:1.15rem; margin-bottom:12px;">Snel ophalen</h3>
-          <p style="color:#4a5568; font-size:0.95rem; line-height:1.7;">
-            In 90% van de gevallen ligt uw drukwerk dezelfde werkdag klaar aan de Mijlweg 9i.
-            Bestelt u voor de middag? Dan kunt u het vaak 's middags al ophalen.
+    </div>
+  </section>
+
+  <!-- ===== ONS VERHAAL ===== -->
+  <div class="op-verhaal" id="op-verhaal">
+
+    <!-- Hoofdstuk 1: Het begin -->
+    <section class="op-hoofdstuk">
+      <div class="container op-hoofdstuk__raster">
+        <div class="op-hoofdstuk__visueel" data-richting="-1">
+          <div class="op-scene op-scene--letterkast">
+            <div class="op-scene__zoom">
+              <div class="op-letterblokken">
+                <span class="op-letterblok">1</span>
+                <span class="op-letterblok">9</span>
+                <span class="op-letterblok">6</span>
+                <span class="op-letterblok">1</span>
+              </div>
+              <div class="op-letterkast__lade op-letterkast__lade--1"></div>
+              <div class="op-letterkast__lade op-letterkast__lade--2"></div>
+            </div>
+            <span class="op-scene__label">Waar het begon</span>
+          </div>
+        </div>
+        <div class="op-hoofdstuk__tekst">
+          <span class="dp-kicker">1961 — Het begin</span>
+          <h2 class="dp-titel">Begonnen met loden letters<br />en een passie voor papier.</h2>
+          <p class="dp-alinea">
+            In 1961 opende Drukkerij Van den Herik haar deuren in 's-Gravendeel.
+            Wat begon als een ambachtelijke drukkerij met handgezette letters en
+            één pers, groeide uit tot de vertrouwde drukkerij van de Hoeksche
+            Waard en ver daarbuiten.
+          </p>
+          <p class="dp-alinea">
+            De tijden zijn veranderd, maar één ding niet: de overtuiging dat goed
+            drukwerk begint bij aandacht. Aandacht voor het papier, voor de kleur
+            — en vooral voor de mensen voor wie wij het maken.
           </p>
         </div>
-        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:40px 28px;">
-          <div style="margin-bottom:16px;"><img src="Mailings.png" style="width:52px;height:52px;object-fit:contain;" alt="Bezorgen"></div>
-          <h3 style="color:var(--blauw-donker); font-size:1.15rem; margin-bottom:12px;">Laten bezorgen</h3>
-          <p style="color:#4a5568; font-size:0.95rem; line-height:1.7;">
-            Wij verzenden uw bestelling door heel Nederland.
-            Handig als u geen tijd heeft om langs te komen.
+      </div>
+    </section>
+
+    <!-- Hoofdstuk 2: Groei & modernisering -->
+    <section class="op-hoofdstuk op-hoofdstuk--grijs">
+      <div class="container op-hoofdstuk__raster op-hoofdstuk__raster--omgekeerd">
+        <div class="op-hoofdstuk__tekst">
+          <span class="dp-kicker">Door de jaren heen</span>
+          <h2 class="dp-titel">Meegegroeid met elke<br />nieuwe techniek.</h2>
+          <p class="dp-alinea">
+            Van hoogdruk naar offset, van offset naar digitaal: wij investeerden
+            telkens opnieuw in de modernste machines. Zo kunnen wij vandaag elke
+            oplage aan — van één exemplaar tot duizenden stuks — zonder in te
+            leveren op kwaliteit.
           </p>
+          <p class="dp-alinea">
+            Als onderdeel van 't Papierenhuys bundelen wij drukwerk, fotoservice
+            en afwerking onder één dak. Alles uit eigen productie, met korte
+            lijnen en snelle levertijden.
+          </p>
+          <ul class="dp-voordelen">
+            <li>Digitale én offsetpersen in eigen huis</li>
+            <li>Groot formaat tot 1,20 meter breed</li>
+            <li>Complete afwerking: snijden, vouwen, binden</li>
+          </ul>
+        </div>
+        <div class="op-hoofdstuk__visueel" data-richting="1">
+          <div class="op-scene op-scene--pers">
+            <div class="op-scene__zoom">
+              <div class="op-pers__rol op-pers__rol--groot"></div>
+              <div class="op-pers__rol op-pers__rol--klein"></div>
+              <div class="op-pers__baan"></div>
+              <div class="op-pers__vel op-pers__vel--1"></div>
+              <div class="op-pers__vel op-pers__vel--2"></div>
+              <div class="op-pers__inkt">
+                <span class="op-inkt op-inkt--c"></span>
+                <span class="op-inkt op-inkt--m"></span>
+                <span class="op-inkt op-inkt--y"></span>
+                <span class="op-inkt op-inkt--k"></span>
+              </div>
+            </div>
+            <span class="op-scene__label">Moderne productie</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hoofdstuk 3: Vandaag -->
+    <section class="op-hoofdstuk">
+      <div class="container op-hoofdstuk__raster">
+        <div class="op-hoofdstuk__visueel" data-richting="-1">
+          <div class="op-scene op-scene--vandaag">
+            <div class="op-scene__zoom">
+              <div class="op-waaier">
+                <div class="op-waaier__kaart op-waaier__kaart--1"></div>
+                <div class="op-waaier__kaart op-waaier__kaart--2"></div>
+                <div class="op-waaier__kaart op-waaier__kaart--3">
+                  <span class="op-waaier__merk">VDH</span>
+                  <span class="op-waaier__lijn"></span>
+                </div>
+              </div>
+            </div>
+            <span class="op-scene__label">Het eindresultaat</span>
+          </div>
+        </div>
+        <div class="op-hoofdstuk__tekst">
+          <span class="dp-kicker">Vandaag</span>
+          <h2 class="dp-titel">Traditie in het hart,<br />techniek in de vingers.</h2>
+          <p class="dp-alinea">
+            Vandaag combineren wij het beste van twee werelden: het oog voor
+            detail van de ambachtelijke drukker en de precisie van de nieuwste
+            productietechnieken. Elk product wordt gecontroleerd voordat het ons
+            pand verlaat.
+          </p>
+          <p class="dp-alinea">
+            En misschien wel het belangrijkste: bij ons spreekt u nog gewoon met
+            de mensen die uw drukwerk maken. Geen callcenter, geen tussenpersonen
+            — maar vakmensen die met u meedenken.
+          </p>
+          <div class="op-tellers">
+            <div class="op-teller">
+              <span class="op-teller__getal" data-teller="1961" data-start="1900">1961</span>
+              <span class="op-teller__label">opgericht</span>
+            </div>
+            <div class="op-teller">
+              <span class="op-teller__getal" data-teller="60" data-achtervoegsel="+">60+</span>
+              <span class="op-teller__label">jaar vakmanschap</span>
+            </div>
+            <div class="op-teller">
+              <span class="op-teller__getal" data-teller="90" data-achtervoegsel="%">90%</span>
+              <span class="op-teller__label">dezelfde werkdag klaar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== WAAROM KLANTEN VOOR ONS KIEZEN ===== -->
+  <section class="op-waarom">
+    <div class="container">
+      <div class="op-waarom__kop">
+        <span class="dp-kicker">Waarom Van den Herik</span>
+        <h2 class="dp-titel">Waarom klanten<br />voor ons kiezen.</h2>
+        <p class="dp-alinea op-waarom__intro">
+          Kwaliteit is geen toeval. Het is het resultaat van ervaring, moderne
+          middelen en de wil om elke opdracht perfect af te leveren.
+        </p>
+      </div>
+      <div class="op-waarom__raster">
+        <div class="op-waarde">
+          <span class="op-waarde__icoon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5"/></svg>
+          </span>
+          <h3>Meer dan 60 jaar ervaring</h3>
+          <p>Drie generaties drukkersvakmanschap, sinds 1961 opgebouwd aan de pers.</p>
+        </div>
+        <div class="op-waarde">
+          <span class="op-waarde__icoon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 1 0-3.1 6.3L21 19l-.7-2.8A7.9 7.9 0 0 0 21 12z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></svg>
+          </span>
+          <h3>Persoonlijke service</h3>
+          <p>Direct contact met vakmensen die meedenken — aan de balie, per mail of telefoon.</p>
+        </div>
+        <div class="op-waarde">
+          <span class="op-waarde__icoon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6 4V9l6 4V4h6v17z"/><path d="M3 21h18"/></svg>
+          </span>
+          <h3>Eigen productie</h3>
+          <p>Alles wordt gemaakt in ons eigen pand aan de Mijlweg — zonder tussenpersonen.</p>
+        </div>
+        <div class="op-waarde">
+          <span class="op-waarde__icoon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+          </span>
+          <h3>Moderne machines</h3>
+          <p>Digitale én offsetpersen van de nieuwste generatie, voor elk formaat en materiaal.</p>
+        </div>
+        <div class="op-waarde">
+          <span class="op-waarde__icoon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.6.8-4 3.9.9 5.5L12 14.5 7.1 17.1l.9-5.5-4-3.9 5.6-.8z"/></svg>
+          </span>
+          <h3>Hoge kwaliteit</h3>
+          <p>Elk product wordt gecontroleerd op kleur, snit en afwerking vóór het de deur uitgaat.</p>
+        </div>
+        <div class="op-waarde">
+          <span class="op-waarde__icoon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>
+          </span>
+          <h3>Snelle levertijden</h3>
+          <p>In 90% van de gevallen ligt uw drukwerk dezelfde werkdag klaar of is het verstuurd.</p>
+        </div>
+        <div class="op-waarde">
+          <span class="op-waarde__icoon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h16M4 17l2-10h12l2 10M9 7V5a3 3 0 0 1 6 0v2"/><path d="M4 21h16"/></svg>
+          </span>
+          <h3>Kleine én grote oplages</h3>
+          <p>Van één exemplaar tot duizenden stuks — elke oplage is bij ons welkom.</p>
+        </div>
+        <div class="op-waarde">
+          <span class="op-waarde__icoon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5-2-8-5.5-8-10a8 8 0 0 1 16 0c0 4.5-3.5 8-8 10z"/><path d="M12 21c3-4 3-12 0-16-3 4-3 12 0 16z"/></svg>
+          </span>
+          <h3>Duurzaam drukken</h3>
+          <p>FSC®-gecertificeerd papier, plantaardige inkten en energiezuinige productie.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="cta-sectie">
+  <!-- ===== ONZE WERKWIJZE ===== -->
+  <section class="op-werkwijze">
     <div class="container">
-      <div class="streep" style="margin:0 auto 24px;"></div>
-      <h2 class="sectie-titel">Benieuwd wat wij voor u kunnen doen?</h2>
-      <p class="sectie-ondertitel" style="margin:0 auto 40px;">
-        Neem contact op of kom gerust langs. Wij helpen u graag verder.
-      </p>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-        <a href="contact.html" class="knop knop--primair" style="background:var(--wit);color:var(--blauw-donker);">Neem contact op</a>
-        <a href="diensten.html" class="knop knop--omlijnd">Bekijk onze diensten</a>
+      <div class="op-werkwijze__kop">
+        <span class="dp-kicker dp-kicker--licht">Onze werkwijze</span>
+        <h2 class="dp-titel dp-titel--licht">Van aanvraag tot levering,<br />in vijf zorgvuldige stappen.</h2>
       </div>
+      <div class="op-stappen">
+        <div class="op-stappen__lijn" aria-hidden="true"><span class="op-stappen__lijn-vulling"></span></div>
+        <div class="op-stap">
+          <div class="op-stap__punt" aria-hidden="true">1</div>
+          <div class="op-stap__kaart">
+            <h3>Advies</h3>
+            <p>U vertelt wat u nodig heeft — wij denken direct mee over formaat, papier, oplage en budget. Vrijblijvend en eerlijk.</p>
+          </div>
+        </div>
+        <div class="op-stap">
+          <div class="op-stap__punt" aria-hidden="true">2</div>
+          <div class="op-stap__kaart">
+            <h3>Ontwerp</h3>
+            <p>Eigen bestand of ontwerp door ons team: wij controleren elk bestand gratis op resolutie, kleur en afloop.</p>
+          </div>
+        </div>
+        <div class="op-stap">
+          <div class="op-stap__punt" aria-hidden="true">3</div>
+          <div class="op-stap__kaart">
+            <h3>Productie</h3>
+            <p>Digitaal of offset — op moderne persen, met de precisie van ruim zestig jaar ervaring aan de machine.</p>
+          </div>
+        </div>
+        <div class="op-stap">
+          <div class="op-stap__punt" aria-hidden="true">4</div>
+          <div class="op-stap__kaart">
+            <h3>Afwerking</h3>
+            <p>Snijden, rillen, vouwen, lamineren of inbinden: de finishing touch gebeurt volledig in eigen huis.</p>
+          </div>
+        </div>
+        <div class="op-stap">
+          <div class="op-stap__punt" aria-hidden="true">5</div>
+          <div class="op-stap__kaart">
+            <h3>Levering</h3>
+            <p>Dezelfde werkdag ophalen in 's-Gravendeel, of bezorging door heel Nederland. U kiest wat het beste uitkomt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOTOGALERIJ ===== -->
+  <section class="op-galerij">
+    <div class="container">
+      <div class="op-galerij__kop">
+        <span class="dp-kicker">Een kijkje binnen</span>
+        <h2 class="dp-titel">De drukkerij<br />in beeld.</h2>
+        <p class="dp-alinea op-galerij__intro">
+          Van de eerste rol papier tot het afgewerkte eindproduct: zo ziet een
+          dag bij Drukkerij Van den Herik eruit.
+        </p>
+      </div>
+      <div class="op-galerij__raster">
+        <figure class="op-foto op-foto--hoog">
+          <div class="op-foto__scene op-foto__scene--hal">
+            <div class="op-hal__raam op-hal__raam--1"></div>
+            <div class="op-hal__raam op-hal__raam--2"></div>
+            <div class="op-hal__pers"></div>
+            <div class="op-hal__vloer"></div>
+          </div>
+          <figcaption class="op-foto__info">
+            <span class="op-foto__nummer">01</span>
+            <h3>De drukkerij</h3>
+            <p>Ons pand aan de Mijlweg in 's-Gravendeel.</p>
+          </figcaption>
+        </figure>
+        <figure class="op-foto">
+          <div class="op-foto__scene op-foto__scene--cmyk">
+            <span class="op-cmyk__baan op-cmyk__baan--c"></span>
+            <span class="op-cmyk__baan op-cmyk__baan--m"></span>
+            <span class="op-cmyk__baan op-cmyk__baan--y"></span>
+            <span class="op-cmyk__baan op-cmyk__baan--k"></span>
+          </div>
+          <figcaption class="op-foto__info">
+            <span class="op-foto__nummer">02</span>
+            <h3>Kleur op de pers</h3>
+            <p>CMYK, kleurnauwkeurig afgestemd.</p>
+          </figcaption>
+        </figure>
+        <figure class="op-foto">
+          <div class="op-foto__scene op-foto__scene--papier">
+            <div class="op-papier__stapel op-papier__stapel--1"></div>
+            <div class="op-papier__stapel op-papier__stapel--2"></div>
+            <div class="op-papier__stapel op-papier__stapel--3"></div>
+          </div>
+          <figcaption class="op-foto__info">
+            <span class="op-foto__nummer">03</span>
+            <h3>Het papiermagazijn</h3>
+            <p>Voor elk project het juiste papier.</p>
+          </figcaption>
+        </figure>
+        <figure class="op-foto op-foto--breed">
+          <div class="op-foto__scene op-foto__scene--afwerking">
+            <div class="op-afwerking__mes"></div>
+            <div class="op-afwerking__vel op-afwerking__vel--1"></div>
+            <div class="op-afwerking__vel op-afwerking__vel--2"></div>
+            <div class="op-afwerking__vel op-afwerking__vel--3"></div>
+          </div>
+          <figcaption class="op-foto__info">
+            <span class="op-foto__nummer">04</span>
+            <h3>De afwerking</h3>
+            <p>Snijden, rillen en vouwen op de millimeter.</p>
+          </figcaption>
+        </figure>
+        <figure class="op-foto">
+          <div class="op-foto__scene op-foto__scene--team">
+            <span class="op-team__lid op-team__lid--1"></span>
+            <span class="op-team__lid op-team__lid--2"></span>
+            <span class="op-team__lid op-team__lid--3"></span>
+          </div>
+          <figcaption class="op-foto__info">
+            <span class="op-foto__nummer">05</span>
+            <h3>Ons team</h3>
+            <p>Vakmensen met passie voor drukwerk.</p>
+          </figcaption>
+        </figure>
+        <figure class="op-foto op-foto--hoog">
+          <div class="op-foto__scene op-foto__scene--resultaat">
+            <div class="op-resultaat__kaart op-resultaat__kaart--1"></div>
+            <div class="op-resultaat__kaart op-resultaat__kaart--2"></div>
+            <div class="op-resultaat__kaart op-resultaat__kaart--3"><span>VDH</span></div>
+          </div>
+          <figcaption class="op-foto__info">
+            <span class="op-foto__nummer">06</span>
+            <h3>Het eindresultaat</h3>
+            <p>Drukwerk om trots op te zijn.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AFSLUITENDE CTA ===== -->
+  <section class="op-cta">
+    <div class="op-cta__achtergrond" aria-hidden="true">
+      <div class="op-cta__vel op-cta__vel--1"></div>
+      <div class="op-cta__vel op-cta__vel--2"></div>
+      <div class="op-cta__overlay"></div>
+    </div>
+    <div class="container op-cta__inhoud">
+      <h2 class="op-cta__titel">Benieuwd wat wij voor u<br /><span class="op-hero__accent">kunnen betekenen?</span></h2>
+      <p class="op-cta__sub">
+        Vraag vrijblijvend een offerte aan of kom gerust langs.
+        Wij reageren meestal nog dezelfde werkdag.
+      </p>
+      <div class="op-cta__knoppen">
+        <a href="contact.html" class="knop knop--hero-primair">Vraag een offerte aan <span class="knop__pijl">→</span></a>
+        <a href="contact.html" class="knop knop--hero-omlijnd">Neem contact op</a>
+      </div>
+      <a href="tel:+31786731266" class="op-cta__tel">of bel 078 673 12 66</a>
     </div>
   </section>
 
@@ -300,6 +502,9 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/over-ons.js"></script>
 </body>
 </html>
