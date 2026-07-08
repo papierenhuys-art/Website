@@ -4,11 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wat wij doen — Drukkerij Van den Herik</title>
-  <meta name="description" content="Ontdek het volledige dienstenpakket van Drukkerij Van den Herik: visitekaartjes, flyers, folders, groot formaat drukwerk en verpakkingen op maat." />
+  <meta name="description" content="Ontdek het volledige dienstenpakket van Drukkerij Van den Herik: visitekaartjes, flyers, brochures, groot formaat, stickers en gelegenheidsdrukwerk. Alles uit eigen productie." />
   <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <div id="scroll-voortgang" aria-hidden="true"></div>
 
   <!-- ===== NAVIGATIE ===== -->
   <nav class="navbar">
@@ -29,642 +34,401 @@
     </div>
   </nav>
 
-  <!-- ===== PAGINAKOP ===== -->
-  <header class="paginakop">
-    <div class="container kop-flex">
-      <div>
-        <p class="paginakop__broodkruimel">
-          <a href="/">Home</a> &rsaquo; Wat wij doen
-        </p>
-        <h1 class="paginakop__titel">Wat wij doen</h1>
-        <p class="paginakop__ondertitel">
-          Van kleine oplage tot massaproductie — wij bieden een breed scala aan drukwerkdiensten
-          voor bedrijven en particulieren.
-        </p>
+  <!-- ===== HERO ===== -->
+  <header class="dp-hero" id="dp-hero">
+    <div class="dp-hero__achtergrond" aria-hidden="true">
+      <div class="dp-laag dp-laag--c"></div>
+      <div class="dp-laag dp-laag--m"></div>
+      <div class="dp-laag dp-laag--y"></div>
+      <div class="dp-laag dp-laag--k"></div>
+      <div class="dp-hero__raster"></div>
+      <div class="dp-hero__ruis"></div>
+    </div>
+    <div class="container dp-hero__inhoud">
+      <span class="dp-hero__kicker">Wat wij doen</span>
+      <h1 class="dp-hero__titel">
+        <span class="dp-hero__regel"><span>Alles wat u wilt drukken.</span></span>
+        <span class="dp-hero__regel"><span class="dp-hero__accent">Perfect geproduceerd.</span></span>
+      </h1>
+      <p class="dp-hero__intro">
+        Van één visitekaartje tot honderden spandoeken — alles uit eigen productie
+        in 's-Gravendeel. In 90% van de gevallen dezelfde werkdag klaar.
+      </p>
+      <div class="dp-hero__knoppen">
+        <a href="contact.html" class="knop knop--hero-primair">Vraag een offerte aan <span class="knop__pijl">→</span></a>
+        <a href="#dp-hoofdstukken" class="knop knop--hero-omlijnd">Ontdek onze diensten</a>
       </div>
-      <img src="logo.png" alt="" class="kop-logo" aria-hidden="true" />
+    </div>
+    <div class="hero__scrollhint dp-hero__scrollhint" aria-hidden="true">
+      <span class="hero__scrollhint-lijn"><span></span></span>
+      <span class="hero__scrollhint-tekst">Scroll</span>
     </div>
   </header>
 
-  <!-- ===== GECATEGORISEERDE DIENSTEN ===== -->
-  <section class="sectie sectie--grijs">
+  <!-- ===== STATEMENT ===== -->
+  <section class="dp-statement">
     <div class="container">
-      <div class="streep"></div>
-      <h2 class="sectie-titel">Ons dienstenpakket</h2>
-      <p class="sectie-ondertitel">
-        Klik op een dienst voor meer informatie. Van klein kaartje tot groot spandoek — wij regelen het.
+      <p class="dp-statement__tekst" data-woorden>
+        Drukwerk is ons vak sinds 1961. Zes diensten vormen het hart van wat wij
+        elke dag maken — met de precisie van een drukker en de snelheid die u
+        van ons gewend bent.
       </p>
-      <!-- Categorie 1 -->
-      <div class="categorie-kop">
-        <h3>Drukwerk voor informatie &amp; promotie</h3>
-      </div>
-      <div class="uitklap-lijst" style="margin-top:16px;">
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Flyers.png" alt="Flyers"></span>
-            <h3 class="uitklap-rij__titel">Flyers</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Opvallende flyers die uw boodschap helder overbrengen. Wij drukken snel en scherp geprijsd op diverse papiergewichten en formaten.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Formaten A3, A4, A5 en A6 — andere maten ook mogelijk</div>
-              <div class="kenmerk-item">80 g/m² tot 400 g/m² karton</div>
-              <div class="kenmerk-item">Eenzijdig of dubbelzijdig</div>
-              <div class="kenmerk-item">Optioneel laminaat of UV-lak</div>
-              <div class="kenmerk-item">In 90% van de gevallen dezelfde werkdag klaar</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Folders.png" alt="Folders"></span>
-            <h3 class="uitklap-rij__titel">Folders</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Gevouwen folders in diverse vouwen voor elk informatiedoel — van simpele tweevoud tot complexe accordeonvouwen.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Tweevoud, drievoud, accordeonvouw en Z-vouw</div>
-              <div class="kenmerk-item">Papiergewichten 90–350 g/m²</div>
-              <div class="kenmerk-item">Full colour binnen- en buitenzijde</div>
-              <div class="kenmerk-item">Persoonlijk advies over indeling en ontwerp</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Brochures.png" alt="Brochures"></span>
-            <h3 class="uitklap-rij__titel">Brochures</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Meerlagige brochures voor uitgebreide productcatalogi, bedrijfspresentaties of jaarverslagen.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Nieten, ring- of lijmbinding</div>
-              <div class="kenmerk-item">Diverse formaten en papiersoorten</div>
-              <div class="kenmerk-item">Harde of zachte kaft mogelijk</div>
-              <div class="kenmerk-item">Full colour of zwart-wit binnenwerk</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Mailings.png" alt="Mailings"></span>
-            <h3 class="uitklap-rij__titel">Mailings</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Gepersonaliseerde mailings, enveloppen en adreslabels voor directe postacties op grote schaal.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Variabele data drukken</div>
-              <div class="kenmerk-item">Gepersonaliseerde naam- en adresvermelding</div>
-              <div class="kenmerk-item">Enveloppen en adreslabels inbegrepen</div>
-              <div class="kenmerk-item">Klaar voor directe postbezorging</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Categorie 2 -->
-      <div class="categorie-kop">
-        <h3>Posters, banners &amp; buitenreclame</h3>
-      </div>
-      <div class="uitklap-lijst" style="margin-top:16px;">
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Posters.png" alt="Posters"></span>
-            <h3 class="uitklap-rij__titel">Posters</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Opvallende posters in elk formaat, voor binnen en buiten, mat of glans afgewerkt.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Rolbreedte maximaal 1,20 m, lengte naar wens</div>
-              <div class="kenmerk-item">Fotopapier, mat papier of backlit materiaal</div>
-              <div class="kenmerk-item">Geschikt voor binnen en buiten</div>
-              <div class="kenmerk-item">Diverse materialen beschikbaar op aanvraag</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Spandoeken.png" alt="Spandoeken"></span>
-            <h3 class="uitklap-rij__titel">Spandoeken</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Grote spandoeken voor buitenreclame, geveldoeken en evenementbanners — weerbestendig en duurzaam.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Rolbreedte maximaal 1,20 m, lengte naar wens</div>
-              <div class="kenmerk-item">UV-bestendige inkten voor buiten</div>
-              <div class="kenmerk-item">Afwerking met ogen, keder of zoom</div>
-              <div class="kenmerk-item">Mesh-spandoeken voor wind</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Roll-banners.png" alt="Roll-banners"></span>
-            <h3 class="uitklap-rij__titel">Roll-banners</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Oprolbare roll-up banners voor beurzen, winkels en presentaties — snel op te zetten en compact te vervoeren.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Standaard 85 × 200 cm en maatwerk</div>
-              <div class="kenmerk-item">Inclusief draagtas en aluminium cassette</div>
-              <div class="kenmerk-item">Hoge resolutie full colour druk</div>
-              <div class="kenmerk-item">Eenvoudig te wisselen print</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Canvas.png" alt="Canvas"></span>
-            <h3 class="uitklap-rij__titel">Canvas</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Foto's en ontwerpen op canvasdoek, perfect als muurdecoratie of persoonlijk cadeau.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Diverse formaten en verhoudingen</div>
-              <div class="kenmerk-item">Leverbaar op houten frame of opgerold</div>
-              <div class="kenmerk-item">Mat of glans canvasmateriaal</div>
-              <div class="kenmerk-item">Geschikt als zakelijk relatiegeschenk</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Displays.png" alt="Displays"></span>
-            <h3 class="uitklap-rij__titel">Displays</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Displaymaterialen voor winkels, beurzen en evenementen: toonbankdisplays, vloerdisplays en vrijstaande units.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Karton, PVC of forex materiaal</div>
-              <div class="kenmerk-item">Toonbank- en vloerdisplays</div>
-              <div class="kenmerk-item">Maatwerk constructies mogelijk</div>
-              <div class="kenmerk-item">Full colour bedrukking</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Belettering.png" alt="Belettering"></span>
-            <h3 class="uitklap-rij__titel">Belettering</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Voertuig- en gevelreclame met geknipt vinyl of full-colour print. Van kleine stickers tot complete autobelettering.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Geknipt vinyl of full-colour print</div>
-              <div class="kenmerk-item">Voertuigbelettering op maat</div>
-              <div class="kenmerk-item">Gevelborden en raamstickers</div>
-              <div class="kenmerk-item">Weerbestendig en UV-bestendig</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Bouwtekeningen.png" alt="Bouwtekeningen"></span>
-            <h3 class="uitklap-rij__titel">Bouwtekeningen</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Technische tekeningen en bouwtekeningen in groot formaat, nauwkeurig afgedrukt op plotterpapier of polyesterfolie.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Rolbreedte maximaal 1,20 m, lengte naar wens</div>
-              <div class="kenmerk-item">Plotterpapier of polyesterfolie</div>
-              <div class="kenmerk-item">Zwart-wit of full colour</div>
-              <div class="kenmerk-item">Schaal nauwkeurig gegarandeerd</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Categorie 3 -->
-      <div class="categorie-kop">
-        <h3>Zakelijk drukwerk &amp; kantoorartikelen</h3>
-      </div>
-      <div class="uitklap-lijst" style="margin-top:16px;">
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Huisstijl.png" alt="Visitekaartjes"></span>
-            <h3 class="uitklap-rij__titel">Visitekaartjes</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Uw eerste tastbare indruk. Wij drukken visitekaartjes van eenvoudig standaard tot ultra-luxe met folie of reliëf.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Standaard 85 × 55 mm en maatwerk</div>
-              <div class="kenmerk-item">Mat, glans of zijdemat laminaat</div>
-              <div class="kenmerk-item">Afgeronde hoeken, stans en foliedruk</div>
-              <div class="kenmerk-item">Oplages van 50 tot 100.000+ exemplaren</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Mappen.png" alt="Mappen"></span>
-            <h3 class="uitklap-rij__titel">Mappen</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Presentatiemappen en ringbanden in uw eigen huisstijl, voor een professionele uitstraling bij klanten en relaties.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Met of zonder venster en insteekvak</div>
-              <div class="kenmerk-item">Visitekaarthouder mogelijk</div>
-              <div class="kenmerk-item">Full colour bedrukking</div>
-              <div class="kenmerk-item">Karton of kunststof materiaal</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Sets-&-bloks.png" alt="Sets en bloks"></span>
-            <h3 class="uitklap-rij__titel">Sets &amp; Bloks</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Schrijfblokken, notitieblokken en formuliersets op maat voor kantoor of bedrijf.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Genummerde formulieren mogelijk</div>
-              <div class="kenmerk-item">Met of zonder carbonpapier</div>
-              <div class="kenmerk-item">Diverse formaten en pagina-aantallen</div>
-              <div class="kenmerk-item">Bedrukt met uw logo en huisstijl</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Stempels.png" alt="Stempels"></span>
-            <h3 class="uitklap-rij__titel">Stempels</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Zelfinktende stempels met uw logo, handtekening of adresgegevens. Snel geleverd in diverse maten.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Zelfinktend, geen inktkussen nodig</div>
-              <div class="kenmerk-item">Logo, tekst of handtekening</div>
-              <div class="kenmerk-item">Diverse maten en inktcleuren</div>
-              <div class="kenmerk-item">Snel leverbaar</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Stickers.png" alt="Stickers"></span>
-            <h3 class="uitklap-rij__titel">Stickers</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Stickers in elke vorm, maat en materiaal — voor producten, verpakkingen, promotie of decoratie.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Papier, vinyl of transparant</div>
-              <div class="kenmerk-item">Elke vorm en maat mogelijk</div>
-              <div class="kenmerk-item">Permanent of verwijderbaar</div>
-              <div class="kenmerk-item">Kleine en grote oplages</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Categorie 4 -->
-      <div class="categorie-kop">
-        <h3>Gelegenheidsdrukwerk</h3>
-      </div>
-      <div class="uitklap-lijst" style="margin-top:16px;">
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Geboorte.png" alt="Geboortekaarten"></span>
-            <h3 class="uitklap-rij__titel">Geboortekaarten</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Prachtige geboortekaartjes volledig naar wens: formaat, papiersoort en afwerking. Snel geleverd voor uw blijde aankondiging.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Eigen ontwerp of via ons opgemaakt</div>
-              <div class="kenmerk-item">Diverse papiersoorten en formaten</div>
-              <div class="kenmerk-item">Met bijpassende envelop leverbaar</div>
-              <div class="kenmerk-item">Snel geleverd</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Huwelijk.png" alt="Huwelijksdrukwerk"></span>
-            <h3 class="uitklap-rij__titel">Huwelijksdrukwerk</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Uitnodigingen, trouwkaarten, menukaarten, programmaboekjes en bedankjes voor uw trouwdag op maat.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Complete sets mogelijk</div>
-              <div class="kenmerk-item">Luxe papiersoorten en afwerkingen</div>
-              <div class="kenmerk-item">Gepersonaliseerde tekst en foto's</div>
-              <div class="kenmerk-item">Persoonlijk advies op afspraak</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Jubileum.png" alt="Jubileum"></span>
-            <h3 class="uitklap-rij__titel">Jubileum</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Drukwerk voor jubilea, afstuderingen en andere bijzondere momenten — volledig gepersonaliseerd en op maat.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Uitnodigingen en programmaboekjes</div>
-              <div class="kenmerk-item">Herinneringsprinten en foto-afdrukken</div>
-              <div class="kenmerk-item">Spandoeken en posters voor de locatie</div>
-              <div class="kenmerk-item">Kleine en grote oplages</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Kerstkaarten.png" alt="Kerstkaarten"></span>
-            <h3 class="uitklap-rij__titel">Kerstkaarten</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Stijlvolle kerstkaarten voor bedrijven en particulieren. Standaard of volledig gepersonaliseerd, met of zonder envelop.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Eigen logo en tekst mogelijk</div>
-              <div class="kenmerk-item">Luxe papier en afwerkingen</div>
-              <div class="kenmerk-item">Met bijpassende envelop</div>
-              <div class="kenmerk-item">Vroeg bestellen = zekerheid</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Rouw.png" alt="Rouwkaarten"></span>
-            <h3 class="uitklap-rij__titel">Rouwkaarten</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Waardige rouwkaarten en rouwbrieven in diverse stijlen. Snel en discreet geleverd, met persoonlijk advies bij de keuze.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Diverse stijlen en formaten</div>
-              <div class="kenmerk-item">Spoed mogelijk bij overlijden</div>
-              <div class="kenmerk-item">Met bijpassende envelop</div>
-              <div class="kenmerk-item">Persoonlijk en discreet contact</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Categorie 5 -->
-      <div class="categorie-kop">
-        <h3>Fotodruk &amp; overige printdiensten</h3>
-      </div>
-      <div class="uitklap-lijst" style="margin-top:16px;">
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Fotoboeken.png" alt="Fotoboeken"></span>
-            <h3 class="uitklap-rij__titel">Fotoboeken</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Herinneringen vastgelegd in een professioneel fotoboek op maat — voor particulier en bedrijf.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Harde of zachte kaft</div>
-              <div class="kenmerk-item">Diverse formaten en pagina-aantallen</div>
-              <div class="kenmerk-item">Liggend, staand of vierkant</div>
-              <div class="kenmerk-item">Geschikt als zakelijk relatiegeschenk</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Fotoservice.png" alt="Fotoservice"></span>
-            <h3 class="uitklap-rij__titel">Fotoservice</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Foto's afdrukken als losse print of groot formaat fotoprint in hoge kwaliteit.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Fotopapier glans of mat</div>
-              <div class="kenmerk-item">Kleine prints tot groot formaat</div>
-              <div class="kenmerk-item">Hoge resolutie gegarandeerd</div>
-              <div class="kenmerk-item">Snel en voordelig</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Full-color.png" alt="Full-color"></span>
-            <h3 class="uitklap-rij__titel">Full-color</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Levendig full-colour drukwerk in CMYK voor maximale kleurdiepte en een professionele uitstraling.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">CMYK en Pantone kleuren</div>
-              <div class="kenmerk-item">Kleurnauwkeurig drukproces</div>
-              <div class="kenmerk-item">Geschikt voor alle drukwerktypes</div>
-              <div class="kenmerk-item">Proefdruk op aanvraag</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Zwart-Wit.png" alt="Zwart-Wit"></span>
-            <h3 class="uitklap-rij__titel">Zwart-Wit</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Zwart-wit kopieën en drukwerk voor documenten, rapporten en formulieren — snel en voordelig in hoge oplage.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Diverse papierformaten en gewichten</div>
-              <div class="kenmerk-item">Eenzijdig of dubbelzijdig</div>
-              <div class="kenmerk-item">Grote oplages snel leverbaar</div>
-              <div class="kenmerk-item">Optioneel nieten of inbinden</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Categorie 6 -->
-      <div class="categorie-kop">
-        <h3>Ontwerp, opmaak &amp; afwerking</h3>
-      </div>
-      <div class="uitklap-lijst" style="margin-top:16px;">
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Eigen-ontwerp.png" alt="Eigen ontwerp"></span>
-            <h3 class="uitklap-rij__titel">Eigen ontwerp aanleveren</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Heeft u al een ontwerp? Stuur uw bestand aan en wij zorgen voor een vlekkeloos drukresultaat. Wij controleren uw bestand gratis.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">PDF, AI, InDesign of Illustrator</div>
-              <div class="kenmerk-item">Gratis bestandscontrole</div>
-              <div class="kenmerk-item">Feedback bij technische fouten</div>
-              <div class="kenmerk-item">Snel productieproces na goedkeuring</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Layout.png" alt="Opmaak en layout"></span>
-            <h3 class="uitklap-rij__titel">Opmaak &amp; Layout</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Geen grafische kennis? Geen probleem. Ons team maakt uw drukwerk professioneel op, van eenvoudige aanpassingen tot complete ontwerpen.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Logo-integratie en huisstijl</div>
-              <div class="kenmerk-item">Tekst- en beeldbewerking</div>
-              <div class="kenmerk-item">Drukklaar eindresultaat</div>
-              <div class="kenmerk-item">Kleine vergoeding, groot resultaat</div>
-            </div>
-          </div>
-        </div>
-        <div class="uitklap-rij uitklap-rij--blauw" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon"><img src="Afwerking.png" alt="Afwerking"></span>
-            <h3 class="uitklap-rij__titel">Afwerking</h3>
-            <span class="uitklap-kaart__pijl">+</span>
-          </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Professionele afwerking voor elk drukwerk: lamineren, rillen, snijden, nieten, inbinden en foliedruk naar wens.</p>
-            <div class="dienst-detail__kenmerken" style="margin-top:16px;">
-              <div class="kenmerk-item">Lamineren mat, glans of soft-touch</div>
-              <div class="kenmerk-item">Rillen, vouwen en snijden</div>
-              <div class="kenmerk-item">Nieten of inbinden</div>
-              <div class="kenmerk-item">Foliedruk en UV-spotlak</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
+  <!-- ===== HOOFDSTUKKEN: DE DIENSTEN ===== -->
+  <div class="dp-hoofdstukken" id="dp-hoofdstukken">
 
-  <!-- ===== BESTANDSSPECIFICATIES ===== -->
-  <section class="sectie sectie--grijs">
+    <!-- 01 Visitekaartjes -->
+    <article class="dp-hoofdstuk">
+      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--wit">
+        <div class="dp-hoofdstuk__raster">
+          <div class="dp-hoofdstuk__visueel" data-richting="-1">
+            <div class="dp-scene dp-scene--visite">
+              <div class="dp-scene__zoom">
+                <div class="dp-vk dp-vk--achter"></div>
+                <div class="dp-vk dp-vk--midden"></div>
+                <div class="dp-vk dp-vk--voor">
+                  <span class="dp-vk__naam">DRUKKERIJ<br />VAN DEN HERIK</span>
+                  <span class="dp-vk__lijn"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dp-hoofdstuk__tekst">
+            <span class="dp-kicker">01 — Visitekaartjes</span>
+            <h2 class="dp-titel">De eerste indruk,<br />perfect gedrukt.</h2>
+            <p class="dp-alinea">
+              Een visitekaartje is drie seconden in iemands hand — en blijft jaren
+              in het geheugen. Wij drukken kaartjes waar u trots op bent, van
+              standaard tot ultra-luxe met folie of reliëf.
+            </p>
+            <ul class="dp-voordelen">
+              <li>85 × 55 mm en volledig maatwerk</li>
+              <li>Mat, glans of soft-touch laminaat</li>
+              <li>Oplages vanaf 50 stuks</li>
+            </ul>
+            <a href="contact.html" class="knop knop--primair dp-cta">Offerte voor visitekaartjes →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 02 Flyers & Folders -->
+    <article class="dp-hoofdstuk">
+      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--grijs">
+        <div class="dp-hoofdstuk__raster dp-hoofdstuk__raster--omgekeerd">
+          <div class="dp-hoofdstuk__tekst">
+            <span class="dp-kicker">02 — Flyers &amp; Folders</span>
+            <h2 class="dp-titel">Uw boodschap,<br />scherp verspreid.</h2>
+            <p class="dp-alinea">
+              Van deurmat tot beursstand: een goede flyer werkt. Wij drukken
+              razendsnel op elk gewicht papier, in elke vouw die u kunt bedenken.
+            </p>
+            <ul class="dp-voordelen">
+              <li>A3 t/m A6 — andere maten ook mogelijk</li>
+              <li>80 t/m 400 g/m² papier en karton</li>
+              <li>Twee-, drie-, accordeon- en Z-vouw</li>
+            </ul>
+            <a href="contact.html" class="knop knop--primair dp-cta">Offerte voor flyers →</a>
+          </div>
+          <div class="dp-hoofdstuk__visueel" data-richting="1">
+            <div class="dp-scene dp-scene--flyer">
+              <div class="dp-scene__zoom">
+                <div class="dp-vel dp-vel--achter"></div>
+                <div class="dp-vel dp-vel--voor">
+                  <div class="dp-vel__kop"></div>
+                  <div class="dp-vel__regel" style="width:75%"></div>
+                  <div class="dp-vel__regel" style="width:60%"></div>
+                  <div class="dp-vel__regel" style="width:68%"></div>
+                  <div class="dp-vel__blok"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03 Brochures -->
+    <article class="dp-hoofdstuk">
+      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--blauwtint">
+        <div class="dp-hoofdstuk__raster">
+          <div class="dp-hoofdstuk__visueel" data-richting="-1">
+            <div class="dp-scene dp-scene--brochure">
+              <div class="dp-scene__zoom">
+                <div class="dp-boek">
+                  <div class="dp-boek__pagina dp-boek__pagina--links">
+                    <div class="dp-vel__regel" style="width:80%"></div>
+                    <div class="dp-vel__regel" style="width:65%"></div>
+                    <div class="dp-vel__regel" style="width:72%"></div>
+                    <div class="dp-boek__foto"></div>
+                  </div>
+                  <div class="dp-boek__pagina dp-boek__pagina--rechts">
+                    <div class="dp-boek__foto dp-boek__foto--blauw"></div>
+                    <div class="dp-vel__regel" style="width:70%"></div>
+                    <div class="dp-vel__regel" style="width:55%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dp-hoofdstuk__tekst">
+            <span class="dp-kicker">03 — Brochures</span>
+            <h2 class="dp-titel">Uw verhaal,<br />gebonden.</h2>
+            <p class="dp-alinea">
+              Catalogi, presentaties, jaarverslagen: een brochure geeft uw verhaal
+              gewicht. Geniet, gelijmd of geringd — met harde of zachte kaft.
+            </p>
+            <ul class="dp-voordelen">
+              <li>Niet-, ring- of lijmbinding</li>
+              <li>Harde of zachte kaft</li>
+              <li>Full colour of zwart-wit binnenwerk</li>
+            </ul>
+            <a href="contact.html" class="knop knop--primair dp-cta">Offerte voor brochures →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 04 Groot formaat -->
+    <article class="dp-hoofdstuk">
+      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--donker">
+        <div class="dp-hoofdstuk__raster dp-hoofdstuk__raster--omgekeerd">
+          <div class="dp-hoofdstuk__tekst dp-hoofdstuk__tekst--licht">
+            <span class="dp-kicker dp-kicker--licht">04 — Posters &amp; Spandoeken</span>
+            <h2 class="dp-titel dp-titel--licht">Niet te missen.<br />Letterlijk.</h2>
+            <p class="dp-alinea dp-alinea--licht">
+              Groot formaat is ons specialisme: posters, spandoeken en banners
+              die opvallen — binnen én buiten, weerbestendig gedrukt.
+            </p>
+            <ul class="dp-voordelen dp-voordelen--licht">
+              <li>Rolbreedte tot 1,20 m — lengte naar wens</li>
+              <li>Fotopapier, mat papier of backlit</li>
+              <li>UV-bestendige inkt, afwerking met ogen of zoom</li>
+            </ul>
+            <a href="contact.html" class="knop knop--hero-primair dp-cta">Offerte voor groot formaat →</a>
+          </div>
+          <div class="dp-hoofdstuk__visueel" data-richting="1">
+            <div class="dp-scene dp-scene--spandoek">
+              <div class="dp-scene__zoom">
+                <div class="dp-doek">
+                  <span class="dp-doek__oog dp-doek__oog--lb"></span>
+                  <span class="dp-doek__oog dp-doek__oog--rb"></span>
+                  <span class="dp-doek__oog dp-doek__oog--lo"></span>
+                  <span class="dp-doek__oog dp-doek__oog--ro"></span>
+                  <span class="dp-doek__tekst">GRAND OPENING</span>
+                </div>
+                <div class="dp-poster"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 05 Stickers -->
+    <article class="dp-hoofdstuk">
+      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--wit">
+        <div class="dp-hoofdstuk__raster">
+          <div class="dp-hoofdstuk__visueel" data-richting="-1">
+            <div class="dp-scene dp-scene--sticker">
+              <div class="dp-scene__zoom">
+                <div class="dp-sticker dp-sticker--rond"><span>NIEUW</span></div>
+                <div class="dp-sticker dp-sticker--vierkant"></div>
+                <div class="dp-sticker dp-sticker--label"><span>drukkerijherik.nl</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="dp-hoofdstuk__tekst">
+            <span class="dp-kicker">05 — Stickers &amp; Etiketten</span>
+            <h2 class="dp-titel">Plak uw merk<br />overal op.</h2>
+            <p class="dp-alinea">
+              Van productetiket tot raamsticker: elke vorm, elke maat, elk
+              materiaal. Permanent of verwijderbaar — u zegt het maar.
+            </p>
+            <ul class="dp-voordelen">
+              <li>Papier, vinyl of transparant</li>
+              <li>Elke vorm en maat mogelijk</li>
+              <li>Kleine én grote oplages</li>
+            </ul>
+            <a href="contact.html" class="knop knop--primair dp-cta">Offerte voor stickers →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 06 Gelegenheidsdrukwerk -->
+    <article class="dp-hoofdstuk">
+      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--grijs">
+        <div class="dp-hoofdstuk__raster dp-hoofdstuk__raster--omgekeerd">
+          <div class="dp-hoofdstuk__tekst">
+            <span class="dp-kicker">06 — Gelegenheidsdrukwerk</span>
+            <h2 class="dp-titel">Voor de momenten<br />die ertoe doen.</h2>
+            <p class="dp-alinea">
+              Geboorte, huwelijk, jubileum of afscheid: sommige drukwerken maak
+              je maar één keer. Wij zorgen dat het klopt — snel, persoonlijk en
+              met zorg.
+            </p>
+            <ul class="dp-voordelen">
+              <li>Geboorte-, trouw-, jubileum- en rouwkaarten</li>
+              <li>Spoed mogelijk, ook bij overlijden</li>
+              <li>Persoonlijk advies, met bijpassende envelop</li>
+            </ul>
+            <a href="contact.html" class="knop knop--primair dp-cta">Persoonlijk advies aanvragen →</a>
+          </div>
+          <div class="dp-hoofdstuk__visueel" data-richting="1">
+            <div class="dp-scene dp-scene--kaart">
+              <div class="dp-scene__zoom">
+                <div class="dp-envelop">
+                  <div class="dp-envelop__flap"></div>
+                </div>
+                <div class="dp-kaartje">
+                  <span class="dp-kaartje__hart">♥</span>
+                  <div class="dp-vel__regel" style="width:60%; margin:10px auto 6px;"></div>
+                  <div class="dp-vel__regel" style="width:40%; margin:0 auto;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- ===== ALLE DIENSTEN INDEX ===== -->
+  <section class="sectie dp-index">
     <div class="container">
-      <div class="streep"></div>
-      <h2 class="sectie-titel">Bestand aanleveren</h2>
-      <p class="sectie-ondertitel">
-        Voor een vlekkeloos drukresultaat is een correct aangeleverd bestand essentieel.
-        Hieronder vindt u onze technische vereisten.
-      </p>
-
-      <div class="spec-raster">
-
-        <div class="spec-kaart">
-
-          <h3>Bestandsformaat: PDF</h3>
-          <p>Lever uw bestand aan als <strong>PDF/X-1a of PDF/X-4</strong>. Dit zijn de meest betrouwbare formaten voor druk, waarbij lettertypen zijn ingesloten en kleuren correct zijn vastgelegd. Andere formaten zoals Word, PowerPoint of JPEG kunnen afwijkingen veroorzaken.</p>
-        </div>
-
-        <div class="spec-kaart">
-
-          <h3>Kleurprofiel: CMYK</h3>
-          <p>Gebruik altijd het <strong>CMYK-kleurprofiel</strong> (Cyan, Magenta, Yellow, Key/Black). RGB-kleuren zijn bedoeld voor schermen en zien er bij druk anders uit — soms significant donkerder of minder verzadigd. Controleer uw kleurinstellingen vóór het exporteren.</p>
-        </div>
-
-        <div class="spec-kaart">
-
-          <h3>Afloop: 3 mm</h3>
-          <p>Voeg aan alle zijden <strong>3 mm afloop (bleed)</strong> toe. Dit is de extra rand buiten het snijformaat die voorkomt dat er witte randjes ontstaan na het snijden. Achtergrondkleuren en afbeeldingen die tot aan de rand lopen, moeten tot in de afloop doorlopen.</p>
-        </div>
-
-        <div class="spec-kaart">
-
-          <h3>Snijtekens</h3>
-          <p>Voeg <strong>snijtekens (crop marks)</strong> toe aan uw PDF. Deze kleine lijntjes buiten het formaat geven onze drukkers aan waar het materiaal na het drukken precies doorgesneden moet worden. In de meeste programma's kunt u dit aanvinken bij het exporteren naar PDF.</p>
-        </div>
-
-        <div class="spec-kaart">
-
-          <h3>Resolutie: minimaal 300 DPI</h3>
-          <p>Zorg dat alle afbeeldingen in uw bestand een resolutie hebben van <strong>minimaal 300 DPI</strong> op het uiteindelijke drukformaat. Afbeeldingen van websites (72–96 DPI) zijn nooit geschikt voor druk — deze zien er wazig en korrelig uit op papier.</p>
-        </div>
-
-        <div class="spec-kaart">
-
-          <h3>Lettertypen insluiten</h3>
-          <p>Sluit alle lettertypen in uw PDF in (<em>embed fonts</em>). Zo voorkomen wij dat tekst verschuift of vervangen wordt door een standaardlettertype als het gebruikte font niet op onze systemen staat. Bij export naar PDF/X wordt dit automatisch gedaan.</p>
-        </div>
-
+      <span class="dp-kicker">En nog veel meer</span>
+      <h2 class="dp-titel dp-index__titel">Alle diensten, één adres.</h2>
+      <div class="dp-index__raster">
+        <a href="contact.html" class="dp-index__rij"><img src="Mailings.png" alt="" /><span class="dp-index__naam">Mailings</span><span class="dp-index__sub">Gepersonaliseerde post op grote schaal</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Roll-banners.png" alt="" /><span class="dp-index__naam">Roll-banners</span><span class="dp-index__sub">85 × 200 cm, inclusief cassette en tas</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Canvas.png" alt="" /><span class="dp-index__naam">Canvas</span><span class="dp-index__sub">Foto's op doek, op frame of opgerold</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Displays.png" alt="" /><span class="dp-index__naam">Displays</span><span class="dp-index__sub">Toonbank- en vloerdisplays op maat</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Belettering.png" alt="" /><span class="dp-index__naam">Belettering</span><span class="dp-index__sub">Voertuig- en gevelreclame in vinyl</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Bouwtekeningen.png" alt="" /><span class="dp-index__naam">Bouwtekeningen</span><span class="dp-index__sub">Groot formaat, schaalnauwkeurig</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Mappen.png" alt="" /><span class="dp-index__naam">Mappen</span><span class="dp-index__sub">Presentatiemappen in uw huisstijl</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Sets-&-bloks.png" alt="" /><span class="dp-index__naam">Sets &amp; Bloks</span><span class="dp-index__sub">Formulieren en notitieblokken</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Stempels.png" alt="" /><span class="dp-index__naam">Stempels</span><span class="dp-index__sub">Zelfinktend, met logo of tekst</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Fotoboeken.png" alt="" /><span class="dp-index__naam">Fotoboeken</span><span class="dp-index__sub">Herinneringen professioneel gebonden</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Fotoservice.png" alt="" /><span class="dp-index__naam">Fotoservice</span><span class="dp-index__sub">Prints in elk formaat, glans of mat</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Full-color.png" alt="" /><span class="dp-index__naam">Full-colour</span><span class="dp-index__sub">CMYK en Pantone, kleurnauwkeurig</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Zwart-Wit.png" alt="" /><span class="dp-index__naam">Zwart-wit</span><span class="dp-index__sub">Documenten en rapporten, snel en voordelig</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Eigen-ontwerp.png" alt="" /><span class="dp-index__naam">Eigen ontwerp</span><span class="dp-index__sub">Gratis bestandscontrole vóór het drukken</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Layout.png" alt="" /><span class="dp-index__naam">Opmaak &amp; layout</span><span class="dp-index__sub">Wij maken uw bestand drukklaar</span><span class="dp-index__pijl">→</span></a>
+        <a href="contact.html" class="dp-index__rij"><img src="Afwerking.png" alt="" /><span class="dp-index__naam">Afwerking</span><span class="dp-index__sub">Lamineren, rillen, snijden, inbinden</span><span class="dp-index__pijl">→</span></a>
       </div>
-
-      <!-- Hulp bij aanleveren -->
-      <div class="spec-hulp">
-        <div class="spec-hulp__tekst">
-          <h3>Lukt het aanleveren niet? Wij helpen u graag.</h3>
-          <p>
-            Niet iedereen heeft grafische software of kennis van drukspecificaties — en dat is volkomen begrijpelijk.
-            Ons team staat klaar om uw bestand drukklaar te maken. Of het nu gaat om het omzetten naar CMYK,
-            het toevoegen van afloop, het corrigeren van de resolutie of het volledig opmaken van uw ontwerp:
-            <strong>wij regelen het voor een kleine vergoeding</strong>. Zo weet u zeker dat uw drukwerk er
-            precies uitziet zoals u het voor ogen heeft.
-          </p>
-          <a href="contact.html" class="knop knop--primair" style="margin-top:20px; display:inline-block;">Vraag bestandshulp aan</a>
-        </div>
-        <div class="spec-hulp__icoon">🛠️</div>
-      </div>
-
     </div>
   </section>
 
-  <!-- ===== WERKWIJZE ===== -->
-  <section class="sectie sectie--grijs">
-    <div class="container">
-      <div style="text-align:center; margin-bottom:48px;">
-        <div class="streep" style="margin:0 auto 16px;"></div>
-        <h2 class="sectie-titel">Hoe werkt het?</h2>
-        <p class="sectie-ondertitel" style="margin:0 auto;">
-          In vier eenvoudige stappen van opdracht tot aflevering.
-        </p>
+  <!-- ===== PRODUCTIEPROCES (horizontaal) ===== -->
+  <section class="dp-proces">
+    <div class="dp-proces__pin">
+      <div class="container dp-proces__kop">
+        <span class="dp-kicker">Van idee tot levering</span>
+        <h2 class="dp-titel">Zo werken wij.</h2>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:32px; text-align:center;">
-        <div>
-          <div style="width:72px;height:72px;background:var(--blauw-licht);border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;font-size:1.75rem;color:var(--wit);font-weight:800;">1</div>
-          <h3 style="color:var(--blauw-donker);font-size:1.05rem;margin-bottom:8px;">Aanvraag</h3>
-          <p style="color:#4a5568;font-size:0.9rem;">Bel of mail ons vrijblijvend — wij reageren dezelfde werkdag nog.</p>
+      <div class="dp-proces__lijn"><span class="dp-proces__lijn-vulling"></span></div>
+      <div class="dp-proces__spoor">
+        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">1</span><h3>Idee</h3><p>U vertelt wat u nodig heeft — telefonisch, per mail of aan de balie. Wij denken direct mee.</p></div></div>
+        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">2</span><h3>Ontwerp</h3><p>Eigen bestand of ontwerp door ons team: samen komen we tot een drukklaar resultaat.</p></div></div>
+        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">3</span><h3>Controle</h3><p>Wij controleren elk bestand gratis op resolutie, kleur en afloop vóór er iets gedrukt wordt.</p></div></div>
+        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">4</span><h3>Productie</h3><p>Digitaal of offset — op moderne persen, met de zorg van ruim zestig jaar vakmanschap.</p></div></div>
+        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">5</span><h3>Afwerking</h3><p>Snijden, rillen, vouwen, lamineren of inbinden: de finishing touch gebeurt in eigen huis.</p></div></div>
+        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">6</span><h3>Levering</h3><p>Dezelfde werkdag ophalen in 's-Gravendeel, of verzending via UPS door heel Nederland.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MATERIALEN ===== -->
+  <section class="sectie dp-materialen">
+    <div class="container">
+      <span class="dp-kicker">Voel het verschil</span>
+      <h2 class="dp-titel">Papier &amp; afwerking.</h2>
+      <p class="dp-alinea dp-materialen__intro">
+        Hetzelfde ontwerp voelt totaal anders op ander papier. Beweeg over de
+        stalen en ontdek wat bij uw drukwerk past.
+      </p>
+      <div class="dp-materialen__raster">
+        <div class="dp-mat dp-mat--structuur">
+          <div class="dp-mat__vlak"><span class="dp-mat__glans"></span></div>
+          <h3>Structuurpapier</h3>
+          <p>Voelbare linnen- of hamerslagstructuur voor extra karakter.</p>
         </div>
-        <div>
-          <div style="width:72px;height:72px;background:var(--blauw-licht);border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;font-size:1.75rem;color:var(--wit);font-weight:800;">2</div>
-          <h3 style="color:var(--blauw-donker);font-size:1.05rem;margin-bottom:8px;">Offerte</h3>
-          <p style="color:#4a5568;font-size:0.9rem;">Wij sturen u dezelfde werkdag nog een scherpe offerte op maat — vaak binnen enkele uren.</p>
+        <div class="dp-mat dp-mat--glans">
+          <div class="dp-mat__vlak"><span class="dp-mat__glans"></span></div>
+          <h3>Glanzend</h3>
+          <p>Diepe kleuren en maximaal contrast — ideaal voor foto's.</p>
         </div>
-        <div>
-          <div style="width:72px;height:72px;background:var(--blauw-licht);border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;font-size:1.75rem;color:var(--wit);font-weight:800;">3</div>
-          <h3 style="color:var(--blauw-donker);font-size:1.05rem;margin-bottom:8px;">Productie</h3>
-          <p style="color:#4a5568;font-size:0.9rem;">Na goedkeuring gaan wij direct aan de slag met uw order.</p>
+        <div class="dp-mat dp-mat--mat">
+          <div class="dp-mat__vlak"><span class="dp-mat__glans"></span></div>
+          <h3>Mat</h3>
+          <p>Chique en rustig, zonder spiegeling. Prettig leesbaar.</p>
         </div>
-        <div>
-          <div style="width:72px;height:72px;background:var(--blauw-licht);border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;font-size:1.75rem;color:var(--wit);font-weight:800;">4</div>
-          <h3 style="color:var(--blauw-donker);font-size:1.05rem;margin-bottom:8px;">Levering</h3>
-          <p style="color:#4a5568;font-size:0.9rem;">Uw drukwerk wordt bezorgd of ligt klaar voor afhalen.</p>
+        <div class="dp-mat dp-mat--soft">
+          <div class="dp-mat__vlak"><span class="dp-mat__glans"></span></div>
+          <h3>Soft-touch</h3>
+          <p>Fluweelzacht laminaat dat u wilt blijven vasthouden.</p>
+        </div>
+        <div class="dp-mat dp-mat--folie">
+          <div class="dp-mat__vlak"><span class="dp-mat__folie-tekst">AU</span><span class="dp-mat__glans"></span></div>
+          <h3>Foliedruk</h3>
+          <p>Goud, zilver of koper — metallic accenten die schitteren.</p>
+        </div>
+        <div class="dp-mat dp-mat--relief">
+          <div class="dp-mat__vlak"><span class="dp-mat__relief-tekst">VDH</span><span class="dp-mat__glans"></span></div>
+          <h3>Reliëf &amp; preeg</h3>
+          <p>Verhoogd of verdiept — tekst die u kunt voelen.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="cta-sectie">
+  <!-- ===== WAAROM VAN DEN HERIK ===== -->
+  <section class="dp-waarom">
     <div class="container">
-      <div class="streep" style="margin:0 auto 24px;"></div>
-      <h2 class="sectie-titel">Interesse gewekt?</h2>
-      <p class="sectie-ondertitel" style="margin:0 auto 40px;">
-        Neem vandaag nog contact op voor een vrijblijvende offerte of kom langs in onze drukkerij.
-      </p>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-        <a href="contact.html" class="knop knop--primair" style="background:var(--wit);color:var(--blauw-donker);">Offerte aanvragen</a>
-        <a href="tel:+31786731266" class="knop knop--omlijnd">📞 078 673 12 66</a>
+      <span class="dp-kicker dp-kicker--licht">Waarom Van den Herik</span>
+      <h2 class="dp-titel dp-titel--licht">Drukwerk is vertrouwen.<br />Dat verdienen wij al generaties.</h2>
+      <div class="dp-waarom__tellers">
+        <div class="dp-teller"><span class="dp-teller__getal" data-teller="1961" data-start="1900">1961</span><span class="dp-teller__label">opgericht in 's-Gravendeel</span></div>
+        <div class="dp-teller"><span class="dp-teller__getal" data-teller="90" data-achtervoegsel="%">90%</span><span class="dp-teller__label">dezelfde werkdag klaar of verstuurd</span></div>
+        <div class="dp-teller"><span class="dp-teller__getal" data-teller="30" data-achtervoegsel="+">30+</span><span class="dp-teller__label">drukwerkproducten uit eigen huis</span></div>
       </div>
+      <div class="dp-waarom__lijst">
+        <div class="dp-usp"><span class="dp-usp__nr">01</span><div><h3>Eigen productie</h3><p>Geen tussenpersonen: uw drukwerk wordt hier gemaakt, aan de Mijlweg.</p></div></div>
+        <div class="dp-usp"><span class="dp-usp__nr">02</span><div><h3>Zelfde werkdag mogelijk</h3><p>Voor de middag besteld? Vaak kunt u het 's middags al ophalen.</p></div></div>
+        <div class="dp-usp"><span class="dp-usp__nr">03</span><div><h3>Persoonlijk advies</h3><p>U spreekt met mensen die zelf aan de pers staan — geen callcenter.</p></div></div>
+        <div class="dp-usp"><span class="dp-usp__nr">04</span><div><h3>Kleine én grote oplages</h3><p>Vanaf één exemplaar. Bij grotere aantallen daalt de stuksprijs snel.</p></div></div>
+        <div class="dp-usp"><span class="dp-usp__nr">05</span><div><h3>Moderne druktechnieken</h3><p>Digitaal én offset onder één dak, voor elke oplage de beste keuze.</p></div></div>
+        <div class="dp-usp"><span class="dp-usp__nr">06</span><div><h3>FSC®-gecertificeerd</h3><p>Duurzaam papier, plantaardige inkt en energiezuinige productie.</p></div></div>
+      </div>
+      <div class="dp-waarom__bestand">
+        <p><strong>Bestand aanleveren?</strong> PDF met 3 mm afloop en 300 DPI is perfect.
+        Lukt dat niet — wij maken uw bestand drukklaar voor een kleine vergoeding.</p>
+        <a href="contact.html" class="knop knop--hero-omlijnd">Vraag bestandshulp aan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINALE CTA ===== -->
+  <section class="dp-finale">
+    <div class="dp-finale__pers" aria-hidden="true">
+      <div class="dp-pers__baan"></div>
+      <div class="dp-pers__rol dp-pers__rol--1"></div>
+      <div class="dp-pers__rol dp-pers__rol--2"></div>
+      <div class="dp-pers__inkt">
+        <span class="dp-inkt dp-inkt--c"></span>
+        <span class="dp-inkt dp-inkt--m"></span>
+        <span class="dp-inkt dp-inkt--y"></span>
+        <span class="dp-inkt dp-inkt--k"></span>
+      </div>
+    </div>
+    <div class="container dp-finale__inhoud">
+      <h2 class="dp-finale__titel">Uw volgende drukwerk<br /><span class="dp-hero__accent">begint hier.</span></h2>
+      <p class="dp-finale__sub">Vandaag aangevraagd is meestal vandaag beantwoord — en vaak morgen al in productie.</p>
+      <a href="contact.html" class="knop knop--hero-primair dp-finale__knop">Vraag direct een offerte aan <span class="knop__pijl">→</span></a>
+      <a href="tel:+31786731266" class="dp-finale__tel">of bel 078 673 12 66</a>
     </div>
   </section>
 
@@ -705,19 +469,9 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    document.querySelectorAll('.uitklap-kaart, .uitklap-rij').forEach(function(el) {
-      el.addEventListener('click', function() {
-        var isOpen = el.classList.contains('open');
-        el.classList.toggle('open', !isOpen);
-        el.setAttribute('aria-expanded', !isOpen);
-        el.querySelector('.uitklap-kaart__pijl').textContent = isOpen ? '+' : '×';
-      });
-      el.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
-      });
-    });
-  </script>
+  <script src="js/diensten.js"></script>
 </body>
 </html>
