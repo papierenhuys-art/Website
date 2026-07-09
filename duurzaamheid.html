@@ -3,12 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Duurzaamheid — Drukkerij Van den Herik</title>
-  <meta name="description" content="Drukkerij Van den Herik drukt duurzaam: FSC- en PEFC-gecertificeerd papier, plantaardige inkten en energiezuinige productie. Uw drukwerk met een groen geweten." />
+  <title>Duurzaamheid — Drukkerij Van den Herik | Drukwerk met een groen geweten</title>
+  <meta name="description" content="Drukkerij Van den Herik drukt duurzaam: FSC- en PEFC-gecertificeerd papier, plantaardige inkten, plasticvrije verpakkingen en energiezuinige productie. Ontdek hoe wij verantwoord drukken." />
   <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Duurzaamheid — Drukkerij Van den Herik",
+    "description": "FSC- en PEFC-gecertificeerd papier, plantaardige inkten, plasticvrije verpakkingen en energiezuinige productie.",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "Drukkerij Van den Herik",
+      "telephone": "+31786731266",
+      "email": "info@drukkerijherik.nl",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mijlweg 9i",
+        "postalCode": "3295 KG",
+        "addressLocality": "'s-Gravendeel",
+        "addressCountry": "NL"
+      }
+    }
+  }
+  </script>
 </head>
-<body>
+<body class="pagina-duurzaamheid">
+
+  <div id="scroll-voortgang" aria-hidden="true"></div>
 
   <!-- ===== NAVIGATIE ===== -->
   <nav class="navbar">
@@ -29,274 +55,438 @@
     </div>
   </nav>
 
-  <!-- ===== PAGINAKOP ===== -->
-  <header class="paginakop paginakop--groen">
-    <div class="container kop-flex">
-      <div>
-        <span class="paginakop__badge">🌍 Duurzaam drukken</span>
-        <h1 class="paginakop__titel">Drukwerk met een groen geweten</h1>
-        <p class="paginakop__ondertitel">
-          Duurzaamheid is geen bijzaak voor ons — het zit in elk vel papier, elke druppel inkt
-          en elke beslissing die wij maken. Ontdek hoe Drukkerij Van den Herik verantwoord drukt.
-        </p>
+  <!-- ===== HERO ===== -->
+  <header class="du-hero" id="du-hero">
+    <div class="du-hero__achtergrond" aria-hidden="true">
+      <div class="du-hero__gloed du-hero__gloed--1" data-parallax="0.2"></div>
+      <div class="du-hero__gloed du-hero__gloed--2" data-parallax="0.35"></div>
+
+      <!-- Jaarringen: de groei van een boom, getekend als drukwerk -->
+      <svg class="du-hero__ringen" data-parallax="0.15" viewBox="0 0 600 600" fill="none">
+        <circle cx="300" cy="300" r="90"  stroke="currentColor" stroke-width="1" />
+        <circle cx="300" cy="300" r="150" stroke="currentColor" stroke-width="1" />
+        <circle cx="300" cy="300" r="215" stroke="currentColor" stroke-width="1" />
+        <circle cx="300" cy="300" r="285" stroke="currentColor" stroke-width="1" />
+      </svg>
+
+      <!-- Zwevende papiervellen -->
+      <div class="du-hero__vel du-hero__vel--1" data-parallax="0.5" data-zweef="1"></div>
+      <div class="du-hero__vel du-hero__vel--2" data-parallax="0.75" data-zweef="2"></div>
+
+      <!-- Bladeren -->
+      <svg class="du-blad du-blad--1" data-parallax="0.6" data-zweef="3" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M50 8C26 10 10 26 10 50c0 2 1 4 4 4 24 0 40-16 42-40 0-3-3-6-6-6z" fill="currentColor"/>
+        <path d="M14 50C24 36 36 24 50 14" stroke="rgba(255,255,255,0.35)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      </svg>
+      <svg class="du-blad du-blad--2" data-parallax="0.85" data-zweef="4" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M50 8C26 10 10 26 10 50c0 2 1 4 4 4 24 0 40-16 42-40 0-3-3-6-6-6z" fill="currentColor"/>
+        <path d="M14 50C24 36 36 24 50 14" stroke="rgba(255,255,255,0.3)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      </svg>
+      <svg class="du-blad du-blad--3" data-parallax="0.45" data-zweef="5" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M50 8C26 10 10 26 10 50c0 2 1 4 4 4 24 0 40-16 42-40 0-3-3-6-6-6z" fill="currentColor"/>
+      </svg>
+
+      <div class="du-hero__raster"></div>
+      <div class="du-hero__ruis"></div>
+    </div>
+
+    <div class="container du-hero__inhoud">
+      <span class="du-hero__kicker">Duurzaamheid — drukken met zorg voor morgen</span>
+      <h1 class="du-hero__titel">
+        <span class="du-hero__regel"><span>Drukwerk met een</span></span>
+        <span class="du-hero__regel"><span class="du-hero__accent">groen geweten.</span></span>
+      </h1>
+      <p class="du-hero__intro">
+        Duurzaamheid is geen bijzaak voor ons — het zit in elk vel papier, elke
+        druppel inkt en elke beslissing die wij maken. Ontdek hoe Drukkerij
+        Van den Herik verantwoord drukt.
+      </p>
+      <div class="du-hero__knoppen">
+        <a href="#du-verhaal" class="knop knop--du-primair">Ontdek hoe wij drukken <span class="knop__pijl">→</span></a>
+        <a href="contact.html" class="knop knop--du-omlijnd">Vraag advies aan</a>
       </div>
-      <img src="logo.png" alt="" class="kop-logo" aria-hidden="true" />
+    </div>
+
+    <div class="hero__scrollhint du-hero__scrollhint" aria-hidden="true">
+      <span class="hero__scrollhint-lijn"><span></span></span>
+      <span class="hero__scrollhint-tekst">Scroll</span>
     </div>
   </header>
 
-  <!-- ===== INTRO ===== -->
-  <section class="sectie">
+  <!-- ===== STATEMENT ===== -->
+  <section class="du-statement" aria-label="Ons duurzaamheidsstatement">
     <div class="container">
-      <div class="duurz-intro-rij">
-        <div class="duurz-intro-tekst">
-          <div class="streep streep--groen"></div>
-          <h2 class="sectie-titel">Waarom duurzaamheid ons aan het hart gaat</h2>
-          <p>
-            Als drukkerij verwerken wij dagelijks grote hoeveelheden papier, inkt en energie.
-            Dat brengt verantwoordelijkheid met zich mee. Al jaren investeren wij bewust in
-            milieuvriendelijkere alternatieven — niet omdat het verplicht is, maar omdat wij
-            geloven dat goed ondernemen verder gaat dan de winst- en verliesrekening.
-          </p>
-          <p>
-            Van de grondstof tot de verpakking: wij kijken kritisch naar elke schakel in ons
-            productieproces. Zo helpen wij onze klanten om met een gerust geweten te kiezen
-            voor professioneel drukwerk.
-          </p>
+      <p class="du-statement__tekst" data-woorden>
+        Papier komt van bomen. Wie daar dagelijks mee werkt, draagt een
+        verantwoordelijkheid. Daarom kijken wij kritisch naar elke schakel
+        — van grondstof tot verpakking, al meer dan zestig jaar.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== WAAROM ===== -->
+  <section class="du-intro" id="du-verhaal">
+    <div class="container du-intro__raster">
+      <div class="du-intro__tekst">
+        <span class="du-kicker">Onze overtuiging</span>
+        <h2 class="du-titel">Waarom duurzaamheid ons<br />aan het hart gaat.</h2>
+        <p class="du-alinea">
+          Als drukkerij verwerken wij dagelijks grote hoeveelheden papier, inkt
+          en energie. Dat brengt verantwoordelijkheid met zich mee. Al jaren
+          investeren wij bewust in milieuvriendelijkere alternatieven — niet
+          omdat het verplicht is, maar omdat wij geloven dat goed ondernemen
+          verder gaat dan de winst- en verliesrekening.
+        </p>
+        <p class="du-alinea">
+          Van de grondstof tot de verpakking: wij kijken kritisch naar elke
+          schakel in ons productieproces. Zo helpen wij onze klanten om met een
+          gerust geweten te kiezen voor professioneel drukwerk.
+        </p>
+        <ul class="du-punten">
+          <li>Gecertificeerd papier als standaard, niet als optie</li>
+          <li>Plantaardige inkten voor vrijwel al ons drukwerk</li>
+          <li>Verpakken zonder plastic — al jaren</li>
+        </ul>
+      </div>
+      <div class="du-intro__visueel" aria-hidden="true">
+        <div class="du-scene">
+          <div class="du-scene__zoom">
+            <div class="du-scene__vel du-scene__vel--1"></div>
+            <div class="du-scene__vel du-scene__vel--2"></div>
+            <div class="du-scene__vel du-scene__vel--3">
+              <svg class="du-scene__blad" viewBox="0 0 64 64">
+                <path d="M50 8C26 10 10 26 10 50c0 2 1 4 4 4 24 0 40-16 42-40 0-3-3-6-6-6z" fill="currentColor"/>
+                <path d="M14 50C24 36 36 24 50 14" stroke="rgba(255,255,255,0.5)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <span class="du-scene__label">Van grondstof tot eindproduct</span>
         </div>
-        <div class="duurz-intro-stats">
-          <div class="duurz-stat">
-            <div class="duurz-stat__getal">100%</div>
-            <div class="duurz-stat__label">FSC- of PEFC-gecertificeerd papier beschikbaar</div>
-          </div>
-          <div class="duurz-stat">
-            <div class="duurz-stat__getal">0</div>
-            <div class="duurz-stat__label">Gebruik van plastic verpakkingsmateriaal</div>
-          </div>
-          <div class="duurz-stat">
-            <div class="duurz-stat__getal">↓40%</div>
-            <div class="duurz-stat__label">Minder energieverbruik t.o.v. traditioneel offset</div>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CIJFERS ===== -->
+  <section class="du-cijfers" aria-label="Duurzaamheid in cijfers">
+    <div class="du-cijfers__achtergrond" aria-hidden="true">
+      <svg class="du-cijfers__ringen" viewBox="0 0 600 600" fill="none">
+        <circle cx="300" cy="300" r="120" stroke="currentColor" stroke-width="1" />
+        <circle cx="300" cy="300" r="200" stroke="currentColor" stroke-width="1" />
+        <circle cx="300" cy="300" r="285" stroke="currentColor" stroke-width="1" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="du-cijfers__kop">
+        <span class="du-kicker du-kicker--licht">Duurzaamheid in cijfers</span>
+        <h2 class="du-titel du-titel--licht">Geen beloftes,<br />maar meetbare keuzes.</h2>
+      </div>
+      <div class="du-cijfers__raster">
+        <div class="du-cijfer">
+          <svg class="du-cijfer__boog" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+            <circle class="du-cijfer__boog-vulling" cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+          </svg>
+          <div class="du-cijfer__getal"><span data-teller="100" data-achtervoegsel="%">100%</span></div>
+          <h3 class="du-cijfer__label">FSC®- of PEFC-papier</h3>
+          <p class="du-cijfer__toelichting">Gecertificeerd papier beschikbaar voor elke opdracht — van visitekaartje tot brochure.</p>
+        </div>
+        <div class="du-cijfer">
+          <svg class="du-cijfer__boog" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+            <circle class="du-cijfer__boog-vulling" cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+          </svg>
+          <div class="du-cijfer__getal"><span data-teller="0" data-start="25">0</span></div>
+          <h3 class="du-cijfer__label">Plastic verpakkingen</h3>
+          <p class="du-cijfer__toelichting">Uw bestelling verlaat ons pand in karton en papier — zonder folie of piepschuim.</p>
+        </div>
+        <div class="du-cijfer">
+          <svg class="du-cijfer__boog" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+            <circle class="du-cijfer__boog-vulling" cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+          </svg>
+          <div class="du-cijfer__getal"><span class="du-cijfer__voorvoegsel">−</span><span data-teller="40" data-achtervoegsel="%">40%</span></div>
+          <h3 class="du-cijfer__label">Minder energieverbruik</h3>
+          <p class="du-cijfer__toelichting">Onze digitale persen verbruiken tot 40% minder energie dan traditioneel offset.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== CERTIFICERINGEN ===== -->
-  <section class="sectie sectie--grijs">
+  <section class="du-certs" aria-label="Onze certificeringen">
     <div class="container">
-      <div class="streep streep--groen"></div>
-      <h2 class="sectie-titel">Onze certificeringen</h2>
-      <p class="sectie-ondertitel">
-        Duurzame claims zijn pas geloofwaardig als ze worden ondersteund door onafhankelijke controle.
-        Wij werken uitsluitend met papier en materialen die zijn gecertificeerd door erkende instanties.
-      </p>
+      <div class="du-certs__kop">
+        <span class="du-kicker">Onafhankelijk gecontroleerd</span>
+        <h2 class="du-titel">Certificeringen die<br />er werkelijk toe doen.</h2>
+        <p class="du-alinea du-certs__intro">
+          Duurzame claims zijn pas geloofwaardig als ze worden ondersteund door
+          onafhankelijke controle. Wij werken uitsluitend met papier en materialen
+          die zijn gecertificeerd door erkende instanties.
+        </p>
+      </div>
 
-      <div class="cert-raster">
+      <div class="du-certs__lijst">
 
-        <div class="uitklap-kaart" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-kaart__hoofd">
-            <div class="uitklap-kaart__icoon">🌲</div>
-            <div class="uitklap-kaart__titels">
-              <h3 class="uitklap-kaart__naam">FSC®</h3>
-              <p class="uitklap-kaart__sub">Forest Stewardship Council</p>
-            </div>
-            <span class="uitklap-kaart__pijl">+</span>
+        <article class="du-cert">
+          <div class="du-cert__zegel" aria-hidden="true">
+            <svg class="du-cert__zegel-ring" viewBox="0 0 120 120" fill="none">
+              <circle cx="60" cy="60" r="57" stroke="currentColor" stroke-width="1" stroke-dasharray="4 7" stroke-linecap="round"/>
+            </svg>
+            <svg class="du-cert__zegel-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3 7 10h3l-4 6h4v5h4v-5h4l-4-6h3z"/>
+            </svg>
+            <span class="du-cert__nummer">01</span>
           </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Het FSC-keurmerk is de wereldwijd meest erkende standaard voor verantwoord bosbeheer.
-            FSC-gecertificeerd papier garandeert dat het hout afkomstig is uit bossen die worden
-            beheerd met oog voor biodiversiteit, arbeidsrechten en de belangen van lokale gemeenschappen.
-            Op elk FSC-product staat een uniek licentienummer waarmee de herkomst traceerbaar is.</p>
-            <ul class="cert-kaart__punten">
-              <li>✔ Traceerbare houtketen</li>
-              <li>✔ Bescherming van bedreigde bossen</li>
-              <li>✔ Rechten van arbeiders en inheemse volkeren</li>
-              <li>✔ Verbod op genetisch gemanipuleerd hout</li>
+          <div class="du-cert__info">
+            <div class="du-cert__naamblok">
+              <h3 class="du-cert__naam">FSC®</h3>
+              <p class="du-cert__voluit">Forest Stewardship Council</p>
+            </div>
+            <p class="du-cert__tekst">
+              Het FSC-keurmerk is de wereldwijd meest erkende standaard voor
+              verantwoord bosbeheer. FSC-gecertificeerd papier garandeert dat het
+              hout afkomstig is uit bossen die worden beheerd met oog voor
+              biodiversiteit, arbeidsrechten en de belangen van lokale
+              gemeenschappen. Op elk FSC-product staat een uniek licentienummer
+              waarmee de herkomst traceerbaar is.
+            </p>
+            <ul class="du-cert__punten">
+              <li>Traceerbare houtketen</li>
+              <li>Bescherming van bedreigde bossen</li>
+              <li>Rechten van arbeiders en inheemse volkeren</li>
+              <li>Verbod op genetisch gemanipuleerd hout</li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="uitklap-kaart" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-kaart__hoofd">
-            <div class="uitklap-kaart__icoon">🏷️</div>
-            <div class="uitklap-kaart__titels">
-              <h3 class="uitklap-kaart__naam">PEFC</h3>
-              <p class="uitklap-kaart__sub">Programme for the Endorsement of Forest Certification</p>
-            </div>
-            <span class="uitklap-kaart__pijl">+</span>
+        <article class="du-cert">
+          <div class="du-cert__zegel" aria-hidden="true">
+            <svg class="du-cert__zegel-ring" viewBox="0 0 120 120" fill="none">
+              <circle cx="60" cy="60" r="57" stroke="currentColor" stroke-width="1" stroke-dasharray="4 7" stroke-linecap="round"/>
+            </svg>
+            <svg class="du-cert__zegel-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21c-4-1-6-4.5-6-8 0-5 4-9 9-9s9 4 9 9c0 3.5-2 7-6 8"/>
+              <path d="M12 8v13M12 13l-3-3M12 13l3-3"/>
+            </svg>
+            <span class="du-cert__nummer">02</span>
           </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>PEFC is 's werelds grootste bosbouwcertificeringsstelsel. Het keurmerk borgt dat
-            hout en papier afkomstig zijn van duurzaam beheerde bossen, waarbij lokale en nationale
-            regelgeving strikt wordt nageleefd. PEFC werkt nauw samen met bosbeheerders, overheden
-            en maatschappelijke organisaties.</p>
-            <ul class="cert-kaart__punten">
-              <li>✔ Verankerd in nationaal recht</li>
-              <li>✔ Onafhankelijke derde-partijcontrole</li>
-              <li>✔ Focus op kleinschalige bosbeheerders</li>
-              <li>✔ Wereldwijd operationeel in 50+ landen</li>
+          <div class="du-cert__info">
+            <div class="du-cert__naamblok">
+              <h3 class="du-cert__naam">PEFC</h3>
+              <p class="du-cert__voluit">Programme for the Endorsement of Forest Certification</p>
+            </div>
+            <p class="du-cert__tekst">
+              PEFC is 's werelds grootste bosbouwcertificeringsstelsel. Het
+              keurmerk borgt dat hout en papier afkomstig zijn van duurzaam
+              beheerde bossen, waarbij lokale en nationale regelgeving strikt
+              wordt nageleefd. PEFC werkt nauw samen met bosbeheerders, overheden
+              en maatschappelijke organisaties.
+            </p>
+            <ul class="du-cert__punten">
+              <li>Verankerd in nationaal recht</li>
+              <li>Onafhankelijke derde-partijcontrole</li>
+              <li>Focus op kleinschalige bosbeheerders</li>
+              <li>Wereldwijd operationeel in 50+ landen</li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="uitklap-kaart" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-kaart__hoofd">
-            <div class="uitklap-kaart__icoon">♻️</div>
-            <div class="uitklap-kaart__titels">
-              <h3 class="uitklap-kaart__naam">EU Ecolabel</h3>
-              <p class="uitklap-kaart__sub">Europees Milieukeurmerk voor papierproducten</p>
-            </div>
-            <span class="uitklap-kaart__pijl">+</span>
+        <article class="du-cert">
+          <div class="du-cert__zegel" aria-hidden="true">
+            <svg class="du-cert__zegel-ring" viewBox="0 0 120 120" fill="none">
+              <circle cx="60" cy="60" r="57" stroke="currentColor" stroke-width="1" stroke-dasharray="4 7" stroke-linecap="round"/>
+            </svg>
+            <svg class="du-cert__zegel-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 5.5A8.5 8.5 0 1 0 20.5 12"/>
+              <path d="M20.5 5.5 12 14l-2.5-2.5"/>
+            </svg>
+            <span class="du-cert__nummer">03</span>
           </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Een selectie van ons papieraanbod beschikt over het EU Ecolabel — het officiële
-            milieukeurmerk van de Europese Unie. Dit keurmerk stelt hoge eisen aan de volledige
-            levenscyclus van het product: van grondstof tot afvalverwerking, inclusief energie-
-            en waterverbruik tijdens de productie.</p>
-            <ul class="cert-kaart__punten">
-              <li>✔ Lager energie- en waterverbruik bij productie</li>
-              <li>✔ Beperking van gevaarlijke stoffen</li>
-              <li>✔ Criteria voor hergebruik en recycling</li>
-              <li>✔ Onafhankelijk geverifieerd door EU-instanties</li>
+          <div class="du-cert__info">
+            <div class="du-cert__naamblok">
+              <h3 class="du-cert__naam">EU Ecolabel</h3>
+              <p class="du-cert__voluit">Europees milieukeurmerk voor papierproducten</p>
+            </div>
+            <p class="du-cert__tekst">
+              Een selectie van ons papieraanbod beschikt over het EU Ecolabel —
+              het officiële milieukeurmerk van de Europese Unie. Dit keurmerk
+              stelt hoge eisen aan de volledige levenscyclus van het product: van
+              grondstof tot afvalverwerking, inclusief energie- en waterverbruik
+              tijdens de productie.
+            </p>
+            <ul class="du-cert__punten">
+              <li>Lager energie- en waterverbruik bij productie</li>
+              <li>Beperking van gevaarlijke stoffen</li>
+              <li>Criteria voor hergebruik en recycling</li>
+              <li>Onafhankelijk geverifieerd door EU-instanties</li>
             </ul>
           </div>
-        </div>
+        </article>
 
       </div>
     </div>
   </section>
 
   <!-- ===== MATERIALEN ===== -->
-  <section class="sectie">
+  <section class="du-materialen" aria-label="Milieuvriendelijke materialen">
     <div class="container">
-      <div class="streep streep--groen"></div>
-      <h2 class="sectie-titel">Milieuvriendelijke materialen</h2>
-      <p class="sectie-ondertitel">
-        Naast gecertificeerd houtpulp bieden wij een breed scala aan duurzame papiersoorten
-        en milieuvriendelijke inkten voor elk type drukwerk.
-      </p>
+      <div class="du-materialen__kop">
+        <span class="du-kicker">Bewuste materiaalkeuze</span>
+        <h2 class="du-titel">Materialen die u<br />bijna kunt voelen.</h2>
+        <p class="du-alinea du-materialen__intro">
+          Naast gecertificeerd houtpulp bieden wij een breed scala aan duurzame
+          papiersoorten en milieuvriendelijke inkten voor elk type drukwerk.
+        </p>
+      </div>
 
-      <div class="uitklap-lijst">
+      <div class="du-materialen__raster">
 
-        <div class="uitklap-rij" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon">🌿</span>
-            <h3 class="uitklap-rij__titel">Gerecycled papier</h3>
-            <span class="uitklap-kaart__pijl">+</span>
+        <article class="du-materiaal" data-kantel>
+          <div class="du-materiaal__staal du-materiaal__staal--gerecycled" aria-hidden="true">
+            <div class="du-materiaal__textuur"></div>
+            <svg class="du-materiaal__icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21c-4.5-2-8-5.5-8-10a8 8 0 0 1 16 0c0 4.5-3.5 8-8 10z"/>
+              <path d="M12 21c3-4 3-12 0-16-3 4-3 12 0 16z"/>
+            </svg>
           </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Ons gerecycled papier bevat minimaal 50–100% post-consumer gerecycled vezels.
-            Door het gebruik van oud papier als grondstof wordt de vraag naar vers hout
-            verminderd, het waterverbruik gehalveerd en de CO₂-uitstoot met meer dan 30%
-            verlaagd ten opzichte van maagdelijk papier.</p>
-            <p style="margin-top:10px;">Beschikbare soorten: gerecycled offsetpapier (80–300 g/m²), gerecycled
-            kraftpapier voor verpakkingen en gerecycled karton voor dozen en omslagen.</p>
+          <div class="du-materiaal__inhoud">
+            <h3 class="du-materiaal__titel">Gerecycled papier</h3>
+            <p class="du-materiaal__tekst">
+              Minimaal 50–100% post-consumer gerecyclede vezels. Minder vraag
+              naar vers hout, de helft minder waterverbruik en ruim 30% minder
+              CO₂-uitstoot dan maagdelijk papier.
+            </p>
+            <p class="du-materiaal__detail">Offsetpapier 80–300 g/m² · kraftpapier · gerecycled karton</p>
           </div>
-        </div>
+        </article>
 
-        <div class="uitklap-rij" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon">🌾</span>
-            <h3 class="uitklap-rij__titel">Agropapier</h3>
-            <span class="uitklap-kaart__pijl">+</span>
+        <article class="du-materiaal" data-kantel>
+          <div class="du-materiaal__staal du-materiaal__staal--agro" aria-hidden="true">
+            <div class="du-materiaal__textuur"></div>
+            <svg class="du-materiaal__icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22V8"/>
+              <path d="M12 8c0-3.5 2.5-6 6-6 0 3.5-2.5 6-6 6zM12 14c0-3.5-2.5-6-6-6 0 3.5 2.5 6 6 6z"/>
+            </svg>
           </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Een innovatief alternatief: papier gemaakt van landbouwresten zoals stro,
-            suikerriet of graanstengels. Bij de productie van agropapier wordt géén
-            hout gebruikt — ideaal voor opdrachtgevers die volledig bos-neutraal willen drukken.</p>
-            <p style="margin-top:10px;">Beschikbaar als offsetpapier en voor eenvoudige verpakkingen. Vraag naar
-            de mogelijkheden voor uw specifieke opdracht.</p>
+          <div class="du-materiaal__inhoud">
+            <h3 class="du-materiaal__titel">Agropapier</h3>
+            <p class="du-materiaal__tekst">
+              Papier van landbouwresten zoals stro, suikerriet of graanstengels.
+              Volledig hout-vrij geproduceerd — ideaal voor opdrachtgevers die
+              bos-neutraal willen drukken.
+            </p>
+            <p class="du-materiaal__detail">Offsetpapier · eenvoudige verpakkingen · op aanvraag</p>
           </div>
-        </div>
+        </article>
 
-        <div class="uitklap-rij" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon">🎨</span>
-            <h3 class="uitklap-rij__titel">Plantaardige en watergedragen inkten</h3>
-            <span class="uitklap-kaart__pijl">+</span>
+        <article class="du-materiaal" data-kantel>
+          <div class="du-materiaal__staal du-materiaal__staal--inkt" aria-hidden="true">
+            <div class="du-materiaal__textuur"></div>
+            <svg class="du-materiaal__icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3c3 4 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 3-7 6-11z"/>
+              <path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/>
+            </svg>
           </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Traditionele drukinkten bevatten minerale oliën die vluchtige organische
-            stoffen (VOS) uitstoten. Wij werken standaard met <strong>plantaardige
-            soja- en lijnzaadinkt</strong> voor offsetdruk en <strong>watergedragen
-            inkten</strong> voor digitale productie.</p>
-            <p style="margin-top:10px;">Voordelen: minder emissies, levendiger kleuren, makkelijker te deinken
-            bij recycling en volledig biologisch afbreekbaar.</p>
+          <div class="du-materiaal__inhoud">
+            <h3 class="du-materiaal__titel">Plantaardige inkten</h3>
+            <p class="du-materiaal__tekst">
+              Soja- en lijnzaadinkt voor offsetdruk, watergedragen inkten voor
+              digitaal. Minder emissies, levendiger kleuren en volledig
+              biologisch afbreekbaar.
+            </p>
+            <p class="du-materiaal__detail">Standaard bij offset · makkelijker te de-inken bij recycling</p>
           </div>
-        </div>
+        </article>
 
-        <div class="uitklap-rij" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon">📦</span>
-            <h3 class="uitklap-rij__titel">Recyclebare verpakking</h3>
-            <span class="uitklap-kaart__pijl">+</span>
+        <article class="du-materiaal" data-kantel>
+          <div class="du-materiaal__staal du-materiaal__staal--verpakking" aria-hidden="true">
+            <div class="du-materiaal__textuur"></div>
+            <svg class="du-materiaal__icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 8 12 3 3 8v8l9 5 9-5z"/>
+              <path d="M3 8l9 5 9-5M12 13v8"/>
+            </svg>
           </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Uw bestelling wordt verpakt in kartonnen dozen van gerecycled materiaal,
-            met papieren vulling in plaats van plastic piepschuim of luchtbelfolie.
-            Onze tape is op waterbasis en volledig recyclebaar samen met het karton.</p>
-            <p style="margin-top:10px;">Wij streven naar verpakkingen die direct in de papierbak kunnen — zonder
-            sorteren of scheiden.</p>
+          <div class="du-materiaal__inhoud">
+            <h3 class="du-materiaal__titel">Recyclebare verpakking</h3>
+            <p class="du-materiaal__tekst">
+              Kartonnen dozen van gerecycled materiaal met papieren vulling —
+              geen piepschuim of luchtbelfolie. Onze tape is op waterbasis en
+              recyclebaar samen met het karton.
+            </p>
+            <p class="du-materiaal__detail">Direct in de papierbak — zonder sorteren of scheiden</p>
           </div>
-        </div>
+        </article>
 
       </div>
     </div>
   </section>
 
-  <!-- ===== ENERGIE & PRODUCTIE ===== -->
-  <section class="sectie sectie--grijs">
+  <!-- ===== PRODUCTIEPROCES ===== -->
+  <section class="du-proces" aria-label="Duurzame productie">
     <div class="container">
-      <div class="streep streep--groen"></div>
-      <h2 class="sectie-titel">Energie &amp; productie</h2>
-      <p class="sectie-ondertitel">
-        De keuze voor moderne productietechnologie is niet alleen goed voor de kwaliteit —
-        het is ook aanzienlijk beter voor het milieu.
-      </p>
+      <div class="du-proces__kop">
+        <span class="du-kicker du-kicker--licht">Energie &amp; productie</span>
+        <h2 class="du-titel du-titel--licht">Duurzaam in elke stap<br />van het proces.</h2>
+        <p class="du-alinea du-alinea--licht du-proces__intro">
+          De keuze voor moderne productietechnologie is niet alleen goed voor de
+          kwaliteit — het is ook aanzienlijk beter voor het milieu.
+        </p>
+      </div>
 
-      <div class="uitklap-lijst">
+      <div class="du-stappen">
+        <div class="du-stappen__lijn" aria-hidden="true"><span class="du-stappen__lijn-vulling"></span></div>
 
-        <div class="uitklap-rij" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon">⚡</span>
-            <h3 class="uitklap-rij__titel">Digitale pers</h3>
-            <span class="uitklap-kaart__pijl">+</span>
+        <div class="du-stap">
+          <div class="du-stap__punt" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2 4 14h6l-1 8 9-12h-6z"/>
+            </svg>
           </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Onze digitale drukpersen verbruiken tot 40% minder energie per gedrukt exemplaar dan traditionele offsetpersen. Bovendien is er geen filmbelichting, geen aanmaakwaste en geen chemische ontwikkeling nodig.</p>
+          <div class="du-stap__kaart">
+            <span class="du-stap__nummer">Stap 01</span>
+            <h3>Energiezuinig drukken</h3>
+            <p>Onze digitale drukpersen verbruiken tot 40% minder energie per gedrukt exemplaar dan traditionele offsetpersen. Geen filmbelichting, geen aanmaakwaste en geen chemische ontwikkeling.</p>
           </div>
         </div>
 
-        <div class="uitklap-rij" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon">🔄</span>
-            <h3 class="uitklap-rij__titel">Print-on-demand</h3>
-            <span class="uitklap-kaart__pijl">+</span>
+        <div class="du-stap">
+          <div class="du-stap__punt" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 12a8 8 0 1 1-2.3-5.6M20 3v4h-4"/>
+            </svg>
           </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Door exact op bestelling te drukken vermijden wij overproductie. Geen stapels ongebruikte drukwerken op magazijn — wat u bestelt, wordt gedrukt. Minder verspilling van materiaal en energie.</p>
+          <div class="du-stap__kaart">
+            <span class="du-stap__nummer">Stap 02</span>
+            <h3>Print-on-demand</h3>
+            <p>Door exact op bestelling te drukken vermijden wij overproductie. Geen stapels ongebruikt drukwerk in het magazijn — wat u bestelt, wordt gedrukt. Minder verspilling van materiaal en energie.</p>
           </div>
         </div>
 
-        <div class="uitklap-rij" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon">🗑️</span>
-            <h3 class="uitklap-rij__titel">Papierverspilling minimaliseren</h3>
-            <span class="uitklap-kaart__pijl">+</span>
+        <div class="du-stap">
+          <div class="du-stap__punt" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 19a4 4 0 0 1-1-7.9A5.5 5.5 0 0 1 16.7 9 4.5 4.5 0 0 1 17 18"/>
+              <path d="M12 12v9M12 21l-3-3M12 21l3-3"/>
+            </svg>
           </div>
-          <div class="uitklap-kaart__lichaam">
+          <div class="du-stap__kaart">
+            <span class="du-stap__nummer">Stap 03</span>
+            <h3>Niets naar het restafval</h3>
             <p>Snijresten en misdrukken worden ingezameld en aangeboden aan erkende papierrecyclagebedrijven. Geen papierrestant gaat bij ons rechtstreeks naar het restafval.</p>
           </div>
         </div>
 
-        <div class="uitklap-rij" tabindex="0" role="button" aria-expanded="false">
-          <div class="uitklap-rij__hoofd">
-            <span class="uitklap-rij__icoon">🚚</span>
-            <h3 class="uitklap-rij__titel">Lokaal &amp; efficiënt transport</h3>
-            <span class="uitklap-kaart__pijl">+</span>
+        <div class="du-stap">
+          <div class="du-stap__punt" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 8h13v9H1zM14 11h4l3 3v3h-7z"/>
+              <circle cx="5.5" cy="19" r="1.8"/><circle cx="17.5" cy="19" r="1.8"/>
+            </svg>
           </div>
-          <div class="uitklap-kaart__lichaam">
-            <p>Wij bundelen leveringen waar mogelijk en werken samen met transportpartners die actief inzetten op CO₂-reductie. Voor klanten in de regio bieden wij afhalen aan als emissievrij alternatief.</p>
+          <div class="du-stap__kaart">
+            <span class="du-stap__nummer">Stap 04</span>
+            <h3>Lokaal &amp; efficiënt transport</h3>
+            <p>Wij bundelen leveringen waar mogelijk en werken met transportpartners die actief inzetten op CO₂-reductie. Voor klanten in de regio is afhalen het emissievrije alternatief.</p>
           </div>
         </div>
 
@@ -304,25 +494,80 @@
     </div>
   </section>
 
-  <!-- ===== GROENE KEUZE ===== -->
-  <section class="sectie duurzaamheid-sectie">
-    <div class="container" style="text-align:center;">
-      <div class="streep streep--groen" style="margin: 0 auto 24px;"></div>
-      <h2 class="sectie-titel">Maak de groene keuze voor uw drukwerk</h2>
-      <p class="sectie-ondertitel" style="margin: 0 auto 40px;">
-        Wilt u uw volgende drukproject duurzaam laten uitvoeren? Wij adviseren u graag over de
-        meest milieuvriendelijke papiersoort, inkt en afwerking die past bij uw wensen en budget.
+  <!-- ===== VERTROUWEN ===== -->
+  <section class="du-vertrouwen" aria-label="Waar u op kunt vertrouwen">
+    <div class="container">
+      <div class="du-vertrouwen__kop">
+        <span class="du-kicker">Waar u op kunt rekenen</span>
+        <h2 class="du-titel">Duurzaam, zonder concessies<br />aan kwaliteit.</h2>
+      </div>
+      <div class="du-vertrouwen__raster">
+        <div class="du-belofte">
+          <span class="du-belofte__nummer">01</span>
+          <h3>Verantwoord geproduceerd</h3>
+          <p>Elke opdracht wordt gedrukt met oog voor mens, materiaal en milieu — van klein tot groot.</p>
+        </div>
+        <div class="du-belofte">
+          <span class="du-belofte__nummer">02</span>
+          <h3>Moderne machines</h3>
+          <p>Digitale én offsetpersen van de nieuwste generatie: zuiniger, stiller en schoner.</p>
+        </div>
+        <div class="du-belofte">
+          <span class="du-belofte__nummer">03</span>
+          <h3>Bewuste materiaalkeuze</h3>
+          <p>Wij adviseren standaard het meest duurzame papier en de meest duurzame inkt die bij uw opdracht past.</p>
+        </div>
+        <div class="du-belofte">
+          <span class="du-belofte__nummer">04</span>
+          <h3>Ruim 60 jaar ervaring</h3>
+          <p>Drie generaties vakmanschap — wij weten precies welk materiaal welk resultaat geeft.</p>
+        </div>
+        <div class="du-belofte">
+          <span class="du-belofte__nummer">05</span>
+          <h3>Kwaliteit zonder concessies</h3>
+          <p>Duurzaam drukwerk van Van den Herik is niet te onderscheiden van regulier drukwerk. Behalve op de milieubalans.</p>
+        </div>
+        <div class="du-belofte">
+          <span class="du-belofte__nummer">06</span>
+          <h3>Eerlijk advies</h3>
+          <p>Geen groene marketingpraatjes: wij vertellen precies wat een keuze oplevert — en wat niet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="du-cta" aria-label="Vraag advies aan">
+    <div class="du-cta__achtergrond" aria-hidden="true">
+      <div class="du-cta__gloed du-cta__gloed--1"></div>
+      <div class="du-cta__gloed du-cta__gloed--2"></div>
+      <svg class="du-blad du-cta__blad du-cta__blad--1" viewBox="0 0 64 64">
+        <path d="M50 8C26 10 10 26 10 50c0 2 1 4 4 4 24 0 40-16 42-40 0-3-3-6-6-6z" fill="currentColor"/>
+      </svg>
+      <svg class="du-blad du-cta__blad du-cta__blad--2" viewBox="0 0 64 64">
+        <path d="M50 8C26 10 10 26 10 50c0 2 1 4 4 4 24 0 40-16 42-40 0-3-3-6-6-6z" fill="currentColor"/>
+      </svg>
+      <div class="du-hero__ruis"></div>
+    </div>
+    <div class="container du-cta__inhoud">
+      <h2 class="du-cta__titel">Maak ook een<br /><span class="du-hero__accent">duurzame keuze.</span></h2>
+      <p class="du-cta__sub">
+        Duurzaamheid en kwaliteit gaan uitstekend samen. Wij adviseren u graag
+        over de meest milieuvriendelijke papiersoort, inkt en afwerking die past
+        bij uw wensen en budget.
       </p>
-      <div class="duurzaamheid-certificaten" style="margin-bottom: 40px;">
-        <span class="cert-badge">🌲 FSC® Gecertificeerd</span>
-        <span class="cert-badge">♻️ PEFC Gecertificeerd</span>
-        <span class="cert-badge">🌿 Plantaardige Inkten</span>
-        <span class="cert-badge">⚡ Energiezuinige Productie</span>
-        <span class="cert-badge">🇪🇺 EU Ecolabel Papier</span>
+      <div class="du-cta__knoppen">
+        <a href="contact.html" class="knop knop--du-primair">Vraag vrijblijvend advies aan <span class="knop__pijl">→</span></a>
+        <a href="diensten.html" class="knop knop--du-omlijnd">Bekijk onze diensten</a>
       </div>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-        <a href="diensten.html" class="knop knop--groen-omlijnd">Bekijk onze diensten</a>
+      <div class="du-cta__badges">
+        <span class="du-badge">FSC® gecertificeerd</span>
+        <span class="du-badge">PEFC gecertificeerd</span>
+        <span class="du-badge">Plantaardige inkten</span>
+        <span class="du-badge">EU Ecolabel papier</span>
+        <span class="du-badge">Plasticvrij verpakt</span>
       </div>
+      <a href="tel:+31786731266" class="du-cta__tel">of bel 078 673 12 66</a>
     </div>
   </section>
 
@@ -363,19 +608,9 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    document.querySelectorAll('.uitklap-kaart, .uitklap-rij').forEach(function(el) {
-      el.addEventListener('click', function() {
-        var isOpen = el.classList.contains('open');
-        el.classList.toggle('open', !isOpen);
-        el.setAttribute('aria-expanded', !isOpen);
-        el.querySelector('.uitklap-kaart__pijl').textContent = isOpen ? '+' : '×';
-      });
-      el.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
-      });
-    });
-  </script>
+  <script src="js/duurzaamheid.js"></script>
 </body>
 </html>
