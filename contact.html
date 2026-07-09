@@ -6,6 +6,9 @@
   <title>Contact — Drukkerij Van den Herik</title>
   <meta name="description" content="Neem contact op met Drukkerij Van den Herik. Vraag een offerte aan, stel uw vraag of kom langs op ons adres in 's-Gravendeel." />
   <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -132,6 +135,105 @@
     </div>
   </section>
 
+  <!-- ===== BESTAND AANLEVEREN ===== -->
+  <section class="ba-sectie" id="bestand-aanleveren">
+    <div class="container">
+      <div class="ba-kop ba-reveal">
+        <span class="dp-kicker">Bestand aanleveren</span>
+        <h2 class="dp-titel">Uw bestanden veilig en<br />eenvoudig aanleveren.</h2>
+        <p class="ba-kop__intro">
+          Heeft u uw ontwerp gereed? Upload eenvoudig uw bestanden en onze
+          specialisten controleren deze voordat de productie start.
+        </p>
+      </div>
+
+      <div class="ba-raster">
+
+        <!-- Uploadomgeving -->
+        <div class="ba-upload ba-reveal">
+          <div class="ba-dropzone" id="ba-dropzone" tabindex="0" role="button"
+               aria-label="Bestanden uploaden: klik of sleep uw bestanden hierheen">
+            <input type="file" id="ba-input" multiple
+                   accept=".pdf,.ai,.eps,.svg,.indd,.psd,.jpg,.jpeg,.png,.tif,.tiff,.zip" hidden />
+            <span class="ba-dropzone__icoon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+                <path d="M14 3v5h5"/>
+                <path d="M12 17v-5M9.5 14.5 12 12l2.5 2.5"/>
+              </svg>
+            </span>
+            <p class="ba-dropzone__titel">Sleep uw bestanden hierheen</p>
+            <p class="ba-dropzone__sub">of <span class="ba-dropzone__link">kies bestanden</span> op uw computer</p>
+            <p class="ba-dropzone__specs">PDF, AI, EPS, SVG, INDD, JPG, PNG, TIFF of ZIP &nbsp;·&nbsp; max. 100 MB per bestand</p>
+          </div>
+
+          <ul class="ba-lijst" id="ba-lijst" aria-live="polite"></ul>
+
+          <p class="ba-melding" id="ba-melding" role="alert" hidden></p>
+
+          <div class="ba-verzenden" id="ba-verzenden" hidden>
+            <button type="button" class="knop knop--primair ba-verzendknop" id="ba-verzendknop">
+              Verstuur uw bestanden <span class="knop__pijl">→</span>
+            </button>
+            <p class="ba-verzenden__privacy">
+              Uw bestanden worden veilig verwerkt en uitsluitend gebruikt voor uw drukwerkopdracht.
+            </p>
+          </div>
+
+          <div class="ba-succes" id="ba-succes" hidden>
+            <span class="ba-succes__icoon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <div>
+              <h3>Bestanden ontvangen!</h3>
+              <p>Onze specialisten controleren uw bestanden en nemen dezelfde werkdag nog contact met u op.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checklist + service -->
+        <div class="ba-zijkant">
+          <div class="ba-checklist ba-reveal">
+            <h3 class="ba-checklist__titel">Controleer voordat u uploadt:</h3>
+            <ul>
+              <li>
+                <span class="ba-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div><strong>Bestand opgeslagen als PDF</strong><span>Bij voorkeur print-ready (PDF/X)</span></div>
+              </li>
+              <li>
+                <span class="ba-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div><strong>Juiste afmetingen gebruikt</strong><span>Op het eindformaat van uw drukwerk</span></div>
+              </li>
+              <li>
+                <span class="ba-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div><strong>Afloop (bleed) toegevoegd</strong><span>3 mm rondom, indien nodig</span></div>
+              </li>
+              <li>
+                <span class="ba-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div><strong>Afbeeldingen voldoende hoge resolutie</strong><span>Minimaal 300 DPI voor scherp drukwerk</span></div>
+              </li>
+              <li>
+                <span class="ba-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div><strong>Juiste kleuren gebruikt</strong><span>CMYK waar nodig, geen RGB</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="ba-hulp ba-reveal">
+            <h3>Twijfelt u over uw bestand?</h3>
+            <p>
+              Geen probleem. Onze medewerkers controleren uw bestanden en helpen
+              u graag verder voordat uw drukwerk wordt geproduceerd.
+            </p>
+            <a href="mailto:info@drukkerijherik.nl?subject=Vraag%20over%20mijn%20drukwerkbestand" class="knop ba-hulp__knop">
+              Neem contact op met onze drukwerkspecialisten
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FAQ ===== -->
   <section class="sectie sectie--grijs">
     <div class="container">
@@ -238,5 +340,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/aanleveren.js"></script>
 </body>
 </html>
