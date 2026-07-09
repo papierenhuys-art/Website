@@ -4044,9 +4044,33 @@ body.gsap-actief .usp-marquee__baan {
   line-height: 1.6;
 }
 
+/* ——— Gegevens & drukwerkwensen ——— */
+.ba-gegevens {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--grijs-middel);
+  display: grid;
+  gap: 20px;
+}
+.ba-gegevens__titel {
+  font-family: 'Sora', 'Segoe UI', system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blauw-donker);
+  margin-bottom: 2px;
+}
+.ba-gegevens textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+.ba-gegevens input::placeholder,
+.ba-gegevens textarea::placeholder {
+  color: #9aa8bf;
+}
+
 /* ——— Verzenden + succes ——— */
 .ba-verzenden {
-  margin-top: 22px;
+  margin-top: 24px;
   text-align: center;
 }
 .ba-verzendknop {

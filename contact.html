@@ -171,12 +171,35 @@
 
           <p class="ba-melding" id="ba-melding" role="alert" hidden></p>
 
-          <div class="ba-verzenden" id="ba-verzenden" hidden>
+          <div class="ba-gegevens">
+            <h3 class="ba-gegevens__titel">Uw gegevens &amp; drukwerkwensen</h3>
+            <div class="formulier-rij">
+              <div class="formulier-groep">
+                <label for="ba-naam">Naam *</label>
+                <input type="text" id="ba-naam" name="naam" autocomplete="name" placeholder="Uw naam" required />
+              </div>
+              <div class="formulier-groep">
+                <label for="ba-email">E-mailadres *</label>
+                <input type="email" id="ba-email" name="email" autocomplete="email" placeholder="naam@voorbeeld.nl" required />
+              </div>
+            </div>
+            <div class="formulier-groep">
+              <label for="ba-telefoon">Telefoonnummer *</label>
+              <input type="tel" id="ba-telefoon" name="telefoon" autocomplete="tel" placeholder="06 12 34 56 78" required />
+            </div>
+            <div class="formulier-groep">
+              <label for="ba-specificaties">Specificaties voor uw drukwerk *</label>
+              <textarea id="ba-specificaties" name="specificaties" rows="4" required
+                placeholder="Bijvoorbeeld: 500 flyers, A5, dubbelzijdig full colour, 170 g/m² mat papier. Vermeld ook uw gewenste leverdatum."></textarea>
+            </div>
+          </div>
+
+          <div class="ba-verzenden" id="ba-verzenden">
             <button type="button" class="knop knop--primair ba-verzendknop" id="ba-verzendknop">
-              Verstuur uw bestanden <span class="knop__pijl">→</span>
+              Verstuur uw aanvraag <span class="knop__pijl">→</span>
             </button>
             <p class="ba-verzenden__privacy">
-              Uw bestanden worden veilig verwerkt en uitsluitend gebruikt voor uw drukwerkopdracht.
+              Uw bestanden en gegevens worden veilig verwerkt en uitsluitend gebruikt voor uw drukwerkopdracht.
             </p>
           </div>
 
@@ -185,8 +208,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
             </span>
             <div>
-              <h3>Bestanden ontvangen!</h3>
-              <p>Onze specialisten controleren uw bestanden en nemen dezelfde werkdag nog contact met u op.</p>
+              <h3>Aanvraag ontvangen!</h3>
+              <p>Onze specialisten controleren uw bestanden en specificaties, en nemen dezelfde werkdag nog contact met u op.</p>
             </div>
           </div>
         </div>

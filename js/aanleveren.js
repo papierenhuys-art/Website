@@ -60,8 +60,50 @@
     melding.hidden = true;
   }
 
-  function werkVerzendenBij() {
-    verzenden.hidden = bestanden.length === 0;
+  var velden = {
+    naam: document.getElementById('ba-naam'),
+    email: document.getElementById('ba-email'),
+    telefoon: document.getElementById('ba-telefoon'),
+    specificaties: document.getElementById('ba-specificaties')
+  };
+
+  function valideerGegevens() {
+    var eersteFout = null;
+    var meldingen = [];
+
+    if (bestanden.length === 0) {
+      meldingen.push('Voeg minimaal één bestand toe.');
+      eersteFout = dropzone;
+    }
+
+    Object.keys(velden).forEach(function (naam) {
+      var veld = velden[naam];
+      if (!veld) return;
+      veld.style.borderColor = '';
+      var waarde = veld.value.trim();
+      var geldig = waarde !== '';
+      if (geldig && naam === 'email') {
+        geldig = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(waarde);
+      }
+      if (!geldig) {
+        veld.style.borderColor = '#e53e3e';
+        if (!eersteFout) eersteFout = veld;
+      }
+    });
+
+    if (Object.keys(velden).some(function (n) { return velden[n] && velden[n].style.borderColor; })) {
+      meldingen.push('Vul uw naam, e-mailadres, telefoonnummer en de specificaties van uw drukwerk in.');
+    }
+
+    if (meldingen.length) {
+      toonMelding(meldingen.join(' '));
+      if (eersteFout) {
+        eersteFout.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (eersteFout.focus) eersteFout.focus({ preventScroll: true });
+      }
+      return false;
+    }
+    return true;
   }
 
   function voegBestandToe(bestand) {
@@ -100,7 +142,6 @@
       bestanden = bestanden.filter(function (b) { return b !== invoer; });
       item.classList.add('ba-item--weg');
       item.addEventListener('animationend', function () { item.remove(); });
-      werkVerzendenBij();
     });
 
     lijst.appendChild(item);
@@ -116,7 +157,6 @@
       if (fout) fouten.push(fout);
     });
     if (fouten.length) toonMelding(fouten.join(' '));
-    werkVerzendenBij();
   }
 
   /* Klikken of toetsenbord opent bestandskiezer */
@@ -148,17 +188,31 @@
     }
   });
 
+  /* Herstel randkleur zodra er getypt wordt */
+  Object.keys(velden).forEach(function (naam) {
+    if (velden[naam]) {
+      velden[naam].addEventListener('input', function () {
+        velden[naam].style.borderColor = '';
+      });
+    }
+  });
+
   /* Versturen (bevestiging; koppel hier later een backend of uploaddienst aan) */
   if (verzendknop) {
     verzendknop.addEventListener('click', function () {
+      verbergMelding();
+      if (!valideerGegevens()) return;
+
       verzendknop.disabled = true;
       verzendknop.textContent = 'Bezig met versturen…';
       setTimeout(function () {
         bestanden = [];
         lijst.innerHTML = '';
-        verzenden.hidden = true;
+        Object.keys(velden).forEach(function (naam) {
+          if (velden[naam]) velden[naam].value = '';
+        });
         verzendknop.disabled = false;
-        verzendknop.innerHTML = 'Verstuur uw bestanden <span class="knop__pijl">→</span>';
+        verzendknop.innerHTML = 'Verstuur uw aanvraag <span class="knop__pijl">→</span>';
         succes.hidden = false;
         succes.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }, 1100);
