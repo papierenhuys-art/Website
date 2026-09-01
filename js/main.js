@@ -82,7 +82,7 @@ if (form) {
   banner.className = 'cookie-banner';
   banner.innerHTML = `
     <div class="cookie-banner__inhoud">
-      <p>🍪 Wij gebruiken functionele cookies om de website goed te laten werken. Er worden geen tracking- of advertentiecookies geplaatst.</p>
+      <p>Wij gebruiken functionele cookies om de website goed te laten werken. Er worden geen tracking- of advertentiecookies geplaatst.</p>
       <div class="cookie-banner__knoppen">
         <button class="knop knop--primair cookie-akkoord">Begrepen</button>
         <a href="#" class="cookie-meer">Meer info</a>
@@ -104,7 +104,7 @@ if (form) {
 // (op pagina's met GSAP neemt js/hero.js dit over)
 if (!window.gsap && 'IntersectionObserver' in window) {
   const elementen = document.querySelectorAll(
-    '.dienst-kaart, .team-kaart, .waarde-kaart, .tijdlijn-item, .teller'
+    '.dienst-kaart, .team-kaart, .waarde-kaart, .tijdlijn-item, .teller, .ct-reveal'
   );
 
   elementen.forEach(el => {

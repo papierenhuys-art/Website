@@ -10,6 +10,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Drukkerij Van den Herik",
+    "telephone": "+31786731266",
+    "email": "info@drukkerijherik.nl",
+    "url": "https://drukkerijherik.nl/contact.html",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mijlweg 9i",
+      "postalCode": "3295 KG",
+      "addressLocality": "'s-Gravendeel",
+      "addressCountry": "NL"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:30"
+    }]
+  }
+  </script>
 </head>
 <body>
 
@@ -33,292 +56,203 @@
   </nav>
 
   <!-- ===== PAGINAKOP ===== -->
-  <header class="paginakop">
-    <div class="container">
-      <p class="paginakop__broodkruimel">
-        <a href="/">Home</a> &rsaquo; Contact
+  <header class="ct-kop">
+    <div class="ct-kop__achtergrond" aria-hidden="true">
+      <div class="ct-kop__raster"></div>
+      <div class="ct-kop__ruis"></div>
+    </div>
+    <div class="container ct-kop__inhoud">
+      <p class="ct-kop__broodkruimel">
+        <a href="/">Home</a><span aria-hidden="true">/</span>Contact
       </p>
-      <h1 class="paginakop__titel">Contact</h1>
-      <p class="paginakop__ondertitel">
-        Heeft u een vraag of wilt u een offerte? Wij staan voor u klaar.
-        U ontvangt dezelfde werkdag nog een reactie.
+      <h1 class="ct-kop__titel">Wij denken graag met u mee.</h1>
+      <p class="ct-kop__intro">
+        Heeft u een vraag of wilt u een offerte? Bel of mail ons vrijblijvend.
+        In de meeste gevallen ontvangt u dezelfde werkdag nog een reactie.
       </p>
     </div>
   </header>
 
-  <!-- ===== CONTACT SECTIE ===== -->
-  <section class="sectie">
-    <div class="container">
-      <div class="contact-raster">
+  <!-- ===== CONTACT ===== -->
+  <section class="ct-sectie">
+    <div class="container ct-raster">
 
-        <!-- Offerte / bereikbaarheid -->
-        <div>
-          <div class="streep"></div>
-          <h2 class="sectie-titel">Vraag een offerte aan</h2>
-          <p style="color:#4a5568; margin-bottom:32px; line-height:1.8;">
-            Wij reageren in de meeste gevallen dezelfde werkdag nog. Bel of mail ons vrijblijvend — wij denken graag met u mee.
-          </p>
+      <!-- Direct contact -->
+      <div class="ct-primair ct-reveal">
+        <span class="ct-kicker">Direct contact</span>
+        <h2 class="ct-titel">Vraag vrijblijvend<br />een offerte aan.</h2>
+        <p class="ct-alinea">
+          Vertel ons wat u nodig heeft — oplage, formaat, papiersoort en gewenste
+          leverdatum — en wij sturen u een scherpe prijsopgave. Weet u het nog niet
+          precies? Wij denken graag met u mee.
+        </p>
 
-          <a href="tel:+31786731266" style="display:flex; align-items:center; gap:16px; background:var(--blauw-donker); color:var(--wit); border-radius:var(--radius); padding:20px 24px; margin-bottom:16px; text-decoration:none; font-weight:600; font-size:1.05rem; transition:background 0.2s;">
-            <span style="font-size:1.5rem;">📞</span>
-            <div>
-              <div style="font-size:0.75rem; font-weight:400; opacity:0.8; margin-bottom:2px;">Bel ons direct</div>
-              078 673 12 66
-            </div>
+        <div class="ct-acties">
+          <a href="tel:+31786731266" class="ct-actie ct-actie--primair">
+            <span class="ct-actie__icoon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
+              </svg>
+            </span>
+            <span class="ct-actie__tekst">
+              <span class="ct-actie__label">Bel ons direct</span>
+              <span class="ct-actie__waarde">078 673 12 66</span>
+            </span>
+            <span class="ct-actie__pijl" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </span>
           </a>
 
-          <a href="mailto:info@drukkerijherik.nl" style="display:flex; align-items:center; gap:16px; background:var(--blauw-middel); color:var(--wit); border-radius:var(--radius); padding:20px 24px; margin-bottom:32px; text-decoration:none; font-weight:600; font-size:1.05rem; transition:background 0.2s;">
-            <span style="font-size:1.5rem;">✉️</span>
-            <div>
-              <div style="font-size:0.75rem; font-weight:400; opacity:0.8; margin-bottom:2px;">Stuur een e-mail</div>
-              info@drukkerijherik.nl
-            </div>
+          <a href="mailto:info@drukkerijherik.nl" class="ct-actie">
+            <span class="ct-actie__icoon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
+                <path d="m3 7.5 9 5.5 9-5.5"/>
+              </svg>
+            </span>
+            <span class="ct-actie__tekst">
+              <span class="ct-actie__label">Stuur een e-mail</span>
+              <span class="ct-actie__waarde">info@drukkerijherik.nl</span>
+            </span>
+            <span class="ct-actie__pijl" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </span>
           </a>
-
-          <p style="color:#4a5568; font-size:0.9rem; line-height:1.7; border-left:3px solid var(--blauw-licht); padding-left:16px;">
-            Heeft u al een bestand klaar? Stuur het mee met uw mail en wij geven u dezelfde dag nog een prijsopgave.
-          </p>
         </div>
 
-        <!-- Contactgegevens -->
-        <div>
-          <div class="streep"></div>
-          <h2 class="sectie-titel">Onze gegevens</h2>
-          <p style="color:#4a5568; margin-bottom:32px; line-height:1.8;">
-            Kom gerust langs op ons adres in 's-Gravendeel. Wij zijn op werkdagen
-            geopend van 08:00 tot 17:30.
-          </p>
-
-          <div class="contact-info-blok">
-            <div class="contact-info-item">
-              <div class="contact-info-item__icoon">📍</div>
-              <div>
-                <div class="contact-info-item__label">Bezoekadres</div>
-                <div class="contact-info-item__waarde">
-                  Mijlweg 9i<br />
-                  3295 KG 's-Gravendeel
-                </div>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-info-item__icoon">📞</div>
-              <div>
-                <div class="contact-info-item__label">Telefoon</div>
-                <div class="contact-info-item__waarde">
-                  <a href="tel:+31786731266" style="color:inherit;">078 673 12 66</a>
-                </div>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-info-item__icoon">✉️</div>
-              <div>
-                <div class="contact-info-item__label">E-mail</div>
-                <div class="contact-info-item__waarde">
-                  <a href="mailto:info@drukkerijherik.nl" style="color:inherit;">info@drukkerijherik.nl</a>
-                </div>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-info-item__icoon">🕐</div>
-              <div>
-                <div class="contact-info-item__label">Openingstijden</div>
-                <div class="contact-info-item__waarde">
-                  Maandag – vrijdag: 08:00 – 17:30<br />
-                  Zaterdag – zondag: Gesloten
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== BESTAND AANLEVEREN ===== -->
-  <section class="ba-sectie" id="bestand-aanleveren">
-    <div class="container">
-      <div class="ba-kop ba-reveal">
-        <span class="dp-kicker">Bestand aanleveren</span>
-        <h2 class="dp-titel">Uw bestanden veilig en<br />eenvoudig aanleveren.</h2>
-        <p class="ba-kop__intro">
-          Heeft u uw ontwerp gereed? Upload eenvoudig uw bestanden en onze
-          specialisten controleren deze voordat de productie start.
+        <p class="ct-notitie">
+          Heeft u uw bestand al klaar? Stuur het mee met uw e-mail — bij voorkeur
+          als print-ready PDF met 3 mm afloop en 300 DPI. Dan ontvangt u dezelfde
+          dag nog een prijsopgave.
         </p>
       </div>
 
-      <div class="ba-raster">
+      <!-- Gegevens -->
+      <aside class="ct-gegevens ct-reveal">
+        <h2 class="ct-gegevens__titel">Onze gegevens</h2>
 
-        <!-- Uploadomgeving -->
-        <div class="ba-upload ba-reveal">
-          <div class="ba-dropzone" id="ba-dropzone" tabindex="0" role="button"
-               aria-label="Bestanden uploaden: klik of sleep uw bestanden hierheen">
-            <input type="file" id="ba-input" multiple
-                   accept=".pdf,.ai,.eps,.svg,.indd,.psd,.jpg,.jpeg,.png,.tif,.tiff,.zip" hidden />
-            <span class="ba-dropzone__icoon" aria-hidden="true">
+        <dl class="ct-lijst">
+          <div class="ct-regel">
+            <span class="ct-regel__icoon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
-                <path d="M14 3v5h5"/>
-                <path d="M12 17v-5M9.5 14.5 12 12l2.5 2.5"/>
+                <path d="M20 10.5c0 5.8-8 11.5-8 11.5s-8-5.7-8-11.5a8 8 0 0 1 16 0z"/>
+                <circle cx="12" cy="10.2" r="2.8"/>
               </svg>
             </span>
-            <p class="ba-dropzone__titel">Sleep uw bestanden hierheen</p>
-            <p class="ba-dropzone__sub">of <span class="ba-dropzone__link">kies bestanden</span> op uw computer</p>
-            <p class="ba-dropzone__specs">PDF, AI, EPS, SVG, INDD, JPG, PNG, TIFF of ZIP &nbsp;·&nbsp; max. 100 MB per bestand</p>
-          </div>
-
-          <ul class="ba-lijst" id="ba-lijst" aria-live="polite"></ul>
-
-          <p class="ba-melding" id="ba-melding" role="alert" hidden></p>
-
-          <div class="ba-gegevens">
-            <h3 class="ba-gegevens__titel">Uw gegevens &amp; drukwerkwensen</h3>
-            <div class="formulier-rij">
-              <div class="formulier-groep">
-                <label for="ba-naam">Naam *</label>
-                <input type="text" id="ba-naam" name="naam" autocomplete="name" placeholder="Uw naam" required />
-              </div>
-              <div class="formulier-groep">
-                <label for="ba-email">E-mailadres *</label>
-                <input type="email" id="ba-email" name="email" autocomplete="email" placeholder="naam@voorbeeld.nl" required />
-              </div>
-            </div>
-            <div class="formulier-groep">
-              <label for="ba-telefoon">Telefoonnummer *</label>
-              <input type="tel" id="ba-telefoon" name="telefoon" autocomplete="tel" placeholder="06 12 34 56 78" required />
-            </div>
-            <div class="formulier-groep">
-              <label for="ba-specificaties">Specificaties voor uw drukwerk *</label>
-              <textarea id="ba-specificaties" name="specificaties" rows="4" required
-                placeholder="Bijvoorbeeld: 500 flyers, A5, dubbelzijdig full colour, 170 g/m² mat papier. Vermeld ook uw gewenste leverdatum."></textarea>
+            <div class="ct-regel__inhoud">
+              <dt>Bezoekadres</dt>
+              <dd>Mijlweg 9i<br />3295 KG 's-Gravendeel</dd>
             </div>
           </div>
 
-          <div class="ba-verzenden" id="ba-verzenden">
-            <button type="button" class="knop knop--primair ba-verzendknop" id="ba-verzendknop">
-              Verstuur uw aanvraag <span class="knop__pijl">→</span>
-            </button>
-            <p class="ba-verzenden__privacy">
-              Uw bestanden en gegevens worden veilig verwerkt en uitsluitend gebruikt voor uw drukwerkopdracht.
-            </p>
-          </div>
-
-          <div class="ba-succes" id="ba-succes" hidden>
-            <span class="ba-succes__icoon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <div class="ct-regel">
+            <span class="ct-regel__icoon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
+              </svg>
             </span>
-            <div>
-              <h3>Aanvraag ontvangen!</h3>
-              <p>Onze specialisten controleren uw bestanden en specificaties, en nemen dezelfde werkdag nog contact met u op.</p>
+            <div class="ct-regel__inhoud">
+              <dt>Telefoon</dt>
+              <dd><a href="tel:+31786731266">078 673 12 66</a></dd>
             </div>
           </div>
-        </div>
 
-        <!-- Checklist + service -->
-        <div class="ba-zijkant">
-          <div class="ba-checklist ba-reveal">
-            <h3 class="ba-checklist__titel">Controleer voordat u uploadt:</h3>
-            <ul>
-              <li>
-                <span class="ba-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div><strong>Bestand opgeslagen als PDF</strong><span>Bij voorkeur print-ready (PDF/X)</span></div>
-              </li>
-              <li>
-                <span class="ba-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div><strong>Juiste afmetingen gebruikt</strong><span>Op het eindformaat van uw drukwerk</span></div>
-              </li>
-              <li>
-                <span class="ba-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div><strong>Afloop (bleed) toegevoegd</strong><span>3 mm rondom, indien nodig</span></div>
-              </li>
-              <li>
-                <span class="ba-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div><strong>Afbeeldingen voldoende hoge resolutie</strong><span>Minimaal 300 DPI voor scherp drukwerk</span></div>
-              </li>
-              <li>
-                <span class="ba-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div><strong>Juiste kleuren gebruikt</strong><span>CMYK waar nodig, geen RGB</span></div>
-              </li>
-            </ul>
+          <div class="ct-regel">
+            <span class="ct-regel__icoon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
+                <path d="m3 7.5 9 5.5 9-5.5"/>
+              </svg>
+            </span>
+            <div class="ct-regel__inhoud">
+              <dt>E-mail</dt>
+              <dd><a href="mailto:info@drukkerijherik.nl">info@drukkerijherik.nl</a></dd>
+            </div>
           </div>
 
-          <div class="ba-hulp ba-reveal">
-            <h3>Twijfelt u over uw bestand?</h3>
-            <p>
-              Geen probleem. Onze medewerkers controleren uw bestanden en helpen
-              u graag verder voordat uw drukwerk wordt geproduceerd.
-            </p>
-            <a href="mailto:info@drukkerijherik.nl?subject=Vraag%20over%20mijn%20drukwerkbestand" class="knop ba-hulp__knop">
-              Neem contact op met onze drukwerkspecialisten
-            </a>
+          <div class="ct-regel">
+            <span class="ct-regel__icoon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 6.8V12l3.4 2"/>
+              </svg>
+            </span>
+            <div class="ct-regel__inhoud">
+              <dt>Openingstijden</dt>
+              <dd>
+                <span class="ct-uren"><span>Maandag &ndash; vrijdag</span><span>08:00 &ndash; 17:30</span></span>
+                <span class="ct-uren"><span>Zaterdag &ndash; zondag</span><span>Gesloten</span></span>
+              </dd>
+            </div>
           </div>
-        </div>
-      </div>
+        </dl>
+
+        <a class="ct-route" href="https://www.google.com/maps/search/?api=1&amp;query=Mijlweg+9i+3295+KG+%27s-Gravendeel"
+           target="_blank" rel="noopener">
+          Bekijk de route
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+      </aside>
+
     </div>
   </section>
 
-  <!-- ===== FAQ ===== -->
-  <section class="sectie sectie--grijs">
+  <!-- ===== VEELGESTELDE VRAGEN ===== -->
+  <section class="ct-faq">
     <div class="container">
-      <div style="text-align:center; margin-bottom:48px;">
-        <div class="streep" style="margin:0 auto 16px;"></div>
-        <h2 class="sectie-titel">Veelgestelde vragen</h2>
+      <div class="ct-faq__kop ct-reveal">
+        <span class="ct-kicker">Veelgestelde vragen</span>
+        <h2 class="ct-titel">Het antwoord op<br />wat vaak gevraagd wordt.</h2>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; max-width:900px; margin:0 auto;">
-        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
-          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
-            Wat is de levertijd voor mijn drukwerk?
-          </h3>
-          <p style="color:#4a5568; font-size:0.9rem; line-height:1.7;">
+      <div class="ct-faq__raster">
+        <div class="ct-vraag ct-reveal">
+          <h3>Wat is de levertijd voor mijn drukwerk?</h3>
+          <p>
             In 90% van de gevallen is uw drukwerk dezelfde werkdag klaar of op weg naar u toe.
-            Bij extreme drukte leveren wij uiterlijk de volgende werkdag. Afhalen in 's-Gravendeel
-            is altijd mogelijk — ook op korte termijn.
+            Bij extreme drukte leveren wij uiterlijk de volgende werkdag. Afhalen in
+            's-Gravendeel is altijd mogelijk — ook op korte termijn.
           </p>
         </div>
-        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
-          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
-            Welke bestandsformaten accepteren jullie?
-          </h3>
-          <p style="color:#4a5568; font-size:0.9rem; line-height:1.7;">
-            Wij werken bij voorkeur met PDF (print-ready), maar ook AI, EPS en InDesign-bestanden
-            worden verwerkt. Vraag naar onze bestandsspecificaties.
+        <div class="ct-vraag ct-reveal">
+          <h3>Welke bestandsformaten accepteren jullie?</h3>
+          <p>
+            Wij werken bij voorkeur met PDF (print-ready), maar ook AI-, EPS- en
+            InDesign-bestanden worden verwerkt. Vraag gerust naar onze bestandsspecificaties.
           </p>
         </div>
-        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
-          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
-            Kan ik een drukproef ontvangen?
-          </h3>
-          <p style="color:#4a5568; font-size:0.9rem; line-height:1.7;">
-            Ja. Wij kunnen een digitale PDF-proef of fysieke drukproef leveren. Vraag dit
-            bij uw offerte-aanvraag aan.
+        <div class="ct-vraag ct-reveal">
+          <h3>Kan ik een drukproef ontvangen?</h3>
+          <p>
+            Ja. Wij kunnen een digitale PDF-proef of een fysieke drukproef leveren.
+            Vraag dit aan bij uw offerte-aanvraag.
           </p>
         </div>
-        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
-          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
-            Leveren jullie door heel Nederland?
-          </h3>
-          <p style="color:#4a5568; font-size:0.9rem; line-height:1.7;">
-            Ja. Wij verzenden via UPS door heel Nederland en België.
-            Grote opdrachten kunnen ook door onze eigen chauffeur worden afgeleverd.
+        <div class="ct-vraag ct-reveal">
+          <h3>Leveren jullie door heel Nederland?</h3>
+          <p>
+            Ja. Wij verzenden via UPS door heel Nederland en België. Grote opdrachten
+            kunnen ook door onze eigen chauffeur worden afgeleverd.
           </p>
         </div>
-        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
-          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
-            Hebben jullie een minimum oplage?
-          </h3>
-          <p style="color:#4a5568; font-size:0.9rem; line-height:1.7;">
+        <div class="ct-vraag ct-reveal">
+          <h3>Hebben jullie een minimum oplage?</h3>
+          <p>
             Nee. Dankzij onze digitale pers drukken wij al vanaf één exemplaar.
             Bij grotere oplagen daalt de prijs per stuk aanzienlijk.
           </p>
         </div>
-        <div style="background:var(--wit); border:1px solid var(--grijs-middel); border-radius:var(--radius-groot); padding:28px;">
-          <h3 style="color:var(--blauw-donker); font-size:1rem; margin-bottom:10px;">
-            Bieden jullie ook ontwerpdiensten aan?
-          </h3>
-          <p style="color:#4a5568; font-size:0.9rem; line-height:1.7;">
-            Ja. Onze interne grafisch ontwerpers helpen u graag met het ontwerp van uw drukwerk.
-            Vraag naar de mogelijkheden bij uw offerte.
+        <div class="ct-vraag ct-reveal">
+          <h3>Bieden jullie ook ontwerpdiensten aan?</h3>
+          <p>
+            Ja. Onze interne grafisch ontwerpers helpen u graag met het ontwerp van
+            uw drukwerk. Vraag naar de mogelijkheden bij uw offerte.
           </p>
         </div>
       </div>
@@ -363,6 +297,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/aanleveren.js"></script>
 </body>
 </html>
