@@ -13,6 +13,37 @@
 </head>
 <body>
 
+  <!-- ===== ICONENSET (lijniconen, één keer gedefinieerd) ===== -->
+  <svg class="icoon-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+    <symbol id="i-klok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/><path d="M12 6.8V12l3.4 2"/>
+    </symbol>
+    <symbol id="i-zegel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="9" r="6"/><path d="M8.4 14.2 7 22l5-2.6 5 2.6-1.4-7.8"/>
+    </symbol>
+    <symbol id="i-gesprek" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.4-.7L3 21l1.8-5.4A8.4 8.4 0 1 1 21 11.5z"/>
+    </symbol>
+    <symbol id="i-prijs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 3.5h7.6l9.4 9.4-7.6 7.6-9.4-9.4z"/><circle cx="7.8" cy="7.8" r="1.5"/>
+    </symbol>
+    <symbol id="i-blad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 20.5a7 7 0 0 1-1.2-13.9C15.5 5.5 19 2.5 19 2.5s2 6-1 11a7 7 0 0 1-7 7z"/><path d="M6 21.5c0-4 2-8 5-10"/>
+    </symbol>
+    <symbol id="i-boom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3 7 10h3l-4 6h4v5h4v-5h4l-4-6h3z"/>
+    </symbol>
+    <symbol id="i-kringloop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 3v4h-4"/>
+    </symbol>
+    <symbol id="i-bliksem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13 2 4 14h6l-1 8 9-12h-6z"/>
+    </symbol>
+    <symbol id="i-telefoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
+    </symbol>
+  </svg>
+
   <div id="scroll-voortgang" aria-hidden="true"></div>
 
   <!-- ===== NAVIGATIE ===== -->
@@ -104,32 +135,32 @@
   </header>
 
   <!-- ===== USP-MARQUEE ===== -->
-  <section class="usp-balk">
+  <section class="usp-balk" aria-label="Onze kernpunten">
     <div class="usp-marquee">
       <div class="usp-marquee__baan">
         <ul class="usp-marquee__groep">
-          <li class="usp-item"><span class="usp-item__icoon">🚀</span>Zelfde werkdag klaar</li>
-          <li class="usp-item"><span class="usp-item__icoon">🏆</span>Topkwaliteit druk</li>
-          <li class="usp-item"><span class="usp-item__icoon">💬</span>Persoonlijk advies</li>
-          <li class="usp-item"><span class="usp-item__icoon">💰</span>Scherpe prijzen</li>
-          <li class="usp-item"><span class="usp-item__icoon">♻️</span>Duurzaam drukken</li>
-          <li class="usp-item"><span class="usp-item__icoon">🚀</span>Zelfde werkdag klaar</li>
-          <li class="usp-item"><span class="usp-item__icoon">🏆</span>Topkwaliteit druk</li>
-          <li class="usp-item"><span class="usp-item__icoon">💬</span>Persoonlijk advies</li>
-          <li class="usp-item"><span class="usp-item__icoon">💰</span>Scherpe prijzen</li>
-          <li class="usp-item"><span class="usp-item__icoon">♻️</span>Duurzaam drukken</li>
+          <li class="usp-item"><svg class="hp-usp__icoon" aria-hidden="true"><use href="#i-klok"/></svg>Zelfde werkdag klaar</li>
+          <li class="usp-item"><svg class="hp-usp__icoon" aria-hidden="true"><use href="#i-zegel"/></svg>Topkwaliteit druk</li>
+          <li class="usp-item"><svg class="hp-usp__icoon" aria-hidden="true"><use href="#i-gesprek"/></svg>Persoonlijk advies</li>
+          <li class="usp-item"><svg class="hp-usp__icoon" aria-hidden="true"><use href="#i-prijs"/></svg>Scherpe prijzen</li>
+          <li class="usp-item"><svg class="hp-usp__icoon" aria-hidden="true"><use href="#i-blad"/></svg>Duurzaam drukken</li>
+          <li class="usp-item"><svg class="hp-usp__icoon" aria-hidden="true"><use href="#i-klok"/></svg>Zelfde werkdag klaar</li>
+          <li class="usp-item"><svg class="hp-usp__icoon" aria-hidden="true"><use href="#i-zegel"/></svg>Topkwaliteit druk</li>
+          <li class="usp-item"><svg class="hp-usp__icoon" aria-hidden="true"><use href="#i-gesprek"/></svg>Persoonlijk advies</li>
+          <li class="usp-item"><svg class="hp-usp__icoon" aria-hidden="true"><use href="#i-prijs"/></svg>Scherpe prijzen</li>
+          <li class="usp-item"><svg class="hp-usp__icoon" aria-hidden="true"><use href="#i-blad"/></svg>Duurzaam drukken</li>
         </ul>
         <ul class="usp-marquee__groep" aria-hidden="true">
-          <li class="usp-item"><span class="usp-item__icoon">🚀</span>Zelfde werkdag klaar</li>
-          <li class="usp-item"><span class="usp-item__icoon">🏆</span>Topkwaliteit druk</li>
-          <li class="usp-item"><span class="usp-item__icoon">💬</span>Persoonlijk advies</li>
-          <li class="usp-item"><span class="usp-item__icoon">💰</span>Scherpe prijzen</li>
-          <li class="usp-item"><span class="usp-item__icoon">♻️</span>Duurzaam drukken</li>
-          <li class="usp-item"><span class="usp-item__icoon">🚀</span>Zelfde werkdag klaar</li>
-          <li class="usp-item"><span class="usp-item__icoon">🏆</span>Topkwaliteit druk</li>
-          <li class="usp-item"><span class="usp-item__icoon">💬</span>Persoonlijk advies</li>
-          <li class="usp-item"><span class="usp-item__icoon">💰</span>Scherpe prijzen</li>
-          <li class="usp-item"><span class="usp-item__icoon">♻️</span>Duurzaam drukken</li>
+          <li class="usp-item"><svg class="hp-usp__icoon"><use href="#i-klok"/></svg>Zelfde werkdag klaar</li>
+          <li class="usp-item"><svg class="hp-usp__icoon"><use href="#i-zegel"/></svg>Topkwaliteit druk</li>
+          <li class="usp-item"><svg class="hp-usp__icoon"><use href="#i-gesprek"/></svg>Persoonlijk advies</li>
+          <li class="usp-item"><svg class="hp-usp__icoon"><use href="#i-prijs"/></svg>Scherpe prijzen</li>
+          <li class="usp-item"><svg class="hp-usp__icoon"><use href="#i-blad"/></svg>Duurzaam drukken</li>
+          <li class="usp-item"><svg class="hp-usp__icoon"><use href="#i-klok"/></svg>Zelfde werkdag klaar</li>
+          <li class="usp-item"><svg class="hp-usp__icoon"><use href="#i-zegel"/></svg>Topkwaliteit druk</li>
+          <li class="usp-item"><svg class="hp-usp__icoon"><use href="#i-gesprek"/></svg>Persoonlijk advies</li>
+          <li class="usp-item"><svg class="hp-usp__icoon"><use href="#i-prijs"/></svg>Scherpe prijzen</li>
+          <li class="usp-item"><svg class="hp-usp__icoon"><use href="#i-blad"/></svg>Duurzaam drukken</li>
         </ul>
       </div>
     </div>
@@ -150,85 +181,84 @@
           <div class="uitklap-kaart__hoofd">
             <div class="uitklap-kaart__icoon"><img src="Huisstijl.png" alt="Visitekaartjes"></div>
             <div class="uitklap-kaart__titels">
-              <h3 class="uitklap-kaart__naam" style="color:var(--blauw-donker);">Visitekaartjes</h3>
+              <h3 class="uitklap-kaart__naam hp-dienst__naam">Visitekaartjes</h3>
             </div>
             <span class="dienst-kaart__pijl">→</span>
           </div>
-          <p style="color:#4a5568; font-size:0.9rem; padding: 0 24px 20px; margin:0;">Professionele visitekaartjes in diverse formaten en afwerkingen.</p>
+          <p class="hp-dienst__tekst">Professionele visitekaartjes in diverse formaten en afwerkingen.</p>
         </a>
         <a href="diensten.html" class="dienst-kaart dienst-kaart--link">
           <div class="uitklap-kaart__hoofd">
             <div class="uitklap-kaart__icoon"><img src="Flyers.png" alt="Flyers en Folders"></div>
             <div class="uitklap-kaart__titels">
-              <h3 class="uitklap-kaart__naam" style="color:var(--blauw-donker);">Flyers &amp; Folders</h3>
+              <h3 class="uitklap-kaart__naam hp-dienst__naam">Flyers &amp; Folders</h3>
             </div>
             <span class="dienst-kaart__pijl">→</span>
           </div>
-          <p style="color:#4a5568; font-size:0.9rem; padding: 0 24px 20px; margin:0;">Scherpe kleuren, heldere boodschap. In A3, A4, A5 en A6.</p>
+          <p class="hp-dienst__tekst">Scherpe kleuren, heldere boodschap. In A3, A4, A5 en A6.</p>
         </a>
         <a href="diensten.html" class="dienst-kaart dienst-kaart--link">
           <div class="uitklap-kaart__hoofd">
             <div class="uitklap-kaart__icoon"><img src="Posters.png" alt="Groot formaat"></div>
             <div class="uitklap-kaart__titels">
-              <h3 class="uitklap-kaart__naam" style="color:var(--blauw-donker);">Groot formaat</h3>
+              <h3 class="uitklap-kaart__naam hp-dienst__naam">Groot formaat</h3>
             </div>
             <span class="dienst-kaart__pijl">→</span>
           </div>
-          <p style="color:#4a5568; font-size:0.9rem; padding: 0 24px 20px; margin:0;">Banners, spandoeken en posters op diverse materialen, max. 1,20 m breed.</p>
+          <p class="hp-dienst__tekst">Banners, spandoeken en posters op diverse materialen, max. 1,20 m breed.</p>
         </a>
         <a href="diensten.html" class="dienst-kaart dienst-kaart--link">
           <div class="uitklap-kaart__hoofd">
             <div class="uitklap-kaart__icoon"><img src="Stickers.png" alt="Stickers"></div>
             <div class="uitklap-kaart__titels">
-              <h3 class="uitklap-kaart__naam" style="color:var(--blauw-donker);">Stickers &amp; meer</h3>
+              <h3 class="uitklap-kaart__naam hp-dienst__naam">Stickers &amp; meer</h3>
             </div>
             <span class="dienst-kaart__pijl">→</span>
           </div>
-          <p style="color:#4a5568; font-size:0.9rem; padding: 0 24px 20px; margin:0;">Stickers, stempels, mappen en nog veel meer.</p>
+          <p class="hp-dienst__tekst">Stickers, stempels, mappen en nog veel meer.</p>
         </a>
       </div>
 
-      <div style="margin-top:40px; text-align:center;" class="reveal">
+      <div class="hp-midden-knop reveal">
         <a href="diensten.html" class="knop knop--primair">Alle diensten bekijken</a>
       </div>
     </div>
   </section>
 
-
-
   <!-- ===== OVER PREVIEW ===== -->
   <section class="sectie sectie--grijs">
-    <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+    <div class="container hp-over">
       <div class="reveal">
         <div class="streep"></div>
         <h2 class="sectie-titel">Al meer dan 63 jaar met passie</h2>
-        <p style="color:#4a5568; margin-bottom:16px; line-height:1.8;" data-woorden>
+        <p class="hp-over__alinea" data-woorden>
           Drukkerij Van den Herik is in 1961 opgericht in de Hoeksche Waard en staat sindsdien
           voor betrouwbaar drukwerk op maat. Wat begon als een kleine drukkerij is uitgegroeid
           tot een moderne zaak met state-of-the-art digitale én offsetapparatuur.
         </p>
-        <p style="color:#4a5568; margin-bottom:32px; line-height:1.8;">
+        <p class="hp-over__alinea">
           Wij drukken alles — ongeacht de hoeveelheid. Van één enkel exemplaar tot duizenden stuks,
           altijd met dezelfde zorg voor kwaliteit en met eerlijke, vaste prijzen zonder verrassingen.
         </p>
         <a href="over-ons.html" class="knop knop--primair">Meer over ons</a>
       </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;" class="reveal-groep">
-        <div style="background:var(--wit); border-radius:var(--radius); padding:28px 24px; box-shadow:0 2px 12px rgba(13,45,107,0.08); border-top:4px solid var(--blauw-licht);">
-          <div style="font-size:2.2rem; font-weight:800; color:var(--blauw-donker); line-height:1;" data-teller="1961" data-start="1900">1961</div>
-          <div style="color:#4a5568; font-size:0.875rem; margin-top:6px;">Opgericht in<br>'s-Gravendeel</div>
+
+      <div class="hp-feiten reveal-groep">
+        <div class="hp-feit">
+          <div class="hp-feit__getal" data-teller="1961" data-start="1900">1961</div>
+          <div class="hp-feit__label">Opgericht in<br />'s-Gravendeel</div>
         </div>
-        <div style="background:var(--wit); border-radius:var(--radius); padding:28px 24px; box-shadow:0 2px 12px rgba(13,45,107,0.08); border-top:4px solid var(--blauw-licht);">
-          <div style="font-size:2.2rem; font-weight:800; color:var(--blauw-donker); line-height:1;" data-teller="90" data-achtervoegsel="%">90%</div>
-          <div style="color:#4a5568; font-size:0.875rem; margin-top:6px;">Dezelfde werkdag<br>klaar of verstuurd</div>
+        <div class="hp-feit">
+          <div class="hp-feit__getal" data-teller="90" data-achtervoegsel="%">90%</div>
+          <div class="hp-feit__label">Dezelfde werkdag<br />klaar of verstuurd</div>
         </div>
-        <div style="background:var(--wit); border-radius:var(--radius); padding:28px 24px; box-shadow:0 2px 12px rgba(13,45,107,0.08); border-top:4px solid var(--blauw-licht);">
-          <div style="font-size:2.2rem; font-weight:800; color:var(--blauw-donker); line-height:1;" data-teller="30" data-achtervoegsel="+">30+</div>
-          <div style="color:#4a5568; font-size:0.875rem; margin-top:6px;">Verschillende<br>drukwerkproducten</div>
+        <div class="hp-feit">
+          <div class="hp-feit__getal" data-teller="30" data-achtervoegsel="+">30+</div>
+          <div class="hp-feit__label">Verschillende<br />drukwerkproducten</div>
         </div>
-        <div style="background:var(--wit); border-radius:var(--radius); padding:28px 24px; box-shadow:0 2px 12px rgba(13,45,107,0.08); border-top:4px solid var(--blauw-licht);">
-          <div style="font-size:2.2rem; font-weight:800; color:var(--blauw-donker); line-height:1;">FSC®</div>
-          <div style="color:#4a5568; font-size:0.875rem; margin-top:6px;">Gecertificeerd<br>duurzaam drukken</div>
+        <div class="hp-feit">
+          <div class="hp-feit__getal">FSC®</div>
+          <div class="hp-feit__label">Gecertificeerd<br />duurzaam drukken</div>
         </div>
       </div>
     </div>
@@ -244,38 +274,30 @@
         Wij kiezen bewust voor milieuvriendelijke materialen en processen.
       </p>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; margin:40px 0;" class="reveal-groep">
-        <div style="display:flex; align-items:flex-start; gap:16px; background:var(--wit); border-radius:var(--radius); padding:24px; box-shadow:0 2px 8px rgba(13,45,107,0.07);">
-          <span style="font-size:1.8rem; flex-shrink:0;">🌲</span>
-          <div>
-            <div style="font-weight:700; color:var(--blauw-donker); margin-bottom:4px;">FSC® gecertificeerd</div>
-            <div style="font-size:0.875rem; color:#4a5568; line-height:1.6;">Papier uit verantwoord beheerde bossen.</div>
-          </div>
+      <div class="hp-groen__raster reveal-groep">
+        <div class="hp-groen">
+          <span class="hp-groen__icoon" aria-hidden="true"><svg><use href="#i-boom"/></svg></span>
+          <h3 class="hp-groen__titel">FSC® gecertificeerd</h3>
+          <p class="hp-groen__tekst">Papier uit verantwoord beheerde bossen.</p>
         </div>
-        <div style="display:flex; align-items:flex-start; gap:16px; background:var(--wit); border-radius:var(--radius); padding:24px; box-shadow:0 2px 8px rgba(13,45,107,0.07);">
-          <span style="font-size:1.8rem; flex-shrink:0;">♻️</span>
-          <div>
-            <div style="font-weight:700; color:var(--blauw-donker); margin-bottom:4px;">Gerecycled papier</div>
-            <div style="font-size:0.875rem; color:#4a5568; line-height:1.6;">Minder grondstoffen, minder CO₂-uitstoot.</div>
-          </div>
+        <div class="hp-groen">
+          <span class="hp-groen__icoon" aria-hidden="true"><svg><use href="#i-kringloop"/></svg></span>
+          <h3 class="hp-groen__titel">Gerecycled papier</h3>
+          <p class="hp-groen__tekst">Minder grondstoffen, minder CO₂-uitstoot.</p>
         </div>
-        <div style="display:flex; align-items:flex-start; gap:16px; background:var(--wit); border-radius:var(--radius); padding:24px; box-shadow:0 2px 8px rgba(13,45,107,0.07);">
-          <span style="font-size:1.8rem; flex-shrink:0;">🌿</span>
-          <div>
-            <div style="font-weight:700; color:var(--blauw-donker); margin-bottom:4px;">Plantaardige inkten</div>
-            <div style="font-size:0.875rem; color:#4a5568; line-height:1.6;">Scherpe kleuren zonder schadelijke emissies.</div>
-          </div>
+        <div class="hp-groen">
+          <span class="hp-groen__icoon" aria-hidden="true"><svg><use href="#i-blad"/></svg></span>
+          <h3 class="hp-groen__titel">Plantaardige inkten</h3>
+          <p class="hp-groen__tekst">Scherpe kleuren zonder schadelijke emissies.</p>
         </div>
-        <div style="display:flex; align-items:flex-start; gap:16px; background:var(--wit); border-radius:var(--radius); padding:24px; box-shadow:0 2px 8px rgba(13,45,107,0.07);">
-          <span style="font-size:1.8rem; flex-shrink:0;">⚡</span>
-          <div>
-            <div style="font-weight:700; color:var(--blauw-donker); margin-bottom:4px;">Energiezuinig</div>
-            <div style="font-size:0.875rem; color:#4a5568; line-height:1.6;">Moderne digitale persen, minder verbruik.</div>
-          </div>
+        <div class="hp-groen">
+          <span class="hp-groen__icoon" aria-hidden="true"><svg><use href="#i-bliksem"/></svg></span>
+          <h3 class="hp-groen__titel">Energiezuinig</h3>
+          <p class="hp-groen__tekst">Moderne digitale persen, minder verbruik.</p>
         </div>
       </div>
 
-      <div style="text-align:center;" class="reveal">
+      <div class="hp-midden-knop reveal">
         <a href="duurzaamheid.html" class="knop knop--primair">Meer over duurzaamheid</a>
       </div>
     </div>
@@ -284,14 +306,17 @@
   <!-- ===== CTA ===== -->
   <section class="cta-sectie">
     <div class="container reveal-groep">
-      <div class="streep" style="margin:0 auto 24px;"></div>
+      <div class="streep"></div>
       <h2 class="sectie-titel">Klaar om samen te werken?</h2>
-      <p class="sectie-ondertitel" style="margin:0 auto 40px;">
+      <p class="sectie-ondertitel hp-cta__sub">
         Vraag vandaag nog een vrijblijvende offerte aan. Wij reageren dezelfde werkdag nog — meestal binnen enkele uren.
       </p>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-        <a href="contact.html" class="knop knop--primair" style="background:var(--wit);color:var(--blauw-donker);">Offerte aanvragen</a>
-        <a href="tel:+31786731266" class="knop knop--omlijnd">📞 078 673 12 66</a>
+      <div class="hp-cta__knoppen">
+        <a href="contact.html" class="knop hp-knop--wit">Offerte aanvragen</a>
+        <a href="tel:+31786731266" class="knop knop--omlijnd hp-knop--tel">
+          <svg class="hp-knop__icoon" aria-hidden="true"><use href="#i-telefoon"/></svg>
+          078 673 12 66
+        </a>
       </div>
     </div>
   </section>
@@ -328,7 +353,7 @@
         </div>
       </div>
       <div class="footer__bodem">
-        Drukkerij Van den Herik is onderdeel van <strong style="color:rgba(255,255,255,0.9);">'t Papierenhuys</strong><br />&copy; 2026 Drukkerij Van den Herik — Alle rechten voorbehouden &nbsp;&nbsp;·&nbsp;&nbsp;<a href="privacy.html" style="color:rgba(255,255,255,0.55);">Privacyverklaring</a>
+        Drukkerij Van den Herik is onderdeel van <strong class="footer__merknaam">'t Papierenhuys</strong><br />&copy; 2026 Drukkerij Van den Herik — Alle rechten voorbehouden &nbsp;&nbsp;·&nbsp;&nbsp;<a href="privacy.html" class="footer__privacy">Privacyverklaring</a>
       </div>
     </div>
   </footer>
@@ -337,18 +362,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/hero.js"></script>
-  <script>
-    document.querySelectorAll('.uitklap-kaart, .uitklap-rij').forEach(function(el) {
-      el.addEventListener('click', function() {
-        var isOpen = el.classList.contains('open');
-        el.classList.toggle('open', !isOpen);
-        el.setAttribute('aria-expanded', !isOpen);
-        el.querySelector('.uitklap-kaart__pijl').textContent = isOpen ? '+' : '×';
-      });
-      el.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
-      });
-    });
-  </script>
 </body>
 </html>
