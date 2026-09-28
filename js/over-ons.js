@@ -17,27 +17,6 @@
   var beperkteBeweging = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fijnePointer = window.matchMedia('(pointer: fine)').matches;
 
-  /* ——— Scroll-voortgangsbalk + navbar (framework-loos) ——— */
-  var voortgang = document.getElementById('scroll-voortgang');
-  var navbar = document.querySelector('.navbar');
-  var scrollTikt = false;
-
-  function bijScroll() {
-    var y = window.scrollY || window.pageYOffset;
-    var docHoogte = document.documentElement.scrollHeight - window.innerHeight;
-    if (voortgang) {
-      voortgang.style.transform = 'scaleX(' + (docHoogte > 0 ? Math.min(y / docHoogte, 1) : 0) + ')';
-    }
-    if (navbar) {
-      navbar.classList.toggle('navbar--gescrold', y > 10);
-    }
-    scrollTikt = false;
-  }
-  window.addEventListener('scroll', function () {
-    if (!scrollTikt) { scrollTikt = true; requestAnimationFrame(bijScroll); }
-  }, { passive: true });
-  bijScroll();
-
   if (!window.gsap || !window.ScrollTrigger) return;
 
   gsap.registerPlugin(ScrollTrigger);

@@ -6,9 +6,14 @@
   <title>Privacyverklaring — Drukkerij Van den Herik</title>
   <meta name="description" content="Privacyverklaring van Drukkerij Van den Herik. Lees hoe wij omgaan met uw persoonsgegevens." />
   <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <div id="scroll-voortgang" aria-hidden="true"></div>
 
   <!-- ===== NAVIGATIE ===== -->
   <nav class="navbar">
@@ -30,153 +35,186 @@
   </nav>
 
   <!-- ===== PAGINAKOP ===== -->
-  <header class="paginakop">
-    <div class="container">
-      <p class="paginakop__broodkruimel">
-        <a href="/">Home</a> &rsaquo; Privacyverklaring
+  <header class="ct-kop pv-kop">
+    <div class="ct-kop__achtergrond" aria-hidden="true">
+      <div class="ct-kop__raster"></div>
+      <div class="ct-kop__ruis"></div>
+    </div>
+    <div class="container ct-kop__inhoud">
+      <p class="ct-kop__broodkruimel">
+        <a href="/">Home</a><span aria-hidden="true">/</span>Privacyverklaring
       </p>
-      <h1 class="paginakop__titel">Privacyverklaring</h1>
-      <p class="paginakop__ondertitel">
+      <h1 class="ct-kop__titel">Zorgvuldig met uw gegevens.</h1>
+      <p class="ct-kop__intro">
         Drukkerij Van den Herik gaat zorgvuldig om met uw persoonsgegevens.
-        In deze verklaring leest u welke gegevens wij verzamelen en hoe wij daarmee omgaan.
+        Hieronder leest u welke gegevens wij verwerken, waarom, en welke rechten u heeft.
       </p>
+      <p class="pv-kop__datum">Laatste wijziging: mei 2026</p>
     </div>
   </header>
 
   <!-- ===== INHOUD ===== -->
-  <section class="sectie">
-    <div class="container" style="max-width:800px;">
+  <section class="pv-sectie">
+    <div class="container pv-raster">
 
-      <div style="background:var(--grijs-licht); border-radius:var(--radius); padding:20px 28px; margin-bottom:40px; border-left:4px solid var(--blauw-licht);">
-        <p style="color:#4a5568; font-size:0.9rem; margin:0;">
-          Laatste wijziging: mei 2026 &nbsp;·&nbsp; Drukkerij Van den Herik, Mijlweg 9i, 3295 KG 's-Gravendeel
-        </p>
-      </div>
+      <nav class="pv-inhoud" aria-label="Inhoudsopgave">
+        <p class="pv-inhoud__titel">Inhoud</p>
+        <ol class="pv-inhoud__lijst">
+          <li><a href="#wie">Wie zijn wij?</a></li>
+          <li><a href="#gegevens">Welke gegevens</a></li>
+          <li><a href="#doel">Waarvoor</a></li>
+          <li><a href="#bewaren">Bewaartermijn</a></li>
+          <li><a href="#delen">Delen met anderen</a></li>
+          <li><a href="#rechten">Uw rechten</a></li>
+          <li><a href="#klachten">Klachten</a></li>
+          <li><a href="#beveiliging">Beveiliging</a></li>
+          <li><a href="#wijzigingen">Wijzigingen</a></li>
+        </ol>
+      </nav>
 
-      <!-- 1 -->
-      <div class="streep"></div>
-      <h2 class="sectie-titel" style="font-size:1.4rem;">1. Wie zijn wij?</h2>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:32px;">
-        Drukkerij Van den Herik is onderdeel van 't Papierenhuys en gevestigd aan de Mijlweg 9i,
-        3295 KG 's-Gravendeel. Wij zijn de verwerkingsverantwoordelijke voor de persoonsgegevens
-        die u via onze website of anderszins aan ons verstrekt.<br /><br />
-        Telefoon: <a href="tel:+31786731266">078 673 12 66</a><br />
-        E-mail: <a href="mailto:info@drukkerijherik.nl">info@drukkerijherik.nl</a>
-      </p>
+      <article class="pv-artikel">
 
-      <!-- 2 -->
-      <div class="streep"></div>
-      <h2 class="sectie-titel" style="font-size:1.4rem;">2. Welke gegevens verwerken wij?</h2>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:16px;">
-        Wij verwerken alleen persoonsgegevens die u zelf aan ons verstrekt, bijvoorbeeld wanneer u
-        contact met ons opneemt voor een offerte of opdracht:
-      </p>
-      <ul style="color:#4a5568; line-height:2; margin-bottom:32px; padding-left:0; list-style:none;">
-        <li class="kenmerk-item">Naam en contactgegevens (telefoon, e-mailadres)</li>
-        <li class="kenmerk-item">Bedrijfsnaam en factuuradres</li>
-        <li class="kenmerk-item">Bezorgadres voor het afleveren van uw bestelling</li>
-        <li class="kenmerk-item">Betalingsgegevens (uitsluitend voor facturatie)</li>
-        <li class="kenmerk-item">Inhoud van uw berichten en opdrachten</li>
-      </ul>
+        <section class="pv-blok ct-reveal" id="wie" aria-labelledby="wie-titel">
+          <span class="pv-blok__nr" aria-hidden="true">01</span>
+          <h2 class="pv-blok__titel" id="wie-titel">Wie zijn wij?</h2>
+          <p>
+            Drukkerij Van den Herik is onderdeel van 't Papierenhuys en gevestigd aan de
+            Mijlweg 9i, 3295 KG 's-Gravendeel. Wij zijn de verwerkingsverantwoordelijke voor
+            de persoonsgegevens die u via onze website of anderszins aan ons verstrekt.
+          </p>
+          <dl class="pv-contact">
+            <div><dt>Telefoon</dt><dd><a href="tel:+31786731266">078 673 12 66</a></dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:info@drukkerijherik.nl">info@drukkerijherik.nl</a></dd></div>
+          </dl>
+        </section>
 
-      <!-- 3 -->
-      <div class="streep"></div>
-      <h2 class="sectie-titel" style="font-size:1.4rem;">3. Waarvoor gebruiken wij uw gegevens?</h2>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:16px;">
-        Uw gegevens worden uitsluitend gebruikt voor:
-      </p>
-      <ul style="color:#4a5568; line-height:2; margin-bottom:32px; padding-left:0; list-style:none;">
-        <li class="kenmerk-item">Het uitbrengen van een offerte op uw verzoek</li>
-        <li class="kenmerk-item">Het uitvoeren en afhandelen van uw opdracht</li>
-        <li class="kenmerk-item">Het bezorgen van uw bestelling via UPS</li>
-        <li class="kenmerk-item">Het versturen van facturen en verwerken van betalingen</li>
-        <li class="kenmerk-item">Het beantwoorden van uw vragen en klachten</li>
-      </ul>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:32px;">
-        Wij gebruiken uw gegevens <strong>niet</strong> voor profilering, het doorverkopen aan
-        derden of het versturen van nieuwsbrieven zonder uw uitdrukkelijke toestemming.
-      </p>
+        <section class="pv-blok ct-reveal" id="gegevens" aria-labelledby="gegevens-titel">
+          <span class="pv-blok__nr" aria-hidden="true">02</span>
+          <h2 class="pv-blok__titel" id="gegevens-titel">Welke gegevens verwerken wij?</h2>
+          <p>
+            Wij verwerken alleen persoonsgegevens die u zelf aan ons verstrekt, bijvoorbeeld
+            wanneer u contact met ons opneemt voor een offerte of opdracht:
+          </p>
+          <ul class="pv-lijst">
+            <li>Naam en contactgegevens (telefoon, e-mailadres)</li>
+            <li>Bedrijfsnaam en factuuradres</li>
+            <li>Bezorgadres voor het afleveren van uw bestelling</li>
+            <li>Betalingsgegevens (uitsluitend voor facturatie)</li>
+            <li>Inhoud van uw berichten en opdrachten</li>
+          </ul>
+        </section>
 
-      <!-- 4 -->
-      <div class="streep"></div>
-      <h2 class="sectie-titel" style="font-size:1.4rem;">4. Hoe lang bewaren wij uw gegevens?</h2>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:32px;">
-        Wij bewaren uw persoonsgegevens niet langer dan noodzakelijk. Klantgegevens en facturen
-        worden bewaard gedurende de wettelijke bewaartermijn van <strong>7 jaar</strong> (fiscale
-        bewaarplicht). Overige correspondentie wordt maximaal <strong>2 jaar</strong> na het laatste
-        contact bewaard, tenzij u eerder om verwijdering verzoekt.
-      </p>
+        <section class="pv-blok ct-reveal" id="doel" aria-labelledby="doel-titel">
+          <span class="pv-blok__nr" aria-hidden="true">03</span>
+          <h2 class="pv-blok__titel" id="doel-titel">Waarvoor gebruiken wij uw gegevens?</h2>
+          <p>Uw gegevens worden uitsluitend gebruikt voor:</p>
+          <ul class="pv-lijst">
+            <li>Het uitbrengen van een offerte op uw verzoek</li>
+            <li>Het uitvoeren en afhandelen van uw opdracht</li>
+            <li>Het bezorgen van uw bestelling via UPS</li>
+            <li>Het versturen van facturen en verwerken van betalingen</li>
+            <li>Het beantwoorden van uw vragen en klachten</li>
+          </ul>
+          <p class="pv-uitgelicht">
+            Wij gebruiken uw gegevens <strong>niet</strong> voor profilering, het doorverkopen
+            aan derden of het versturen van nieuwsbrieven zonder uw uitdrukkelijke toestemming.
+          </p>
+        </section>
 
-      <!-- 5 -->
-      <div class="streep"></div>
-      <h2 class="sectie-titel" style="font-size:1.4rem;">5. Delen wij uw gegevens met anderen?</h2>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:16px;">
-        Wij verstrekken uw gegevens alleen aan derden als dat noodzakelijk is voor de uitvoering
-        van onze dienstverlening:
-      </p>
-      <ul style="color:#4a5568; line-height:2; margin-bottom:32px; padding-left:0; list-style:none;">
-        <li class="kenmerk-item"><strong>UPS</strong> — voor het bezorgen van uw bestelling (naam en bezorgadres)</li>
-        <li class="kenmerk-item"><strong>Onze boekhouder</strong> — voor de financiële administratie (factuurgegevens)</li>
-      </ul>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:32px;">
-        Wij verkopen uw persoonsgegevens nooit aan derden en verstrekken ze niet voor commerciële
-        doeleinden van anderen.
-      </p>
+        <section class="pv-blok ct-reveal" id="bewaren" aria-labelledby="bewaren-titel">
+          <span class="pv-blok__nr" aria-hidden="true">04</span>
+          <h2 class="pv-blok__titel" id="bewaren-titel">Hoe lang bewaren wij uw gegevens?</h2>
+          <p>
+            Wij bewaren uw persoonsgegevens niet langer dan noodzakelijk:
+          </p>
+          <div class="pv-termijnen">
+            <div class="pv-termijn">
+              <span class="pv-termijn__getal">7 jaar</span>
+              <span class="pv-termijn__label">Klantgegevens en facturen — wettelijke fiscale bewaarplicht</span>
+            </div>
+            <div class="pv-termijn">
+              <span class="pv-termijn__getal">2 jaar</span>
+              <span class="pv-termijn__label">Overige correspondentie na het laatste contact, tenzij u eerder om verwijdering vraagt</span>
+            </div>
+          </div>
+        </section>
 
-      <!-- 6 -->
-      <div class="streep"></div>
-      <h2 class="sectie-titel" style="font-size:1.4rem;">6. Uw rechten</h2>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:16px;">
-        Op grond van de Algemene Verordening Gegevensbescherming (AVG) heeft u de volgende rechten:
-      </p>
-      <ul style="color:#4a5568; line-height:2; margin-bottom:32px; padding-left:0; list-style:none;">
-        <li class="kenmerk-item"><strong>Inzage</strong> — u kunt opvragen welke gegevens wij van u hebben</li>
-        <li class="kenmerk-item"><strong>Correctie</strong> — u kunt onjuiste gegevens laten aanpassen</li>
-        <li class="kenmerk-item"><strong>Verwijdering</strong> — u kunt verzoeken uw gegevens te laten wissen</li>
-        <li class="kenmerk-item"><strong>Bezwaar</strong> — u kunt bezwaar maken tegen de verwerking van uw gegevens</li>
-        <li class="kenmerk-item"><strong>Dataportabiliteit</strong> — u kunt uw gegevens opvragen in een overdraagbaar formaat</li>
-      </ul>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:32px;">
-        Stuur uw verzoek naar <a href="mailto:info@drukkerijherik.nl">info@drukkerijherik.nl</a>.
-        Wij reageren binnen 4 weken.
-      </p>
+        <section class="pv-blok ct-reveal" id="delen" aria-labelledby="delen-titel">
+          <span class="pv-blok__nr" aria-hidden="true">05</span>
+          <h2 class="pv-blok__titel" id="delen-titel">Delen wij uw gegevens met anderen?</h2>
+          <p>
+            Wij verstrekken uw gegevens alleen aan derden als dat noodzakelijk is voor de
+            uitvoering van onze dienstverlening:
+          </p>
+          <ul class="pv-lijst">
+            <li><span><strong>UPS</strong> — voor het bezorgen van uw bestelling (naam en bezorgadres)</span></li>
+            <li><span><strong>Onze boekhouder</strong> — voor de financiële administratie (factuurgegevens)</span></li>
+          </ul>
+          <p>
+            Wij verkopen uw persoonsgegevens nooit aan derden en verstrekken ze niet voor
+            commerciële doeleinden van anderen.
+          </p>
+        </section>
 
-      <!-- 7 -->
-      <div class="streep"></div>
-      <h2 class="sectie-titel" style="font-size:1.4rem;">7. Klachten</h2>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:32px;">
-        Heeft u een klacht over hoe wij met uw persoonsgegevens omgaan? Neem dan eerst contact
-        met ons op via <a href="mailto:info@drukkerijherik.nl">info@drukkerijherik.nl</a>.
-        Komen we er samen niet uit, dan heeft u het recht een klacht in te dienen bij de
-        <strong>Autoriteit Persoonsgegevens</strong> via
-        <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">autoriteitpersoonsgegevens.nl</a>.
-      </p>
+        <section class="pv-blok ct-reveal" id="rechten" aria-labelledby="rechten-titel">
+          <span class="pv-blok__nr" aria-hidden="true">06</span>
+          <h2 class="pv-blok__titel" id="rechten-titel">Uw rechten</h2>
+          <p>
+            Op grond van de Algemene Verordening Gegevensbescherming (AVG) heeft u de volgende rechten:
+          </p>
+          <dl class="pv-rechten">
+            <div class="pv-recht"><dt>Inzage</dt><dd>U kunt opvragen welke gegevens wij van u hebben.</dd></div>
+            <div class="pv-recht"><dt>Correctie</dt><dd>U kunt onjuiste gegevens laten aanpassen.</dd></div>
+            <div class="pv-recht"><dt>Verwijdering</dt><dd>U kunt verzoeken uw gegevens te laten wissen.</dd></div>
+            <div class="pv-recht"><dt>Bezwaar</dt><dd>U kunt bezwaar maken tegen de verwerking van uw gegevens.</dd></div>
+            <div class="pv-recht"><dt>Dataportabiliteit</dt><dd>U kunt uw gegevens opvragen in een overdraagbaar formaat.</dd></div>
+          </dl>
+          <p>
+            Stuur uw verzoek naar <a href="mailto:info@drukkerijherik.nl">info@drukkerijherik.nl</a>.
+            Wij reageren binnen 4 weken.
+          </p>
+        </section>
 
-      <!-- 8 -->
-      <div class="streep"></div>
-      <h2 class="sectie-titel" style="font-size:1.4rem;">8. Beveiliging</h2>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:32px;">
-        Wij treffen passende technische en organisatorische maatregelen om uw persoonsgegevens
-        te beschermen tegen verlies, misbruik of onbevoegde toegang. Onze website maakt gebruik
-        van een beveiligde HTTPS-verbinding.
-      </p>
+        <section class="pv-blok ct-reveal" id="klachten" aria-labelledby="klachten-titel">
+          <span class="pv-blok__nr" aria-hidden="true">07</span>
+          <h2 class="pv-blok__titel" id="klachten-titel">Klachten</h2>
+          <p>
+            Heeft u een klacht over hoe wij met uw persoonsgegevens omgaan? Neem dan eerst
+            contact met ons op via <a href="mailto:info@drukkerijherik.nl">info@drukkerijherik.nl</a>.
+            Komen we er samen niet uit, dan heeft u het recht een klacht in te dienen bij de
+            <strong>Autoriteit Persoonsgegevens</strong> via
+            <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">autoriteitpersoonsgegevens.nl</a>.
+          </p>
+        </section>
 
-      <!-- 9 -->
-      <div class="streep"></div>
-      <h2 class="sectie-titel" style="font-size:1.4rem;">9. Wijzigingen</h2>
-      <p style="color:#4a5568; line-height:1.8; margin-bottom:48px;">
-        Wij kunnen deze privacyverklaring aanpassen als onze dienstverlening of de wetgeving
-        daartoe aanleiding geeft. De meest actuele versie vindt u altijd op deze pagina.
-      </p>
+        <section class="pv-blok ct-reveal" id="beveiliging" aria-labelledby="beveiliging-titel">
+          <span class="pv-blok__nr" aria-hidden="true">08</span>
+          <h2 class="pv-blok__titel" id="beveiliging-titel">Beveiliging</h2>
+          <p>
+            Wij treffen passende technische en organisatorische maatregelen om uw
+            persoonsgegevens te beschermen tegen verlies, misbruik of onbevoegde toegang.
+            Onze website maakt gebruik van een beveiligde HTTPS-verbinding.
+          </p>
+        </section>
 
-      <div style="background:var(--blauw-donker); border-radius:var(--radius-groot); padding:32px 36px; color:rgba(255,255,255,0.9);">
-        <div style="font-weight:700; font-size:1.05rem; color:var(--wit); margin-bottom:12px;">Vragen over uw privacy?</div>
-        <p style="font-size:0.95rem; line-height:1.7; margin-bottom:20px; color:rgba(255,255,255,0.85);">
-          Neem gerust contact met ons op. Wij helpen u graag verder.
-        </p>
-        <a href="contact.html" class="knop" style="background:var(--wit); color:var(--blauw-donker); font-weight:700;">Neem contact op</a>
-      </div>
+        <section class="pv-blok ct-reveal" id="wijzigingen" aria-labelledby="wijzigingen-titel">
+          <span class="pv-blok__nr" aria-hidden="true">09</span>
+          <h2 class="pv-blok__titel" id="wijzigingen-titel">Wijzigingen</h2>
+          <p>
+            Wij kunnen deze privacyverklaring aanpassen als onze dienstverlening of de
+            wetgeving daartoe aanleiding geeft. De meest actuele versie vindt u altijd op deze pagina.
+          </p>
+        </section>
 
+        <aside class="pv-vraag ct-reveal">
+          <div>
+            <h2 class="pv-vraag__titel">Vragen over uw privacy?</h2>
+            <p>Neem gerust contact met ons op. Wij helpen u graag verder.</p>
+          </div>
+          <a href="contact.html" class="knop knop--hero-primair">Neem contact op <span class="knop__pijl">→</span></a>
+        </aside>
+
+      </article>
     </div>
   </section>
 
@@ -218,5 +256,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/privacy.js"></script>
 </body>
 </html>

@@ -1,43 +1,22 @@
 /* =========================================
-   Drukkerij Van den Herik — Premium scroll-ervaring
-   GSAP + ScrollTrigger. Alleen geladen op de homepagina.
+   Drukkerij Van den Herik — Homepagina (GSAP + ScrollTrigger)
+   Volgens DESIGN.md: 3 blikvangers + 1 slim detail, L2+.
 
-   - Gepinde hero die transformeert bij het scrollen
-     (zoom, fade, blur, kaarten vliegen de diepte in)
-   - Meerlaagse parallax door de hele pagina
-   - Woord-voor-woord tekstopbouw gekoppeld aan scrub
-   - Marquee en kaarten reageren op scrollsnelheid en -richting
-   - Omkeerbare reveals: elementen komen én verdwijnen
-   - Morfende achtergronden en gradient-sweeps
-   - 60fps: alleen transform/opacity (+ 1x blur), scrub-smoothing
-   - Respecteert prefers-reduced-motion, valt netjes terug zonder GSAP
+   1. Hero: gepind; het volgende "vel papier" schuift eroverheen
+      terwijl de inhoud terugwijkt en de productkaarten wegvliegen
+   2. Manifest-marquee reageert op scrollsnelheid en -richting
+   3. Bento-diensten: spotlight volgt de cursor (rAF-gethrottled)
+   +  Kop-onthulling per regel, woord-voor-woord tekst, tellers,
+      parallax, magnetische knoppen
+   Alleen transform en opacity; geen filter: blur() op bewegende
+   elementen. Respecteert prefers-reduced-motion en werkt zonder GSAP.
+   (Scroll-voortgangsbalk en navbar-status: js/main.js)
    ========================================= */
 (function () {
   'use strict';
 
   var beperkteBeweging = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var fijnePointer = window.matchMedia('(pointer: fine)').matches;
-
-  /* ——— Scroll-voortgangsbalk + navbar-status (framework-loos, altijd actief) ——— */
-  var voortgang = document.getElementById('scroll-voortgang');
-  var navbar = document.querySelector('.navbar');
-  var scrollTikt = false;
-
-  function bijScroll() {
-    var y = window.scrollY || window.pageYOffset;
-    var docHoogte = document.documentElement.scrollHeight - window.innerHeight;
-    if (voortgang) {
-      voortgang.style.transform = 'scaleX(' + (docHoogte > 0 ? Math.min(y / docHoogte, 1) : 0) + ')';
-    }
-    if (navbar) {
-      navbar.classList.toggle('navbar--gescrold', y > 10);
-    }
-    scrollTikt = false;
-  }
-  window.addEventListener('scroll', function () {
-    if (!scrollTikt) { scrollTikt = true; requestAnimationFrame(bijScroll); }
-  }, { passive: true });
-  bijScroll();
+  var fijnePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   /* ——— Reveal-groepen voorbereiden ——— */
   document.querySelectorAll('.reveal-groep').forEach(function (groep) {
@@ -49,7 +28,23 @@
   function toonAlles() {
     document.querySelectorAll('.reveal').forEach(function (el) {
       el.classList.add('reveal--zichtbaar');
-      el.style.transitionDelay = '';
+    });
+  }
+
+  /* ——— Spotlight op de bento-tegels (ook zonder GSAP) ——— */
+  if (fijnePointer && !beperkteBeweging) {
+    document.querySelectorAll('.hp-tegel').forEach(function (tegel) {
+      var wachtend = null;
+      tegel.addEventListener('pointermove', function (e) {
+        wachtend = e;
+        if (tegel._rafId) return;
+        tegel._rafId = requestAnimationFrame(function () {
+          var rect = tegel.getBoundingClientRect();
+          tegel.style.setProperty('--mx', (wachtend.clientX - rect.left) + 'px');
+          tegel.style.setProperty('--my', (wachtend.clientY - rect.top) + 'px');
+          tegel._rafId = null;
+        });
+      });
     });
   }
 
@@ -73,7 +68,6 @@
   var hero = document.querySelector('.hero--premium');
   var heroInhoud = hero ? hero.querySelector('.hero__inhoud') : null;
   var heroAchtergrond = hero ? hero.querySelector('.hero__achtergrond') : null;
-  var heroVisueel = hero ? hero.querySelector('.hero__visueel') : null;
   var watermerk = hero ? hero.querySelector('.hero__watermerk') : null;
   var scrollhint = hero ? hero.querySelector('.hero__scrollhint') : null;
   var kaarten = hero ? gsap.utils.toArray(hero.querySelectorAll('.zweef-kaart')) : [];
@@ -81,7 +75,7 @@
   var mm = gsap.matchMedia();
 
   /* =========================================================
-     1. HERO — gepind en transformerend tijdens het scrollen
+     1. HERO — gepind; het vel papier schuift eroverheen
      ========================================================= */
   mm.add('(min-width: 981px)', function () {
     if (!hero) return;
@@ -90,30 +84,25 @@
       scrollTrigger: {
         trigger: hero,
         start: 'top top',
-        end: '+=75%',
-        scrub: 0.9,
+        end: 'bottom top',
+        scrub: 0.8,
         pin: true,
+        pinSpacing: false,
         anticipatePin: 1
       }
     });
 
     if (heroInhoud) {
-      tl.to(heroInhoud, {
-        yPercent: -14,
-        scale: 0.94,
-        opacity: 0,
-        filter: 'blur(9px)',
-        ease: 'none'
-      }, 0);
+      tl.to(heroInhoud, { yPercent: -10, scale: 0.92, opacity: 0.15, ease: 'none' }, 0);
     }
     if (heroAchtergrond) {
-      tl.to(heroAchtergrond, { scale: 1.12, ease: 'none' }, 0);
+      tl.to(heroAchtergrond, { scale: 1.1, ease: 'none' }, 0);
     }
     if (watermerk) {
       tl.to(watermerk, { rotation: -15, yPercent: 12, ease: 'none' }, 0);
     }
     if (scrollhint) {
-      tl.to(scrollhint, { opacity: 0, ease: 'none' }, 0);
+      tl.to(scrollhint, { opacity: 0, duration: 0.2, ease: 'none' }, 0);
     }
     /* De zwevende kaarten vliegen elk hun eigen kant op, op basis van diepte */
     kaarten.forEach(function (kaart, i) {
@@ -134,18 +123,13 @@
     if (!hero || !heroInhoud) return;
     gsap.to(heroInhoud, {
       y: -40,
-      opacity: 0,
+      opacity: 0.2,
       ease: 'none',
-      scrollTrigger: {
-        trigger: hero,
-        start: 'top top',
-        end: 'bottom 40%',
-        scrub: true
-      }
+      scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom 30%', scrub: true }
     });
   });
 
-  /* ——— Hero: muis-parallax + cursor-spotlight (alleen desktop) ——— */
+  /* ——— Hero: muis-parallax + cursor-spotlight (alleen met fijne pointer) ——— */
   if (hero && fijnePointer) {
     var kaartQuickTos = kaarten.map(function (kaart) {
       return {
@@ -154,28 +138,35 @@
         naarY: gsap.quickTo(kaart, 'y', { duration: 0.7, ease: 'power3' })
       };
     });
+    var heroEvent = null;
+    var heroRaf = null;
 
-    hero.addEventListener('mousemove', function (e) {
-      var rect = hero.getBoundingClientRect();
-      var nx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-      var ny = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-      kaartQuickTos.forEach(function (k) {
-        k.naarX(nx * 26 * k.diepte);
-        k.naarY(ny * 20 * k.diepte);
+    hero.addEventListener('pointermove', function (e) {
+      heroEvent = e;
+      if (heroRaf) return;
+      heroRaf = requestAnimationFrame(function () {
+        var rect = hero.getBoundingClientRect();
+        var fx = (heroEvent.clientX - rect.left) / rect.width;
+        var fy = (heroEvent.clientY - rect.top) / rect.height;
+        kaartQuickTos.forEach(function (k) {
+          k.naarX((fx - 0.5) * 52 * k.diepte);
+          k.naarY((fy - 0.5) * 40 * k.diepte);
+        });
+        hero.style.setProperty('--mx', (fx * 100) + '%');
+        hero.style.setProperty('--my', (fy * 100) + '%');
+        hero.classList.add('spot-actief');
+        heroRaf = null;
       });
-      hero.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width * 100) + '%');
-      hero.style.setProperty('--my', ((e.clientY - rect.top) / rect.height * 100) + '%');
-      hero.classList.add('spot-actief');
     });
 
-    hero.addEventListener('mouseleave', function () {
+    hero.addEventListener('pointerleave', function () {
       kaartQuickTos.forEach(function (k) { k.naarX(0); k.naarY(0); });
       hero.classList.remove('spot-actief');
     });
   }
 
   /* =========================================================
-     2. SCROLLSNELHEID — marquee en kaarten reageren live
+     2. MANIFEST — draait mee met scrollrichting en -snelheid
      ========================================================= */
   var ruweSnelheid = 0;
   ScrollTrigger.create({
@@ -184,56 +175,59 @@
     onUpdate: function (self) { ruweSnelheid = self.getVelocity(); }
   });
 
-  /* Marquee draait mee met de scrollrichting en versnelt bij snel scrollen */
-  var marqueeBaan = document.querySelector('.usp-marquee__baan');
-  var marqueeTween = null;
-  if (marqueeBaan) {
-    marqueeTween = gsap.to(marqueeBaan, {
-      xPercent: -50,
-      duration: 38,
+  var manifestBaan = document.querySelector('.hp-manifest__baan');
+  if (manifestBaan) {
+    var manifestTween = gsap.to(manifestBaan, { xPercent: -50, duration: 46, ease: 'none', repeat: -1 });
+    var gladdeSnelheid = 0;
+    var tempo = 1;
+    gsap.ticker.add(function () {
+      ruweSnelheid += (0 - ruweSnelheid) * 0.08;
+      gladdeSnelheid += (ruweSnelheid - gladdeSnelheid) * 0.1;
+      var doel = gsap.utils.clamp(-4, 5, 1 + gladdeSnelheid / 700);
+      tempo += (doel - tempo) * 0.08;
+      manifestTween.timeScale(tempo);
+    });
+    /* Het manifest schuift bij binnenkomst iets op, voor extra diepte */
+    gsap.fromTo('.hp-manifest', { x: 80 }, {
+      x: -80,
       ease: 'none',
-      repeat: -1
+      scrollTrigger: { trigger: '.hp-vel', start: 'top bottom', end: 'bottom top', scrub: 0.8 }
     });
   }
 
-  /* Rasters hellen subtiel mee met de scrollsnelheid (skew) */
-  var skewDoelen = gsap.utils.toArray('.diensten-raster, .reveal-groep').map(function (el) {
-    return gsap.quickTo(el, 'skewY', { duration: 0.5, ease: 'power3' });
-  });
-
-  var gladdeSnelheid = 0;
-  var marqueeTS = 1;
-  gsap.ticker.add(function () {
-    ruweSnelheid += (0 - ruweSnelheid) * 0.08; /* verval als het scrollen stopt */
-    gladdeSnelheid += (ruweSnelheid - gladdeSnelheid) * 0.1;
-
-    if (marqueeTween) {
-      var doelTS = gsap.utils.clamp(-3.5, 4.5, 1 + gladdeSnelheid / 900);
-      marqueeTS += (doelTS - marqueeTS) * 0.08;
-      marqueeTween.timeScale(marqueeTS);
-    }
-
-    var skewDoel = gsap.utils.clamp(-3.5, 3.5, gladdeSnelheid / 400);
-    skewDoelen.forEach(function (naarSkew) { naarSkew(skewDoel); });
+  gsap.from('.hp-belofte', {
+    y: 26, opacity: 0, duration: 0.8, stagger: 0.08, ease: 'power3.out',
+    scrollTrigger: { trigger: '.hp-beloften', start: 'top 92%', toggleActions: 'play none none reverse' }
   });
 
   /* =========================================================
-     3. REVEALS — elegant in beeld, en weer weg bij terugscrollen
+     3. KOPPEN — regel voor regel omhoog uit een masker
      ========================================================= */
-  var onthullers = gsap.utils.toArray('.reveal');
-
-  /* Elementen met woord-opbouw niet dubbel animeren */
-  var woordElementen = gsap.utils.toArray('[data-woorden]');
-  woordElementen.forEach(function (el) {
-    el.classList.remove('reveal');
-    onthullers = onthullers.filter(function (o) { return o !== el; });
+  gsap.utils.toArray('.kop-onthul').forEach(function (kop) {
+    gsap.from(kop.querySelectorAll('.kop-regel > span'), {
+      yPercent: 110,
+      duration: 0.95,
+      stagger: 0.09,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: kop, start: 'top 86%', toggleActions: 'play none none reverse' }
+    });
   });
 
-  gsap.set(onthullers, { y: 44, opacity: 0 });
+  /* =========================================================
+     4. REVEALS — elegant in beeld, en weer weg bij terugscrollen
+     ========================================================= */
+  var woordElementen = gsap.utils.toArray('[data-woorden]');
+  var onthullers = gsap.utils.toArray('.reveal').filter(function (el) {
+    return woordElementen.indexOf(el) === -1;
+  });
+
+  /* CSS-transities staan uit zolang GSAP animeert, zodat ze niet botsen */
+  gsap.set(onthullers, { y: 44, opacity: 0, transition: 'none' });
 
   ScrollTrigger.batch(onthullers, {
-    start: 'top 88%',
+    start: 'top 90%',
     onEnter: function (batch) {
+      gsap.set(batch, { transition: 'none' });
       gsap.to(batch, {
         y: 0,
         opacity: 1,
@@ -243,17 +237,18 @@
         overwrite: true,
         onComplete: function () {
           /* transform vrijgeven zodat CSS-hovereffecten weer werken */
-          gsap.set(batch, { clearProps: 'transform' });
+          gsap.set(batch, { clearProps: 'transform,transition' });
         }
       });
     },
     onLeaveBack: function (batch) {
+      gsap.set(batch, { transition: 'none' });
       gsap.to(batch, { y: 36, opacity: 0, duration: 0.45, ease: 'power2.in', overwrite: true });
     }
   });
 
   /* =========================================================
-     4. TEKST — woord voor woord opgebouwd, gekoppeld aan scroll
+     5. TEKST — woord voor woord opgebouwd, gekoppeld aan scroll
      ========================================================= */
   woordElementen.forEach(function (el) {
     var woorden = el.textContent.trim().split(/\s+/);
@@ -267,97 +262,55 @@
     });
 
     gsap.fromTo(el.querySelectorAll('.bouw-woord'),
-      { opacity: 0.12 },
+      { opacity: 0.14 },
       {
         opacity: 1,
         ease: 'none',
         stagger: 0.05,
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 84%',
-          end: 'top 38%',
-          scrub: 0.6
-        }
+        scrollTrigger: { trigger: el, start: 'top 86%', end: 'top 45%', scrub: 0.6 }
       }
     );
   });
 
   /* =========================================================
-     5. PARALLAX-LAGEN — de pagina beweegt als één verhaal
+     6. PARALLAX — beeld en cijfers bewegen op eigen tempo
      ========================================================= */
-
-  /* Elke sectie-inhoud drijft licht tegen de scroll in */
-  gsap.utils.toArray('.sectie > .container').forEach(function (inhoud) {
-    gsap.fromTo(inhoud,
-      { y: 34 },
-      {
-        y: -26,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: inhoud.parentNode,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 0.6
-        }
-      }
-    );
+  gsap.utils.toArray('.hp-tegel__beeld .dp-scene__zoom').forEach(function (zoom) {
+    gsap.fromTo(zoom, { yPercent: 6 }, {
+      yPercent: -6,
+      ease: 'none',
+      scrollTrigger: { trigger: zoom.closest('.hp-tegel'), start: 'top bottom', end: 'bottom top', scrub: 0.8 }
+    });
   });
 
-  /* Het feiten-raster (1961 / 90% / 30+ / FSC) zweeft dieper dan de tekst ernaast */
-  var feitenRaster = document.querySelector('.sectie--grijs .reveal-groep');
-  if (feitenRaster) {
-    gsap.fromTo(feitenRaster,
-      { y: 70 },
-      {
-        y: -50,
+  mm.add('(min-width: 981px)', function () {
+    var feiten = document.querySelector('.hp-feiten');
+    if (feiten) {
+      gsap.fromTo(feiten, { y: 60 }, {
+        y: -40,
         ease: 'none',
-        scrollTrigger: {
-          trigger: feitenRaster.closest('.sectie'),
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 0.8
-        }
-      }
-    );
-  }
-
-  /* =========================================================
-     6. ACHTERGRONDEN — morphen mee met de scrollpositie
-     ========================================================= */
-  gsap.utils.toArray('.sectie--grijs').forEach(function (sectie) {
-    gsap.fromTo(sectie,
-      { backgroundColor: '#f4f7fc' },
-      {
-        backgroundColor: '#e7eefb',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: sectie,
-          start: 'top 75%',
-          end: 'bottom 25%',
-          scrub: true
-        }
-      }
-    );
+        scrollTrigger: { trigger: '.hp-over-sectie', start: 'top bottom', end: 'bottom top', scrub: 0.8 }
+      });
+    }
   });
 
-  /* CTA: het gradient schuift langzaam door terwijl je scrolt */
-  var cta = document.querySelector('.cta-sectie');
-  if (cta) {
-    gsap.set(cta, { backgroundSize: '220% 220%' });
-    gsap.fromTo(cta,
-      { backgroundPosition: '0% 50%' },
-      {
-        backgroundPosition: '100% 50%',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: cta,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true
-        }
-      }
-    );
-  }
+  gsap.utils.toArray('.hp-cta__pasmerk').forEach(function (merk, i) {
+    gsap.to(merk, {
+      yPercent: i ? -30 : 30,
+      rotation: i ? -25 : 25,
+      ease: 'none',
+      scrollTrigger: { trigger: '.hp-cta', start: 'top bottom', end: 'bottom top', scrub: true }
+    });
+  });
+
+  /* CTA: titel en knoppen zoomen rustig binnen */
+  gsap.fromTo('.hp-cta__inhoud',
+    { scale: 0.93, opacity: 0 },
+    {
+      scale: 1, opacity: 1, ease: 'power2.out',
+      scrollTrigger: { trigger: '.hp-cta', start: 'top 82%', end: 'top 35%', scrub: 0.8 }
+    }
+  );
 
   /* Footer schuift elegant omhoog in beeld */
   var footerInhoud = document.querySelector('.footer .container');
@@ -367,11 +320,7 @@
       opacity: 0,
       duration: 0.9,
       ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.footer',
-        start: 'top 92%',
-        toggleActions: 'play none none reverse'
-      }
+      scrollTrigger: { trigger: '.footer', start: 'top 92%', toggleActions: 'play none none reverse' }
     });
   }
 
@@ -381,7 +330,7 @@
   gsap.utils.toArray('[data-teller]').forEach(function (el) {
     ScrollTrigger.create({
       trigger: el,
-      start: 'top 85%',
+      start: 'top 88%',
       once: true,
       onEnter: function () {
         var doel = parseFloat(el.dataset.teller);
@@ -392,27 +341,25 @@
           w: doel,
           duration: 1.6,
           ease: 'power2.out',
-          onUpdate: function () {
-            el.textContent = Math.round(teller.w) + achtervoegsel;
-          }
+          onUpdate: function () { el.textContent = Math.round(teller.w) + achtervoegsel; }
         });
       }
     });
   });
 
   /* =========================================================
-     8. MICRO-INTERACTIES — magnetische hero-knoppen
+     8. MICRO-INTERACTIES — magnetische knoppen op donkere vlakken
      ========================================================= */
   if (fijnePointer) {
     document.querySelectorAll('.knop--hero-primair, .knop--hero-omlijnd').forEach(function (knop) {
       var naarX = gsap.quickTo(knop, 'x', { duration: 0.4, ease: 'power3' });
       var naarY = gsap.quickTo(knop, 'y', { duration: 0.4, ease: 'power3' });
-      knop.addEventListener('mousemove', function (e) {
+      knop.addEventListener('pointermove', function (e) {
         var rect = knop.getBoundingClientRect();
         naarX((e.clientX - rect.left - rect.width / 2) * 0.18);
         naarY((e.clientY - rect.top - rect.height / 2) * 0.22);
       });
-      knop.addEventListener('mouseleave', function () {
+      knop.addEventListener('pointerleave', function () {
         naarX(0);
         naarY(0);
       });

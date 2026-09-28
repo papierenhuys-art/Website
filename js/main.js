@@ -2,15 +2,40 @@
    Drukkerij Van den Herik — JavaScript
    ========================================= */
 
+// ——— Scroll-voortgangsbalk + navbar-status (elke pagina, rAF-gethrottled) ———
+(function () {
+  const voortgang = document.getElementById('scroll-voortgang');
+  const navbar = document.querySelector('.navbar');
+  let tikt = false;
+
+  function bijScroll() {
+    const y = window.scrollY || window.pageYOffset;
+    const docHoogte = document.documentElement.scrollHeight - window.innerHeight;
+    if (voortgang) {
+      voortgang.style.transform = 'scaleX(' + (docHoogte > 0 ? Math.min(y / docHoogte, 1) : 0) + ')';
+    }
+    if (navbar) navbar.classList.toggle('navbar--gescrold', y > 10);
+    tikt = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!tikt) { tikt = true; requestAnimationFrame(bijScroll); }
+  }, { passive: true });
+  bijScroll();
+})();
+
 // ——— Mobiel hamburger-menu ———
 const hamburger = document.getElementById('hamburger');
 const navMenu   = document.getElementById('nav-menu');
 
 if (hamburger && navMenu) {
+  hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-controls', 'nav-menu');
   hamburger.addEventListener('click', () => {
     const open = navMenu.classList.toggle('open');
     hamburger.classList.toggle('open', open);
     hamburger.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+    hamburger.setAttribute('aria-expanded', String(open));
   });
 
   // Sluit menu bij klik op een link
@@ -19,58 +44,8 @@ if (hamburger && navMenu) {
       navMenu.classList.remove('open');
       hamburger.classList.remove('open');
       hamburger.setAttribute('aria-label', 'Menu openen');
+      hamburger.setAttribute('aria-expanded', 'false');
     });
-  });
-}
-
-// ——— Contactformulier ———
-const form    = document.getElementById('contact-formulier');
-const succes  = document.getElementById('formulier-succes');
-
-if (form) {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    // Eenvoudige client-side validatie
-    const verplicht = form.querySelectorAll('[required]');
-    let geldig = true;
-
-    verplicht.forEach(veld => {
-      veld.style.borderColor = '';
-      if (!veld.value.trim() || (veld.type === 'checkbox' && !veld.checked)) {
-        veld.style.borderColor = '#e53e3e';
-        geldig = false;
-      }
-    });
-
-    if (!geldig) {
-      // Scroll naar eerste fout
-      const eerste = form.querySelector('[required][style*="e53e3e"]');
-      if (eerste) eerste.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      return;
-    }
-
-    // Simuleer versturen (geen echte backend)
-    const knop = form.querySelector('button[type="submit"]');
-    knop.disabled = true;
-    knop.textContent = 'Bezig met versturen…';
-
-    setTimeout(() => {
-      form.reset();
-      knop.disabled = false;
-      knop.textContent = 'Verstuur bericht';
-      if (succes) {
-        succes.style.display = 'block';
-        succes.classList.add('formulier-bericht--succes');
-        succes.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        setTimeout(() => { succes.style.display = 'none'; }, 6000);
-      }
-    }, 800);
-  });
-
-  // Herstel randkleur bij invullen
-  form.querySelectorAll('input, textarea, select').forEach(veld => {
-    veld.addEventListener('input', () => { veld.style.borderColor = ''; });
   });
 }
 
@@ -100,12 +75,11 @@ if (form) {
   });
 })();
 
-// ——— Scroll-animatie voor kaarten ———
-// (op pagina's met GSAP neemt js/hero.js dit over)
-if (!window.gsap && 'IntersectionObserver' in window) {
-  const elementen = document.querySelectorAll(
-    '.dienst-kaart, .team-kaart, .waarde-kaart, .tijdlijn-item, .teller, .ct-reveal'
-  );
+// ——— Rustige fade-in op L1-pagina's (contact, privacy) ———
+// (op pagina's met GSAP nemen de paginascripts dit over)
+if (!window.gsap && 'IntersectionObserver' in window &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const elementen = document.querySelectorAll('.ct-reveal');
 
   elementen.forEach(el => {
     el.style.opacity = '0';

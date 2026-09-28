@@ -18,27 +18,6 @@
   var beperkteBeweging = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fijnePointer = window.matchMedia('(pointer: fine)').matches;
 
-  /* ——— Scroll-voortgangsbalk + navbar (framework-loos) ——— */
-  var voortgang = document.getElementById('scroll-voortgang');
-  var navbar = document.querySelector('.navbar');
-  var scrollTikt = false;
-
-  function bijScroll() {
-    var y = window.scrollY || window.pageYOffset;
-    var docHoogte = document.documentElement.scrollHeight - window.innerHeight;
-    if (voortgang) {
-      voortgang.style.transform = 'scaleX(' + (docHoogte > 0 ? Math.min(y / docHoogte, 1) : 0) + ')';
-    }
-    if (navbar) {
-      navbar.classList.toggle('navbar--gescrold', y > 10);
-    }
-    scrollTikt = false;
-  }
-  window.addEventListener('scroll', function () {
-    if (!scrollTikt) { scrollTikt = true; requestAnimationFrame(bijScroll); }
-  }, { passive: true });
-  bijScroll();
-
   if (!window.gsap || !window.ScrollTrigger) return;
 
   gsap.registerPlugin(ScrollTrigger);
@@ -70,7 +49,7 @@
       }
     });
     if (heroInhoud) {
-      tl.to(heroInhoud, { yPercent: -12, scale: 0.95, opacity: 0, filter: 'blur(8px)', ease: 'none' }, 0);
+      tl.to(heroInhoud, { yPercent: -12, scale: 0.94, opacity: 0, ease: 'none' }, 0);
     }
     lagen.forEach(function (laag, i) {
       var richting = i % 2 ? 1 : -1;
@@ -143,15 +122,14 @@
      ========================================================= */
   var hoofdstukken = gsap.utils.toArray('.dp-hoofdstuk');
 
-  /* Vorige kaart schaalt terug en vervaagt zodra de volgende eroverheen schuift */
+  /* Vorige kaart schaalt terug en wijkt (opacity + scale, geen blur) zodra de volgende eroverheen schuift */
   mm.add('(min-width: 900px)', function () {
     hoofdstukken.forEach(function (hoofdstuk, i) {
       var volgende = hoofdstukken[i + 1];
       if (!volgende) return;
       gsap.to(hoofdstuk.querySelector('.dp-hoofdstuk__kaart'), {
-        scale: 0.93,
-        opacity: 0.45,
-        filter: 'blur(5px)',
+        scale: 0.92,
+        opacity: 0.35,
         ease: 'none',
         scrollTrigger: {
           trigger: volgende,
