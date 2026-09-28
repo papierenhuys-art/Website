@@ -161,8 +161,14 @@ body {
 
 img { max-width: 100%; display: block; }
 
+/* ——— Voorkom een weesregel: laatste woord van een alinea niet alleen op de regel ——— */
+p { text-wrap: pretty; }
+
 a { color: var(--blauw-licht); text-decoration: none; transition: color var(--transitie); }
 a:hover { color: var(--blauw-donker); }
+
+/* ——— Springdoel voor de skip-link: niet onder de sticky navbar verdwijnen ——— */
+#main { scroll-margin-top: 88px; }
 
 /* ——— Skip link: eerste focusbare element, onzichtbaar tot het focus krijgt ——— */
 .skip-link {
@@ -340,7 +346,7 @@ ul { list-style: none; }
   height: 2px;
   background: var(--wit);
   border-radius: 2px;
-  transition: all var(--transitie);
+  transition: transform var(--transitie), opacity var(--transitie);
 }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -1793,6 +1799,7 @@ body.gsap-actief .reveal {
   font-size: clamp(2.4rem, 4.5vw, 3.4rem);
   font-weight: 800;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
   background: linear-gradient(92deg, var(--blauw-hemel), var(--wit));
   -webkit-background-clip: text;
   background-clip: text;
@@ -2417,6 +2424,7 @@ body.gsap-actief .reveal {
   font-size: clamp(1.7rem, 3vw, 2.3rem);
   font-weight: 800;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
   color: var(--blauw-licht);
   margin-bottom: 6px;
 }
