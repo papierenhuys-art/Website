@@ -288,8 +288,8 @@ ul { list-style: none; }
 
 .navbar__logo-img {
   height: auto;
-  max-height: 32px;
-  max-width: 140px;
+  max-height: 44px;
+  max-width: 150px;
   width: auto;
   display: block;
   object-fit: contain;
