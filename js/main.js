@@ -47,6 +47,17 @@ if (hamburger && navMenu) {
       hamburger.setAttribute('aria-expanded', 'false');
     });
   });
+
+  // Sluit menu met Escape en geef focus terug aan de knop
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-label', 'Menu openen');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.focus();
+    }
+  });
 }
 
 // ——— Cookie-melding ———
@@ -60,7 +71,7 @@ if (hamburger && navMenu) {
       <p>Wij gebruiken functionele cookies om de website goed te laten werken. Er worden geen tracking- of advertentiecookies geplaatst.</p>
       <div class="cookie-banner__knoppen">
         <button class="knop knop--primair cookie-akkoord">Begrepen</button>
-        <a href="#" class="cookie-meer">Meer info</a>
+        <a href="privacy.html" class="cookie-meer">Meer info</a>
       </div>
     </div>
   `;

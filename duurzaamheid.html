@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Duurzaamheid — Drukkerij Van den Herik | Drukwerk met een groen geweten</title>
   <meta name="description" content="Drukkerij Van den Herik drukt duurzaam: FSC- en PEFC-gecertificeerd papier, plantaardige inkten, plasticvrije verpakkingen en energiezuinige productie. Ontdek hoe wij verantwoord drukken." />
+  <link rel="canonical" href="https://drukkerijherik.nl/duurzaamheid.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Drukkerij Van den Herik" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:title" content="Duurzaamheid — Drukkerij Van den Herik" />
+  <meta property="og:description" content="Drukkerij Van den Herik drukt duurzaam: FSC- en PEFC-gecertificeerd papier, plantaardige inkten, plasticvrije verpakkingen en energiezuinige productie." />
+  <meta property="og:url" content="https://drukkerijherik.nl/duurzaamheid.html" />
+  <meta property="og:image" content="https://drukkerijherik.nl/logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Duurzaamheid — Drukkerij Van den Herik" />
+  <meta name="twitter:description" content="FSC- en PEFC-gecertificeerd papier, plantaardige inkten, plasticvrije verpakkingen en energiezuinige productie." />
+  <meta name="twitter:image" content="https://drukkerijherik.nl/logo.png" />
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,26 +25,58 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Duurzaamheid — Drukkerij Van den Herik",
-    "description": "FSC- en PEFC-gecertificeerd papier, plantaardige inkten, plasticvrije verpakkingen en energiezuinige productie.",
-    "mainEntity": {
-      "@type": "LocalBusiness",
-      "name": "Drukkerij Van den Herik",
-      "telephone": "+31786731266",
-      "email": "info@drukkerijherik.nl",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Mijlweg 9i",
-        "postalCode": "3295 KG",
-        "addressLocality": "'s-Gravendeel",
-        "addressCountry": "NL"
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://drukkerijherik.nl/#bedrijf",
+        "name": "Drukkerij Van den Herik",
+        "alternateName": "'t Papierenhuys",
+        "image": "https://drukkerijherik.nl/logo.png",
+        "logo": "https://drukkerijherik.nl/logo.png",
+        "url": "https://drukkerijherik.nl/",
+        "telephone": "+31786731266",
+        "email": "info@drukkerijherik.nl",
+        "priceRange": "€€",
+        "foundingDate": "1961",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Mijlweg 9i",
+          "postalCode": "3295 KG",
+          "addressLocality": "'s-Gravendeel",
+          "addressRegion": "Zuid-Holland",
+          "addressCountry": "NL"
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:30"
+        }]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://drukkerijherik.nl/duurzaamheid.html#webpagina",
+        "url": "https://drukkerijherik.nl/duurzaamheid.html",
+        "name": "Duurzaamheid — Drukkerij Van den Herik",
+        "description": "FSC- en PEFC-gecertificeerd papier, plantaardige inkten, plasticvrije verpakkingen en energiezuinige productie.",
+        "isPartOf": { "@id": "https://drukkerijherik.nl/#website" },
+        "about": { "@id": "https://drukkerijherik.nl/#bedrijf" },
+        "inLanguage": "nl-NL"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://drukkerijherik.nl/duurzaamheid.html#broodkruimel",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://drukkerijherik.nl/" },
+          { "@type": "ListItem", "position": 2, "name": "Duurzaamheid", "item": "https://drukkerijherik.nl/duurzaamheid.html" }
+        ]
       }
-    }
+    ]
   }
   </script>
 </head>
 <body class="pagina-duurzaamheid">
+  <a class="skip-link" href="#main">Naar de inhoud</a>
 
   <div id="scroll-voortgang" aria-hidden="true"></div>
 
@@ -54,6 +98,8 @@
       </ul>
     </div>
   </nav>
+
+  <main id="main">
 
   <!-- ===== HERO ===== -->
   <header class="du-hero" id="du-hero">
@@ -572,6 +618,8 @@
   </section>
 
   <!-- ===== FOOTER ===== -->
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__raster">

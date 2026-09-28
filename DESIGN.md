@@ -52,7 +52,7 @@ Dit document is de bron van waarheid voor de vormgeving van de website. Nieuwe s
   /* ——— Tekst ——— */
   --tekst-donker: #1a202c;   /* hoofdtekst */
   --grijs-tekst:  #4a5568;   /* lopende tekst, beschrijvingen */
-  --tekst-zacht:  #7a8aa5;   /* labels, hulptekst, placeholders */
+  --tekst-zacht:  #61728f;   /* labels, hulptekst, placeholders */
 
   /* ——— Signaal ——— */
   --succes:       #059669;   --succes-diep: #065f46;   --succes-zacht: #ecfdf5;

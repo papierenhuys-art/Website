@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Drukkerij Van den Herik</title>
   <meta name="description" content="Neem contact op met Drukkerij Van den Herik. Vraag een offerte aan, stel uw vraag of kom langs op ons adres in 's-Gravendeel." />
+  <link rel="canonical" href="https://drukkerijherik.nl/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Drukkerij Van den Herik" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:title" content="Contact — Drukkerij Van den Herik" />
+  <meta property="og:description" content="Neem contact op met Drukkerij Van den Herik. Vraag een offerte aan, stel uw vraag of kom langs op ons adres in 's-Gravendeel." />
+  <meta property="og:url" content="https://drukkerijherik.nl/contact.html" />
+  <meta property="og:image" content="https://drukkerijherik.nl/logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contact — Drukkerij Van den Herik" />
+  <meta name="twitter:description" content="Neem contact op met Drukkerij Van den Herik. Vraag een offerte aan, stel uw vraag of kom langs op ons adres in 's-Gravendeel." />
+  <meta name="twitter:image" content="https://drukkerijherik.nl/logo.png" />
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,28 +25,57 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Drukkerij Van den Herik",
-    "telephone": "+31786731266",
-    "email": "info@drukkerijherik.nl",
-    "url": "https://drukkerijherik.nl/contact.html",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Mijlweg 9i",
-      "postalCode": "3295 KG",
-      "addressLocality": "'s-Gravendeel",
-      "addressCountry": "NL"
-    },
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "17:30"
-    }]
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://drukkerijherik.nl/#bedrijf",
+        "name": "Drukkerij Van den Herik",
+        "alternateName": "'t Papierenhuys",
+        "image": "https://drukkerijherik.nl/logo.png",
+        "logo": "https://drukkerijherik.nl/logo.png",
+        "url": "https://drukkerijherik.nl/",
+        "telephone": "+31786731266",
+        "email": "info@drukkerijherik.nl",
+        "priceRange": "€€",
+        "foundingDate": "1961",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Mijlweg 9i",
+          "postalCode": "3295 KG",
+          "addressLocality": "'s-Gravendeel",
+          "addressRegion": "Zuid-Holland",
+          "addressCountry": "NL"
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:30"
+        }]
+      },
+      {
+        "@type": "ContactPage",
+        "@id": "https://drukkerijherik.nl/contact.html#webpagina",
+        "url": "https://drukkerijherik.nl/contact.html",
+        "name": "Contact — Drukkerij Van den Herik",
+        "isPartOf": { "@id": "https://drukkerijherik.nl/#website" },
+        "about": { "@id": "https://drukkerijherik.nl/#bedrijf" },
+        "inLanguage": "nl-NL"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://drukkerijherik.nl/contact.html#broodkruimel",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://drukkerijherik.nl/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://drukkerijherik.nl/contact.html" }
+        ]
+      }
+    ]
   }
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Naar de inhoud</a>
 
   <div id="scroll-voortgang" aria-hidden="true"></div>
 
@@ -56,6 +97,8 @@
       </ul>
     </div>
   </nav>
+
+  <main id="main">
 
   <!-- ===== PAGINAKOP ===== -->
   <header class="ct-kop">
@@ -260,6 +303,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
