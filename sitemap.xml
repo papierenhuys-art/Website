@@ -7,29 +7,29 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://drukkerijherik.nl/diensten.html</loc>
+    <loc>https://drukkerijherik.nl/diensten</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://drukkerijherik.nl/over-ons.html</loc>
+    <loc>https://drukkerijherik.nl/over-ons</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://drukkerijherik.nl/duurzaamheid.html</loc>
+    <loc>https://drukkerijherik.nl/duurzaamheid</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://drukkerijherik.nl/contact.html</loc>
+    <loc>https://drukkerijherik.nl/contact</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- privacy.html is intentionally excluded: it is marked noindex -->
+  <!-- privacy is intentionally excluded: it is marked noindex -->
 </urlset>
 

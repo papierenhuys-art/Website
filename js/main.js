@@ -71,7 +71,7 @@ if (hamburger && navMenu) {
       <p>Wij gebruiken functionele cookies om de website goed te laten werken. Er worden geen tracking- of advertentiecookies geplaatst.</p>
       <div class="cookie-banner__knoppen">
         <button class="knop knop--primair cookie-akkoord">Begrepen</button>
-        <a href="privacy.html" class="cookie-meer">Meer info</a>
+        <a href="privacy" class="cookie-meer">Meer info</a>
       </div>
     </div>
   `;
