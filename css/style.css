@@ -3405,8 +3405,8 @@ body.gsap-actief .reveal {
 }
 .du-cijfer__boog {
   position: absolute;
-  top: -14px;
-  right: 8%;
+  top: -28px;
+  right: -28px;
   width: 108px;
   color: var(--du-salie);
   opacity: 0.55;
@@ -3416,6 +3416,8 @@ body.gsap-actief .reveal {
   stroke-dashoffset: 339.3;
 }
 .du-cijfer__getal {
+  position: relative;
+  display: inline-block;
   font-family: var(--font-display);
   font-size: clamp(3.6rem, 7vw, 5.4rem);
   font-weight: 800;
@@ -3912,7 +3914,6 @@ body.gsap-actief .reveal {
   .du-scene { margin: 0 auto; max-width: 420px; aspect-ratio: 4 / 3.4; }
 
   .du-cijfers__raster { grid-template-columns: 1fr; max-width: 440px; }
-  .du-cijfer__boog { right: 0; }
 
   .du-materialen__raster { grid-template-columns: 1fr; }
 
