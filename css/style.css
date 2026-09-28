@@ -4418,8 +4418,7 @@ body.gsap-actief .hp-manifest__baan { animation: none; }
   white-space: nowrap;
 }
 .hp-manifest__groep .hp-manifest__hol {
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(var(--blauw-donker-rgb), 0.55);
+  color: var(--blauw-licht);
 }
 
 /* Pasmerk (registration mark) als scheidingsteken */
@@ -4979,7 +4978,6 @@ body.gsap-actief .hp-manifest__baan { animation: none; }
 
 @media (max-width: 680px) {
   .hp-vel { border-radius: 24px 24px 0 0; }
-  .hp-manifest__groep .hp-manifest__hol { -webkit-text-stroke-width: 1px; }
   .hp-beloften { grid-template-columns: 1fr; gap: 16px; }
   .hp-bento { grid-template-columns: 1fr; gap: 18px; grid-auto-rows: auto; }
   .hp-tegel--groot,
