@@ -51,7 +51,7 @@
   /* ——— Tekst ——— */
   --tekst-donker:  #1a202c;
   --grijs-tekst:   #4a5568;
-  --tekst-zacht:   #7a8aa5;
+  --tekst-zacht:   #61728f;
   --tekst-vaag:    #9aa8bf;
 
   /* ——— Signaal ——— */
@@ -163,6 +163,25 @@ img { max-width: 100%; display: block; }
 
 a { color: var(--blauw-licht); text-decoration: none; transition: color var(--transitie); }
 a:hover { color: var(--blauw-donker); }
+
+/* ——— Skip link: eerste focusbare element, onzichtbaar tot het focus krijgt ——— */
+.skip-link {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10000;
+  padding: 12px 20px;
+  background: var(--blauw-donker);
+  color: var(--wit);
+  font-weight: 700;
+  border-radius: 8px;
+  transform: translateY(-150%);
+  transition: transform var(--transitie);
+}
+.skip-link:focus-visible,
+.skip-link:focus {
+  transform: translateY(0);
+}
 
 /* ——— Toegankelijke focus: zichtbaar bij toetsenbord, onzichtbaar bij klikken ——— */
 :where(a, button, [role="button"], input, textarea, select, summary, [tabindex]):focus-visible {
