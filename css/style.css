@@ -2677,61 +2677,20 @@ body.gsap-actief .reveal {
   background: linear-gradient(180deg, rgba(var(--wit-rgb), 0.05), transparent);
 }
 
-/* Galerij-scène 02 — CMYK-banen */
+/* Galerij-scène 02 — CMYK, nu een echte foto; achtergrond blijft als laadkleur */
 .op-foto__scene--cmyk {
   background: var(--inkt-diep);
-  display: flex;
 }
-.op-cmyk__baan {
-  flex: 1;
-  transform: skewX(-8deg) scaleY(1.2);
-}
-.op-cmyk__baan--c { background: linear-gradient(180deg, rgba(var(--cmyk-cyaan-rgb), 0.85), rgba(var(--cmyk-cyaan-rgb), 0.4)); }
-.op-cmyk__baan--m { background: linear-gradient(180deg, rgba(var(--cmyk-magenta-rgb), 0.8), rgba(var(--cmyk-magenta-rgb), 0.35)); }
-.op-cmyk__baan--y { background: linear-gradient(180deg, rgba(var(--cmyk-geel-rgb), 0.8), rgba(var(--cmyk-geel-rgb), 0.35)); }
-.op-cmyk__baan--k { background: linear-gradient(180deg, rgba(var(--scene-diep-rgb), 0.95), rgba(var(--scene-diep-rgb), 0.6)); }
 
-/* Galerij-scène 03 — papiermagazijn */
+/* Galerij-scène 03 — papier, nu een echte foto; achtergrond blijft als laadkleur */
 .op-foto__scene--papier {
   background: linear-gradient(160deg, var(--scene-zacht), var(--blauw-ijs));
 }
-.op-papier__stapel {
-  position: absolute;
-  bottom: 0;
-  border-radius: 8px 8px 0 0;
-  background: repeating-linear-gradient(180deg,
-    var(--wit) 0 7px, var(--papier-diep) 7px 9px);
-  box-shadow: 0 -6px 20px rgba(var(--blauw-donker-rgb), 0.1);
-}
-.op-papier__stapel--1 { left: 8%;  width: 26%; height: 58%; }
-.op-papier__stapel--2 { left: 38%; width: 26%; height: 74%; }
-.op-papier__stapel--3 { left: 68%; width: 26%; height: 46%; }
 
-/* Galerij-scène 04 — afwerking / snijmachine */
+/* Galerij-scène 04 — drukpers, nu een echte foto; achtergrond blijft als laadkleur */
 .op-foto__scene--afwerking {
   background: linear-gradient(160deg, var(--inkt-diep), var(--blauw-middel));
 }
-.op-afwerking__mes {
-  position: absolute;
-  top: 16%;
-  left: 10%;
-  right: 10%;
-  height: 5px;
-  border-radius: 3px;
-  background: linear-gradient(90deg, var(--blauw-hemel), var(--scene-sneeuw) 50%, var(--blauw-hemel));
-  box-shadow: 0 0 22px rgba(var(--blauw-hemel-rgb), 0.55);
-}
-.op-afwerking__vel {
-  position: absolute;
-  width: 22%;
-  aspect-ratio: 210 / 148;
-  background: linear-gradient(160deg, var(--wit) 60%, var(--blauw-ijs) 100%);
-  border-radius: 4px;
-  box-shadow: 0 10px 24px rgba(var(--zwart-rgb), 0.3);
-}
-.op-afwerking__vel--1 { left: 14%; bottom: 20%; transform: rotate(-5deg); }
-.op-afwerking__vel--2 { left: 40%; bottom: 26%; transform: rotate(2deg); }
-.op-afwerking__vel--3 { left: 64%; bottom: 18%; transform: rotate(7deg); }
 
 /* Galerij-scène 05 — team */
 .op-foto__scene--team {
@@ -2763,42 +2722,20 @@ body.gsap-actief .reveal {
 .op-team__lid--1 { height: 44%; opacity: 0.75; }
 .op-team__lid--3 { height: 40%; opacity: 0.6; }
 
-/* Galerij-scène 06 — eindresultaat */
+/* Galerij-scène 06 — eindresultaat, nu een echte foto; achtergrond blijft als laadkleur */
 .op-foto__scene--resultaat {
   background: linear-gradient(150deg, var(--grijs-licht), var(--papier-diep));
 }
-.op-resultaat__kaart {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 56%;
-  aspect-ratio: 85 / 55;
-  border-radius: 10px;
+
+/* Echte foto's in de galerij: vullen de scène, subtiele rand voor consistente diepte */
+.op-foto__scene img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-shadow: inset 0 0 0 1px rgba(var(--zwart-rgb), 0.1);
 }
-.op-resultaat__kaart--1 {
-  background: var(--scene-vlak);
-  transform: translate(-60%, -38%) rotate(-10deg);
-  box-shadow: 0 10px 24px rgba(var(--blauw-donker-rgb), 0.14);
-}
-.op-resultaat__kaart--2 {
-  background: var(--wit);
-  transform: translate(-46%, -54%) rotate(-3deg);
-  box-shadow: 0 12px 28px rgba(var(--blauw-donker-rgb), 0.16);
-}
-.op-resultaat__kaart--3 {
-  background: linear-gradient(135deg, var(--blauw-donker), var(--blauw-middel));
-  transform: translate(-50%, -46%) rotate(4deg);
-  box-shadow: 0 18px 40px rgba(var(--blauw-donker-rgb), 0.3);
-  display: grid;
-  place-items: center;
-}
-.op-resultaat__kaart--3 span {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(1rem, 2.4vw, 1.6rem);
-  letter-spacing: 0.18em;
-  color: var(--wit);
-}
+.op-foto--breed .op-foto__scene img { object-position: center 68%; }
 
 /* ——— Afsluitende CTA ——— */
 .op-cta {
