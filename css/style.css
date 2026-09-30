@@ -2580,6 +2580,7 @@ body.gsap-actief .reveal {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 240px;
+  grid-auto-flow: dense;
   gap: 24px;
 }
 .op-foto {
@@ -2725,6 +2726,17 @@ body.gsap-actief .reveal {
 /* Galerij-scène 06 — eindresultaat, nu een echte foto; achtergrond blijft als laadkleur */
 .op-foto__scene--resultaat {
   background: linear-gradient(150deg, var(--grijs-licht), var(--papier-diep));
+}
+
+/* Galerij-scènes 07–09 — echte foto's; achtergrond blijft als laadkleur */
+.op-foto__scene--kleuradvies {
+  background: linear-gradient(150deg, var(--blauw-ijs), var(--wit));
+}
+.op-foto__scene--grootformaat {
+  background: linear-gradient(160deg, var(--inkt-diep), var(--blauw-donker));
+}
+.op-foto__scene--canvas {
+  background: linear-gradient(150deg, var(--scene-zacht), var(--blauw-ijs));
 }
 
 /* Echte foto's in de galerij: vullen de scène, subtiele rand voor consistente diepte */
