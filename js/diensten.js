@@ -147,7 +147,7 @@
     var visueel = hoofdstuk.querySelector('.dp-hoofdstuk__visueel');
     var zoom = hoofdstuk.querySelector('.dp-scene__zoom');
     var richting = visueel ? parseFloat(visueel.dataset.richting || -1) : -1;
-    var tekstDelen = hoofdstuk.querySelectorAll('.dp-kicker, .dp-titel, .dp-alinea, .dp-voordelen li, .dp-cta');
+    var tekstDelen = hoofdstuk.querySelectorAll('.dp-titel, .dp-alinea, .dp-voordelen li, .dp-cta');
 
     if (visueel) {
       gsap.from(visueel, {
@@ -338,7 +338,7 @@
   /* =========================================================
      7. WAAROM — USP's één voor één, tellers
      ========================================================= */
-  gsap.from('.dp-waarom .dp-kicker, .dp-waarom .dp-titel', {
+  gsap.from('.dp-waarom .dp-titel', {
     y: 40, opacity: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out',
     scrollTrigger: { trigger: '.dp-waarom', start: 'top 70%', toggleActions: 'play none none reverse' }
   });
