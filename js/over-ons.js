@@ -119,7 +119,7 @@
     var zoom = hoofdstuk.querySelector('.op-scene__zoom');
     var richting = visueel ? parseFloat(visueel.dataset.richting || -1) : -1;
     var tekstDelen = hoofdstuk.querySelectorAll(
-      '.dp-kicker, .dp-titel, .dp-alinea, .dp-voordelen li, .op-tellers'
+      '.dp-titel, .dp-alinea, .dp-voordelen li, .op-tellers'
     );
 
     if (visueel) {
