@@ -240,7 +240,6 @@ a.index__rij:focus-visible { outline: 3px solid var(--color-focus); outline-offs
 .catalogus--3 > :nth-child(3n+1) .foto, .catalogus--3 > :nth-child(3n+1) .vulling { rotate: var(--rotate-l); }
 .catalogus--3 > :nth-child(3n+2) .foto, .catalogus--3 > :nth-child(3n+2) .vulling { rotate: var(--rotate-r); }
 .catalogus--3 > :nth-child(3n) .foto, .catalogus--3 > :nth-child(3n) .vulling { rotate: -0.8deg; }
-.woordvulling { aspect-ratio: 4 / 3; display: flex; flex-direction: column; justify-content: flex-end; font: var(--display-weight) clamp(1.5rem, 2.4vw, 2.25rem)/1.05 var(--font-display); }
 
 /* ——— Materiaalstalen ——— */
 .stalen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2xl) var(--gap-columns); }
@@ -442,7 +441,6 @@ a.index__rij:focus-visible { outline: 3px solid var(--color-focus); outline-offs
 .verhaal__beeld { position: relative; }
 .verhaal__tag { position: absolute; top: -16px; left: var(--space-lg); rotate: -3deg; }
 .galerij figcaption h3 { font: 700 var(--text-lg)/1.25 var(--font-body); letter-spacing: 0; }
-.galerij .woordvulling { font-size: clamp(1.25rem, 1.8vw, 1.75rem); }
 .hero--stage .jaartal { min-height: 560px; aspect-ratio: auto; }
 @media (max-width: 60rem) { .hero--stage .jaartal { min-height: 260px; } }
 .teller dt { order: 2; }
