@@ -10,7 +10,7 @@
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Sofia+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/style.css" />
   <script type="application/ld+json">
@@ -40,7 +40,6 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Naar de inhoud</a>
-
   <div id="scroll-voortgang" aria-hidden="true"></div>
 
   <!-- ===== NAVIGATIE ===== -->
@@ -64,30 +63,21 @@
 
   <main id="main">
 
-  <!-- ===== PAGINAKOP ===== -->
-  <header class="ct-kop pv-kop">
-    <div class="ct-kop__achtergrond" aria-hidden="true">
-      <div class="ct-kop__raster"></div>
-      <div class="ct-kop__ruis"></div>
-    </div>
-    <div class="container ct-kop__inhoud">
-      <p class="ct-kop__broodkruimel">
-        <a href="/">Home</a><span aria-hidden="true">/</span>Privacyverklaring
-      </p>
-      <h1 class="ct-kop__titel">Zorgvuldig met uw gegevens.</h1>
-      <p class="ct-kop__intro">
-        Drukkerij Van den Herik gaat zorgvuldig om met uw persoonsgegevens.
-        Hieronder leest u welke gegevens wij verwerken, waarom, en welke rechten u heeft.
-      </p>
-      <p class="pv-kop__datum">Laatste wijziging: mei 2026</p>
-    </div>
-  </header>
+  <!-- ===== PAGINAKOP: Banner ===== -->
+    <header class="hero hero--banner pv-kop">
+      <div class="container">
+        <p class="broodkruimel"><a href="/">Home</a><span aria-hidden="true">/</span>Privacyverklaring</p>
+        <h1>Zorgvuldig met uw gegevens.</h1>
+        <p class="lead">Drukkerij Van den Herik gaat zorgvuldig om met uw persoonsgegevens. Hieronder leest u welke gegevens wij verwerken, waarom, en welke rechten u heeft.</p>
+        <p class="label">Laatste wijziging: mei 2026</p>
+      </div>
+    </header>
 
   <!-- ===== INHOUD ===== -->
-  <section class="pv-sectie">
+  <section class="pv-sectie sectie sectie--s">
     <div class="container pv-raster">
 
-      <nav class="pv-inhoud" aria-label="Inhoudsopgave">
+      <nav class="pv-inhoud diecut" aria-label="Inhoudsopgave">
         <p class="pv-inhoud__titel">Inhoud</p>
         <ol class="pv-inhoud__lijst">
           <li><a href="#wie">Wie zijn wij?</a></li>
@@ -104,12 +94,12 @@
 
       <article class="pv-artikel">
 
-        <section class="pv-blok ct-reveal" id="wie" aria-labelledby="wie-titel">
+        <section class="pv-blok" id="wie" aria-labelledby="wie-titel">
           <span class="pv-blok__nr" aria-hidden="true">01</span>
           <h2 class="pv-blok__titel" id="wie-titel">Wie zijn wij?</h2>
           <p>
             Drukkerij Van den Herik is onderdeel van 't Papierenhuys en gevestigd aan de
-            Mijlweg 9i, 3295 KG 's-Gravendeel. Wij zijn de verwerkingsverantwoordelijke voor
+            Mijlweg 9i, 3295 KG <span class="heel">'s-Gravendeel</span>. Wij zijn de verwerkingsverantwoordelijke voor
             de persoonsgegevens die u via onze website of anderszins aan ons verstrekt.
           </p>
           <dl class="pv-contact">
@@ -118,7 +108,7 @@
           </dl>
         </section>
 
-        <section class="pv-blok ct-reveal" id="gegevens" aria-labelledby="gegevens-titel">
+        <section class="pv-blok" id="gegevens" aria-labelledby="gegevens-titel">
           <span class="pv-blok__nr" aria-hidden="true">02</span>
           <h2 class="pv-blok__titel" id="gegevens-titel">Welke gegevens verwerken wij?</h2>
           <p>
@@ -134,7 +124,7 @@
           </ul>
         </section>
 
-        <section class="pv-blok ct-reveal" id="doel" aria-labelledby="doel-titel">
+        <section class="pv-blok" id="doel" aria-labelledby="doel-titel">
           <span class="pv-blok__nr" aria-hidden="true">03</span>
           <h2 class="pv-blok__titel" id="doel-titel">Waarvoor gebruiken wij uw gegevens?</h2>
           <p>Uw gegevens worden uitsluitend gebruikt voor:</p>
@@ -145,13 +135,13 @@
             <li>Het versturen van facturen en verwerken van betalingen</li>
             <li>Het beantwoorden van uw vragen en klachten</li>
           </ul>
-          <p class="pv-uitgelicht">
+          <p class="pv-uitgelicht vulling vulling--limoen">
             Wij gebruiken uw gegevens <strong>niet</strong> voor profilering, het doorverkopen
             aan derden of het versturen van nieuwsbrieven zonder uw uitdrukkelijke toestemming.
           </p>
         </section>
 
-        <section class="pv-blok ct-reveal" id="bewaren" aria-labelledby="bewaren-titel">
+        <section class="pv-blok" id="bewaren" aria-labelledby="bewaren-titel">
           <span class="pv-blok__nr" aria-hidden="true">04</span>
           <h2 class="pv-blok__titel" id="bewaren-titel">Hoe lang bewaren wij uw gegevens?</h2>
           <p>
@@ -169,7 +159,7 @@
           </div>
         </section>
 
-        <section class="pv-blok ct-reveal" id="delen" aria-labelledby="delen-titel">
+        <section class="pv-blok" id="delen" aria-labelledby="delen-titel">
           <span class="pv-blok__nr" aria-hidden="true">05</span>
           <h2 class="pv-blok__titel" id="delen-titel">Delen wij uw gegevens met anderen?</h2>
           <p>
@@ -186,7 +176,7 @@
           </p>
         </section>
 
-        <section class="pv-blok ct-reveal" id="rechten" aria-labelledby="rechten-titel">
+        <section class="pv-blok" id="rechten" aria-labelledby="rechten-titel">
           <span class="pv-blok__nr" aria-hidden="true">06</span>
           <h2 class="pv-blok__titel" id="rechten-titel">Uw rechten</h2>
           <p>
@@ -205,7 +195,7 @@
           </p>
         </section>
 
-        <section class="pv-blok ct-reveal" id="klachten" aria-labelledby="klachten-titel">
+        <section class="pv-blok" id="klachten" aria-labelledby="klachten-titel">
           <span class="pv-blok__nr" aria-hidden="true">07</span>
           <h2 class="pv-blok__titel" id="klachten-titel">Klachten</h2>
           <p>
@@ -217,7 +207,7 @@
           </p>
         </section>
 
-        <section class="pv-blok ct-reveal" id="beveiliging" aria-labelledby="beveiliging-titel">
+        <section class="pv-blok" id="beveiliging" aria-labelledby="beveiliging-titel">
           <span class="pv-blok__nr" aria-hidden="true">08</span>
           <h2 class="pv-blok__titel" id="beveiliging-titel">Beveiliging</h2>
           <p>
@@ -227,7 +217,7 @@
           </p>
         </section>
 
-        <section class="pv-blok ct-reveal" id="wijzigingen" aria-labelledby="wijzigingen-titel">
+        <section class="pv-blok" id="wijzigingen" aria-labelledby="wijzigingen-titel">
           <span class="pv-blok__nr" aria-hidden="true">09</span>
           <h2 class="pv-blok__titel" id="wijzigingen-titel">Wijzigingen</h2>
           <p>
@@ -236,33 +226,30 @@
           </p>
         </section>
 
-        <aside class="pv-vraag ct-reveal">
+        <aside class="pv-vraag vulling vulling--inkt">
           <div>
             <h2 class="pv-vraag__titel">Vragen over uw privacy?</h2>
             <p>Neem gerust contact met ons op. Wij helpen u graag verder.</p>
           </div>
-          <a href="contact" class="knop knop--hero-primair">Neem contact op</a>
+          <a href="contact" class="knop knop--primair">Neem contact op</a>
         </aside>
 
       </article>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
   </main>
 
+  <!-- ===== FOOTER: het statement ===== -->
   <footer class="footer">
     <div class="container">
+      <p class="footer__statement">Kwaliteits&shy;drukwerk voor elk budget.</p>
       <div class="footer__raster">
         <div>
-          <div class="footer__merk">Drukkerij Van den Herik</div>
-          <p class="footer__beschrijving">
-            Kwaliteitsdrukwerk voor elk budget. Al meer dan 63 jaar de vertrouwde drukkerij
-            van 's-Gravendeel en omgeving.
-          </p>
+          <p class="footer__beschrijving">Al meer dan 63 jaar de vertrouwde drukkerij van <span class="heel">'s-Gravendeel</span> en omgeving.</p>
         </div>
         <div>
-          <div class="footer__koptekst">Navigatie</div>
+          <p class="footer__koptekst">Navigatie</p>
           <ul class="footer__links">
             <li><a href="/">Home</a></li>
             <li><a href="diensten">Wat wij doen</a></li>
@@ -272,17 +259,19 @@
           </ul>
         </div>
         <div>
-          <div class="footer__koptekst">Contact</div>
+          <p class="footer__koptekst">Contact</p>
           <ul class="footer__links">
             <li>Mijlweg 9i</li>
-            <li>3295 KG 's-Gravendeel</li>
+            <li>3295 KG <span class="heel">'s-Gravendeel</span></li>
             <li><a href="tel:+31786731266">078 673 12 66</a></li>
             <li><a href="mailto:info@drukkerijherik.nl">info@drukkerijherik.nl</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bodem">
-        Drukkerij Van den Herik is onderdeel van <strong class="footer__merknaam">'t Papierenhuys</strong><br />&copy; 2026 Drukkerij Van den Herik. Alle rechten voorbehouden.<br /><a href="privacy" class="footer__privacy">Privacyverklaring</a>
+        <span>Drukkerij Van den Herik is onderdeel van <strong class="footer__merknaam">'t Papierenhuys</strong>.</span>
+        <span>&copy; 2026 Drukkerij Van den Herik. Alle rechten voorbehouden.</span>
+        <a href="privacy" class="footer__privacy">Privacyverklaring</a>
       </div>
     </div>
   </footer>

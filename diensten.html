@@ -20,7 +20,7 @@
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Sofia+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/style.css" />
   <script type="application/ld+json">
@@ -78,7 +78,6 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Naar de inhoud</a>
-
   <div id="scroll-voortgang" aria-hidden="true"></div>
 
   <!-- ===== NAVIGATIE ===== -->
@@ -102,379 +101,211 @@
 
   <main id="main">
 
-  <!-- ===== HERO ===== -->
-  <header class="dp-hero" id="dp-hero">
-    <div class="dp-hero__achtergrond" aria-hidden="true">
-      <div class="dp-laag dp-laag--c"></div>
-      <div class="dp-laag dp-laag--m"></div>
-      <div class="dp-laag dp-laag--y"></div>
-      <div class="dp-laag dp-laag--k"></div>
-      <div class="dp-hero__raster"></div>
-      <div class="dp-hero__ruis"></div>
-    </div>
-    <div class="container dp-hero__inhoud">
-            <h1 class="dp-hero__titel">
-        <span class="dp-hero__regel"><span>Alles wat u wilt drukken.</span></span>
-        <span class="dp-hero__regel"><span class="dp-hero__accent">Perfect geproduceerd.</span></span>
-      </h1>
-      <p class="dp-hero__intro">
-        Van één visitekaartje tot honderden spandoeken: alles uit eigen productie
-        in 's-Gravendeel. In 90% van de gevallen dezelfde werkdag klaar.
-      </p>
-      <div class="dp-hero__knoppen">
-        <a href="contact" class="knop knop--hero-primair">Vraag een offerte aan</a>
-        <a href="#dp-hoofdstukken" class="knop knop--hero-omlijnd">Ontdek onze diensten</a>
-      </div>
-    </div>
-    <div class="hero__scrollhint dp-hero__scrollhint" aria-hidden="true">
-      <span class="hero__scrollhint-lijn"><span></span></span>
-      <span class="hero__scrollhint-tekst">Scroll</span>
-    </div>
-  </header>
-
-  <!-- ===== STATEMENT ===== -->
-  <section class="dp-statement">
-    <div class="container">
-      <p class="dp-statement__tekst" data-woorden>
-        Drukwerk is ons vak sinds 1961. Zes diensten vormen het hart van wat wij
-        elke dag maken, met de precisie van een drukker en de snelheid die u
-        van ons gewend bent.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== HOOFDSTUKKEN: DE DIENSTEN ===== -->
-  <div class="dp-hoofdstukken" id="dp-hoofdstukken">
-
-    <!-- 01 Visitekaartjes -->
-    <article class="dp-hoofdstuk">
-      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--wit">
-        <div class="dp-hoofdstuk__raster">
-          <div class="dp-hoofdstuk__visueel" data-richting="-1">
-            <div class="dp-scene dp-scene--visite dp-scene--foto">
-              <div class="dp-scene__zoom">
-                <img src="foto-visitekaartjes.jpg" width="1200" height="900" alt="Uitgewaaierde visitekaartjes van Drukkerij Van den Herik op een blauwe ondergrond" loading="lazy" decoding="async" />
-              </div>
-            </div>
+    <!-- ===== HERO: Banner, de catalogus begint boven de vouw ===== -->
+    <header class="hero hero--banner" id="dp-hero">
+      <div class="container hero__kop">
+        <h1>Alles wat u wilt drukken. Perfect geproduceerd.</h1>
+        <div class="hero__tekst">
+          <p class="lead">Van één visitekaartje tot honderden spandoeken, alles uit eigen productie in <span class="heel">'s-Gravendeel</span>.</p>
+          <div class="knoppen">
+            <a href="contact" class="knop knop--primair">Vraag een offerte aan</a>
+            <a href="#dp-hoofdstukken" class="knop">Ontdek onze diensten</a>
           </div>
-          <div class="dp-hoofdstuk__tekst">
-                        <h2 class="dp-titel">Visitekaartjes</h2>
-            <p class="dp-alinea">
-              Een visitekaartje is drie seconden in iemands hand en blijft jaren
-              in het geheugen. Wij drukken kaartjes waar u trots op bent, van
-              standaard tot ultra-luxe met folie of reliëf.
-            </p>
-            <ul class="dp-voordelen">
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== DE ZES DIENSTEN: catalogus ===== -->
+    <section class="sectie sectie--catalogus" id="dp-hoofdstukken" aria-label="Onze zes diensten">
+      <div class="container">
+        <p class="lead catalogus__intro">Drukwerk is ons vak sinds 1961. Zes diensten vormen het hart van wat wij elke dag maken.</p>
+        <div class="catalogus catalogus--3">
+          <article class="product" id="visitekaartjes">
+            <span class="foto"><img src="foto-visitekaartjes.jpg" width="1200" height="900" alt="Uitgewaaierde visitekaartjes van Drukkerij Van den Herik op een blauwe ondergrond" /></span>
+            <h2>Visitekaartjes</h2>
+            <p>Een visitekaartje is drie seconden in iemands hand en blijft jaren in het geheugen. Wij drukken kaartjes waar u trots op bent, van standaard tot ultra-luxe met folie of reliëf.</p>
+            <ul class="product__lijst">
               <li>85 × 55&nbsp;mm en volledig maatwerk</li>
               <li>Mat, glans of soft-touch laminaat</li>
               <li>Oplages vanaf 50 stuks</li>
             </ul>
-            <a href="contact" class="knop knop--primair dp-cta">Offerte voor visitekaartjes</a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- 02 Flyers & Folders -->
-    <article class="dp-hoofdstuk">
-      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--grijs">
-        <div class="dp-hoofdstuk__raster dp-hoofdstuk__raster--omgekeerd">
-          <div class="dp-hoofdstuk__tekst">
-                        <h2 class="dp-titel">Flyers &amp; folders</h2>
-            <p class="dp-alinea">
-              Van deurmat tot beursstand: een goede flyer werkt. Wij drukken
-              razendsnel op elk gewicht papier, in elke vouw die u kunt bedenken.
-            </p>
-            <ul class="dp-voordelen">
+            <a href="contact" class="knop">Offerte voor visitekaartjes</a>
+          </article>
+          <article class="product" id="flyers">
+            <span class="foto"><img src="foto-flyers.jpg" width="1200" height="900" alt="Flyer Familiedrukwerk met envelop, pen en kleurwaaier" /></span>
+            <h2>Flyers &amp; folders</h2>
+            <p>Van deurmat tot beursstand: een goede flyer werkt. Wij drukken razendsnel op elk gewicht papier, in elke vouw die u kunt bedenken.</p>
+            <ul class="product__lijst">
               <li>A3 t/m A6, andere maten ook mogelijk</li>
               <li>80 t/m 400 g/m² papier en karton</li>
               <li>Twee-, drie-, accordeon- en Z-vouw</li>
             </ul>
-            <a href="contact" class="knop knop--primair dp-cta">Offerte voor flyers</a>
-          </div>
-          <div class="dp-hoofdstuk__visueel" data-richting="1">
-            <div class="dp-scene dp-scene--flyer dp-scene--foto">
-              <div class="dp-scene__zoom">
-                <img src="foto-flyers.jpg" width="1200" height="900" alt="Flyer Familiedrukwerk met envelop, pen en kleurwaaier" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- 03 Brochures -->
-    <article class="dp-hoofdstuk">
-      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--blauwtint">
-        <div class="dp-hoofdstuk__raster">
-          <div class="dp-hoofdstuk__visueel" data-richting="-1">
-            <div class="dp-scene dp-scene--brochure dp-scene--foto">
-              <div class="dp-scene__zoom">
-                <img src="foto-brochures.jpg" width="1200" height="900" alt="Stapel brochures met gekleurde omslagen" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
-          <div class="dp-hoofdstuk__tekst">
-                        <h2 class="dp-titel">Brochures</h2>
-            <p class="dp-alinea">
-              Catalogi, presentaties, jaarverslagen: een brochure geeft uw verhaal
-              gewicht. Geniet, gelijmd of geringd, met harde of zachte kaft.
-            </p>
-            <ul class="dp-voordelen">
+            <a href="contact" class="knop">Offerte voor flyers</a>
+          </article>
+          <article class="product" id="brochures">
+            <span class="foto"><img src="foto-brochures.jpg" width="1200" height="900" alt="Stapel brochures met gekleurde omslagen" loading="lazy" decoding="async" /></span>
+            <h2>Brochures</h2>
+            <p>Catalogi, presentaties, jaarverslagen: een brochure geeft uw verhaal gewicht. Geniet, gelijmd of geringd, met harde of zachte kaft.</p>
+            <ul class="product__lijst">
               <li>Niet-, ring- of lijmbinding</li>
               <li>Harde of zachte kaft</li>
               <li>Full colour of zwart-wit binnenwerk</li>
             </ul>
-            <a href="contact" class="knop knop--primair dp-cta">Offerte voor brochures</a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- 04 Groot formaat -->
-    <article class="dp-hoofdstuk">
-      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--donker">
-        <div class="dp-hoofdstuk__raster dp-hoofdstuk__raster--omgekeerd">
-          <div class="dp-hoofdstuk__tekst dp-hoofdstuk__tekst--licht">
-                        <h2 class="dp-titel dp-titel--licht">Posters &amp; spandoeken</h2>
-            <p class="dp-alinea dp-alinea--licht">
-              Groot formaat is ons specialisme: posters, spandoeken en banners
-              die opvallen, binnen én buiten, weerbestendig gedrukt.
-            </p>
-            <ul class="dp-voordelen dp-voordelen--licht">
+            <a href="contact" class="knop">Offerte voor brochures</a>
+          </article>
+          <article class="product" id="groot-formaat">
+            <span class="foto"><img src="foto-spandoeken.jpg" width="1200" height="900" alt="Twee roll-up banners van Drukkerij Van den Herik" loading="lazy" decoding="async" /></span>
+            <h2>Posters &amp; spandoeken</h2>
+            <p>Groot formaat is ons specialisme: posters, spandoeken en banners die opvallen, binnen én buiten, weerbestendig gedrukt.</p>
+            <ul class="product__lijst">
               <li>Rolbreedte tot 1,20&nbsp;m, lengte naar wens</li>
               <li>Fotopapier, mat papier of backlit</li>
               <li>UV-bestendige inkt, afwerking met ogen of zoom</li>
             </ul>
-            <a href="contact" class="knop knop--hero-primair dp-cta">Offerte voor groot formaat</a>
-          </div>
-          <div class="dp-hoofdstuk__visueel" data-richting="1">
-            <div class="dp-scene dp-scene--spandoek dp-scene--foto">
-              <div class="dp-scene__zoom">
-                <img src="foto-spandoeken.jpg" width="1200" height="900" alt="Twee roll-up banners van Drukkerij Van den Herik" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- 05 Stickers -->
-    <article class="dp-hoofdstuk">
-      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--wit">
-        <div class="dp-hoofdstuk__raster">
-          <div class="dp-hoofdstuk__visueel" data-richting="-1">
-            <div class="dp-scene dp-scene--sticker dp-scene--foto">
-              <div class="dp-scene__zoom">
-                <img src="foto-etiketten.jpg" width="1200" height="900" alt="Flesjes Ramses Bier met bedrukte etiketten" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
-          <div class="dp-hoofdstuk__tekst">
-                        <h2 class="dp-titel">Stickers &amp; etiketten</h2>
-            <p class="dp-alinea">
-              Van productetiket tot raamsticker: elke vorm, elke maat, elk
-              materiaal. Permanent of verwijderbaar: u zegt het maar.
-            </p>
-            <ul class="dp-voordelen">
+            <a href="contact" class="knop">Offerte voor groot formaat</a>
+          </article>
+          <article class="product" id="stickers">
+            <span class="foto"><img src="foto-etiketten.jpg" width="1200" height="900" alt="Flesjes Ramses Bier met bedrukte etiketten" loading="lazy" decoding="async" /></span>
+            <h2>Stickers &amp; etiketten</h2>
+            <p>Van productetiket tot raamsticker: elke vorm, elke maat, elk materiaal. Permanent of verwijderbaar: u zegt het maar.</p>
+            <ul class="product__lijst">
               <li>Papier, vinyl of transparant</li>
               <li>Elke vorm en maat mogelijk</li>
               <li>Kleine én grote oplages</li>
             </ul>
-            <a href="contact" class="knop knop--primair dp-cta">Offerte voor stickers</a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- 06 Gelegenheidsdrukwerk -->
-    <article class="dp-hoofdstuk">
-      <div class="dp-hoofdstuk__kaart dp-hoofdstuk__kaart--grijs">
-        <div class="dp-hoofdstuk__raster dp-hoofdstuk__raster--omgekeerd">
-          <div class="dp-hoofdstuk__tekst">
-                        <h2 class="dp-titel">Gelegenheids&shy;drukwerk</h2>
-            <p class="dp-alinea">
-              Geboorte, huwelijk, jubileum of afscheid: sommige drukwerken maak
-              je maar één keer. Wij zorgen dat het klopt: snel, persoonlijk en
-              met zorg.
-            </p>
-            <ul class="dp-voordelen">
+            <a href="contact" class="knop">Offerte voor stickers</a>
+          </article>
+          <article class="product" id="gelegenheid">
+            <span class="vulling vulling--roze woordvulling" aria-hidden="true">Geboorte,<br />huwelijk,<br />jubileum,<br />afscheid.</span>
+            <h2>Gelegenheids&shy;drukwerk</h2>
+            <p>Geboorte, huwelijk, jubileum of afscheid: sommige drukwerken maak je maar één keer. Wij zorgen dat het klopt: snel, persoonlijk en met zorg.</p>
+            <ul class="product__lijst">
               <li>Geboorte-, trouw-, jubileum- en rouwkaarten</li>
               <li>Spoed mogelijk, ook bij overlijden</li>
               <li>Persoonlijk advies, met bijpassende envelop</li>
             </ul>
-            <a href="contact" class="knop knop--primair dp-cta">Persoonlijk advies aanvragen</a>
+            <a href="contact" class="knop">Persoonlijk advies aanvragen</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ALLE DIENSTEN: index ===== -->
+    <section class="sectie band--papier">
+      <div class="container">
+        <div class="kop">
+          <h2>Alle diensten, één adres.</h2>
+        </div>
+        <div class="index">
+          <a href="contact" class="index__rij"><img src="Mailings.png" width="272" height="345" alt="" loading="lazy" /><span class="index__naam">Mailings</span><span class="index__sub">Gepersonaliseerde post op grote schaal</span></a>
+          <a href="contact" class="index__rij"><img src="Roll-banners.png" width="304" height="416" alt="" loading="lazy" /><span class="index__naam">Roll-banners</span><span class="index__sub">85 × 200&nbsp;cm, inclusief cassette en tas</span></a>
+          <a href="contact" class="index__rij"><img src="Canvas.png" width="417" height="359" alt="" loading="lazy" /><span class="index__naam">Canvas</span><span class="index__sub">Foto’s op doek, op frame of opgerold</span></a>
+          <a href="contact" class="index__rij"><img src="Displays.png" width="301" height="423" alt="" loading="lazy" /><span class="index__naam">Displays</span><span class="index__sub">Toonbank- en vloerdisplays op maat</span></a>
+          <a href="contact" class="index__rij"><img src="Belettering.png" width="412" height="253" alt="" loading="lazy" /><span class="index__naam">Belettering</span><span class="index__sub">Voertuig- en gevelreclame in vinyl</span></a>
+          <a href="contact" class="index__rij"><img src="Bouwtekeningen.png" width="573" height="423" alt="" loading="lazy" /><span class="index__naam">Bouwtekeningen</span><span class="index__sub">Groot formaat, schaalnauwkeurig</span></a>
+          <a href="contact" class="index__rij"><img src="Mappen.png" width="235" height="388" alt="" loading="lazy" /><span class="index__naam">Mappen</span><span class="index__sub">Presentatiemappen in uw huisstijl</span></a>
+          <a href="contact" class="index__rij"><img src="Sets-&amp;-bloks.png" width="344" height="351" alt="" loading="lazy" /><span class="index__naam">Sets &amp; Bloks</span><span class="index__sub">Formulieren en notitieblokken</span></a>
+          <a href="contact" class="index__rij"><img src="Stempels.png" width="308" height="398" alt="" loading="lazy" /><span class="index__naam">Stempels</span><span class="index__sub">Zelfinktend, met logo of tekst</span></a>
+          <a href="contact" class="index__rij"><img src="Fotoboeken.png" width="498" height="308" alt="" loading="lazy" /><span class="index__naam">Fotoboeken</span><span class="index__sub">Herinneringen professioneel gebonden</span></a>
+          <a href="contact" class="index__rij"><img src="Fotoservice.png" width="383" height="326" alt="" loading="lazy" /><span class="index__naam">Fotoservice</span><span class="index__sub">Prints in elk formaat, glans of mat</span></a>
+          <a href="contact" class="index__rij"><img src="Full-color.png" width="398" height="404" alt="" loading="lazy" /><span class="index__naam">Full-colour</span><span class="index__sub">CMYK en Pantone, kleurnauwkeurig</span></a>
+          <a href="contact" class="index__rij"><img src="Zwart-Wit.png" width="282" height="329" alt="" loading="lazy" /><span class="index__naam">Zwart-wit</span><span class="index__sub">Documenten en rapporten, snel en voordelig</span></a>
+          <a href="contact" class="index__rij"><img src="Eigen-ontwerp.png" width="384" height="442" alt="" loading="lazy" /><span class="index__naam">Eigen ontwerp</span><span class="index__sub">Gratis bestandscontrole vóór het drukken</span></a>
+          <a href="contact" class="index__rij"><img src="Layout.png" width="375" height="360" alt="" loading="lazy" /><span class="index__naam">Opmaak &amp; layout</span><span class="index__sub">Wij maken uw bestand drukklaar</span></a>
+          <a href="contact" class="index__rij"><img src="Afwerking.png" width="496" height="284" alt="" loading="lazy" /><span class="index__naam">Afwerking</span><span class="index__sub">Lamineren, rillen, snijden, inbinden</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VAN IDEE TOT LEVERING: stappen ===== -->
+    <section class="sectie">
+      <div class="container">
+        <div class="kop">
+          <h2>Van idee tot levering</h2>
+        </div>
+        <ol class="stappen" style="--n: 3">
+          <li class="stap"><h3>Idee</h3><p>U vertelt wat u nodig heeft: telefonisch, per mail of aan de balie. Wij denken direct mee.</p></li>
+          <li class="stap"><h3>Ontwerp</h3><p>Eigen bestand of ontwerp door ons team: samen komen we tot een drukklaar resultaat.</p></li>
+          <li class="stap"><h3>Controle</h3><p>Wij controleren elk bestand gratis op resolutie, kleur en afloop vóór er iets gedrukt wordt.</p></li>
+          <li class="stap"><h3>Productie</h3><p>Digitaal of offset: op moderne persen, met de zorg van ruim zestig jaar vakmanschap.</p></li>
+          <li class="stap"><h3>Afwerking</h3><p>Snijden, rillen, vouwen, lamineren of inbinden: de finishing touch gebeurt in eigen huis.</p></li>
+          <li class="stap"><h3>Levering</h3><p>Dezelfde werkdag ophalen in <span class="heel">'s-Gravendeel</span>, of verzending via UPS door heel Nederland.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== PAPIER & AFWERKING: stalen ===== -->
+    <section class="sectie">
+      <div class="container">
+        <div class="kop kop--split">
+          <h2>Papier &amp; afwerking.</h2>
+          <p class="lead">Hetzelfde ontwerp voelt totaal anders op ander papier. Ontdek wat bij uw drukwerk past.</p>
+        </div>
+        <div class="stalen">
+          <div class="staal staal--structuur"><div class="staal__vlak" aria-hidden="true"></div><h3>Structuurpapier</h3><p>Voelbare linnen- of hamerslagstructuur voor extra karakter.</p></div>
+          <div class="staal staal--glans"><div class="staal__vlak" aria-hidden="true"></div><h3>Glanzend</h3><p>Diepe kleuren en maximaal contrast, ideaal voor foto’s.</p></div>
+          <div class="staal staal--mat"><div class="staal__vlak" aria-hidden="true"></div><h3>Mat</h3><p>Chique en rustig, zonder spiegeling. Prettig leesbaar.</p></div>
+          <div class="staal staal--soft"><div class="staal__vlak" aria-hidden="true"></div><h3>Soft-touch</h3><p>Fluweelzacht laminaat dat u wilt blijven vasthouden.</p></div>
+          <div class="staal staal--folie"><div class="staal__vlak" aria-hidden="true"><span class="staal__folie">AU</span></div><h3>Foliedruk</h3><p>Goud, zilver of koper: metallic accenten die schitteren.</p></div>
+          <div class="staal staal--relief"><div class="staal__vlak" aria-hidden="true"><span class="staal__relief">VDH</span></div><h3>Reliëf &amp; preeg</h3><p>Verhoogd of verdiept: tekst die u kunt voelen.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WAAROM VAN DEN HERIK: inktband ===== -->
+    <section class="band band--inkt">
+      <div class="container">
+        <div class="kop">
+          <h2>Drukwerk is vertrouwen. Dat verdienen wij al generaties.</h2>
+        </div>
+        <dl class="cijfers cijfers--3">
+          <div class="cijfer vulling vulling--roze"><dt class="cijfer__label">Opgericht in <span class="heel">'s-Gravendeel</span></dt><dd class="cijfer__getal">1961</dd></div>
+          <div class="cijfer vulling vulling--limoen"><dt class="cijfer__label">Dezelfde werkdag klaar of verstuurd</dt><dd class="cijfer__getal">90%</dd></div>
+          <div class="cijfer vulling vulling--wit"><dt class="cijfer__label">Drukwerkproducten uit eigen huis</dt><dd class="cijfer__getal">30+</dd></div>
+        </dl>
+        <div class="raster waarom">
+          <ul class="rijen waarom__rijen">
+            <li class="rij"><h3 class="rij__titel">Eigen productie</h3><p class="rij__tekst">Geen tussenpersonen: uw drukwerk wordt hier gemaakt, aan de Mijlweg.</p></li>
+            <li class="rij"><h3 class="rij__titel">Zelfde werkdag mogelijk</h3><p class="rij__tekst">Voor de middag besteld? Vaak kunt u het 's middags al ophalen.</p></li>
+            <li class="rij"><h3 class="rij__titel">Persoonlijk advies</h3><p class="rij__tekst">U spreekt met mensen die zelf aan de pers staan, geen callcenter.</p></li>
+            <li class="rij"><h3 class="rij__titel">Kleine én grote oplages</h3><p class="rij__tekst">Vanaf één exemplaar. Bij grotere aantallen daalt de stuksprijs snel.</p></li>
+            <li class="rij"><h3 class="rij__titel">Moderne druktechnieken</h3><p class="rij__tekst">Digitaal én offset onder één dak, voor elke oplage de beste keuze.</p></li>
+            <li class="rij"><h3 class="rij__titel">FSC®-gecertificeerd</h3><p class="rij__tekst">Duurzaam papier, plantaardige inkt en energiezuinige productie.</p></li>
+          </ul>
+          <div class="waarom__bestand vulling vulling--wit">
+            <p><strong>Bestand aanleveren?</strong> PDF met 3&nbsp;mm afloop en 300&nbsp;DPI is perfect. Lukt dat niet, dan maken wij uw bestand drukklaar voor een kleine vergoeding.</p>
+            <a href="contact" class="knop">Vraag bestandshulp aan</a>
           </div>
-          <div class="dp-hoofdstuk__visueel" data-richting="1">
-            <div class="dp-scene dp-scene--kaart">
-              <div class="dp-scene__zoom">
-                <div class="dp-envelop">
-                  <div class="dp-envelop__flap"></div>
-                </div>
-                <div class="dp-kaartje">
-                  <span class="dp-kaartje__hart" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 20.6S3.8 15.4 3.8 9.9a4.6 4.6 0 0 1 8.2-2.8 4.6 4.6 0 0 1 8.2 2.8c0 5.5-8.2 10.7-8.2 10.7z"/>
-                    </svg>
-                  </span>
-                  <div class="dp-vel__regel dp-vel__regel--60"></div>
-                  <div class="dp-vel__regel dp-vel__regel--40"></div>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SLOT: limoen veld ===== -->
+    <section class="band band--limoen">
+      <div class="container slot">
+        <h2>Uw volgende drukwerk begint hier.</h2>
+        <div class="slot__tekst">
+          <p class="lead">Vandaag aangevraagd is meestal vandaag beantwoord, en vaak morgen al in productie.</p>
+          <div class="knoppen">
+            <a href="contact" class="knop knop--primair">Vraag direct een offerte aan</a>
           </div>
+          <a href="tel:+31786731266" class="tekstlink">of bel 078 673 12 66</a>
         </div>
       </div>
-    </article>
-  </div>
+    </section>
 
-  <!-- ===== ALLE DIENSTEN INDEX ===== -->
-  <section class="sectie dp-index">
-    <div class="container">
-            <h2 class="dp-titel dp-index__titel">Alle diensten, één adres.</h2>
-      <div class="dp-index__raster">
-        <a href="contact" class="dp-index__rij"><img src="Mailings.png" width="272" height="345" alt="" loading="lazy" /><span class="dp-index__naam">Mailings</span><span class="dp-index__sub">Gepersonaliseerde post op grote schaal</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Roll-banners.png" width="304" height="416" alt="" loading="lazy" /><span class="dp-index__naam">Roll-banners</span><span class="dp-index__sub">85 × 200&nbsp;cm, inclusief cassette en tas</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Canvas.png" width="417" height="359" alt="" loading="lazy" /><span class="dp-index__naam">Canvas</span><span class="dp-index__sub">Foto’s op doek, op frame of opgerold</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Displays.png" width="301" height="423" alt="" loading="lazy" /><span class="dp-index__naam">Displays</span><span class="dp-index__sub">Toonbank- en vloerdisplays op maat</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Belettering.png" width="412" height="253" alt="" loading="lazy" /><span class="dp-index__naam">Belettering</span><span class="dp-index__sub">Voertuig- en gevelreclame in vinyl</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Bouwtekeningen.png" width="573" height="423" alt="" loading="lazy" /><span class="dp-index__naam">Bouwtekeningen</span><span class="dp-index__sub">Groot formaat, schaalnauwkeurig</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Mappen.png" width="235" height="388" alt="" loading="lazy" /><span class="dp-index__naam">Mappen</span><span class="dp-index__sub">Presentatiemappen in uw huisstijl</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Sets-&-bloks.png" width="344" height="351" alt="" loading="lazy" /><span class="dp-index__naam">Sets &amp; Bloks</span><span class="dp-index__sub">Formulieren en notitieblokken</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Stempels.png" width="308" height="398" alt="" loading="lazy" /><span class="dp-index__naam">Stempels</span><span class="dp-index__sub">Zelfinktend, met logo of tekst</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Fotoboeken.png" width="498" height="308" alt="" loading="lazy" /><span class="dp-index__naam">Fotoboeken</span><span class="dp-index__sub">Herinneringen professioneel gebonden</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Fotoservice.png" width="383" height="326" alt="" loading="lazy" /><span class="dp-index__naam">Fotoservice</span><span class="dp-index__sub">Prints in elk formaat, glans of mat</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Full-color.png" width="398" height="404" alt="" loading="lazy" /><span class="dp-index__naam">Full-colour</span><span class="dp-index__sub">CMYK en Pantone, kleurnauwkeurig</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Zwart-Wit.png" width="282" height="329" alt="" loading="lazy" /><span class="dp-index__naam">Zwart-wit</span><span class="dp-index__sub">Documenten en rapporten, snel en voordelig</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Eigen-ontwerp.png" width="384" height="442" alt="" loading="lazy" /><span class="dp-index__naam">Eigen ontwerp</span><span class="dp-index__sub">Gratis bestandscontrole vóór het drukken</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Layout.png" width="375" height="360" alt="" loading="lazy" /><span class="dp-index__naam">Opmaak &amp; layout</span><span class="dp-index__sub">Wij maken uw bestand drukklaar</span></a>
-        <a href="contact" class="dp-index__rij"><img src="Afwerking.png" width="496" height="284" alt="" loading="lazy" /><span class="dp-index__naam">Afwerking</span><span class="dp-index__sub">Lamineren, rillen, snijden, inbinden</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PRODUCTIEPROCES (horizontaal) ===== -->
-  <section class="dp-proces">
-    <div class="dp-proces__pin">
-      <div class="container dp-proces__kop">
-                <h2 class="dp-titel">Van idee tot levering</h2>
-      </div>
-      <div class="dp-proces__lijn"><span class="dp-proces__lijn-vulling"></span></div>
-      <div class="dp-proces__spoor">
-        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">1</span><h3>Idee</h3><p>U vertelt wat u nodig heeft: telefonisch, per mail of aan de balie. Wij denken direct mee.</p></div></div>
-        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">2</span><h3>Ontwerp</h3><p>Eigen bestand of ontwerp door ons team: samen komen we tot een drukklaar resultaat.</p></div></div>
-        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">3</span><h3>Controle</h3><p>Wij controleren elk bestand gratis op resolutie, kleur en afloop vóór er iets gedrukt wordt.</p></div></div>
-        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">4</span><h3>Productie</h3><p>Digitaal of offset: op moderne persen, met de zorg van ruim zestig jaar vakmanschap.</p></div></div>
-        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">5</span><h3>Afwerking</h3><p>Snijden, rillen, vouwen, lamineren of inbinden: de finishing touch gebeurt in eigen huis.</p></div></div>
-        <div class="dp-stap"><div class="dp-stap__kaart"><span class="dp-stap__nummer">6</span><h3>Levering</h3><p>Dezelfde werkdag ophalen in 's-Gravendeel, of verzending via UPS door heel Nederland.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== MATERIALEN ===== -->
-  <section class="sectie dp-materialen">
-    <div class="container">
-            <h2 class="dp-titel">Papier &amp; afwerking.</h2>
-      <p class="dp-alinea dp-materialen__intro">
-        Hetzelfde ontwerp voelt totaal anders op ander papier. Beweeg over de
-        stalen en ontdek wat bij uw drukwerk past.
-      </p>
-      <div class="dp-materialen__raster">
-        <div class="dp-mat dp-mat--structuur">
-          <div class="dp-mat__vlak"><span class="dp-mat__glans"></span></div>
-          <h3>Structuurpapier</h3>
-          <p>Voelbare linnen- of hamerslagstructuur voor extra karakter.</p>
-        </div>
-        <div class="dp-mat dp-mat--glans">
-          <div class="dp-mat__vlak"><span class="dp-mat__glans"></span></div>
-          <h3>Glanzend</h3>
-          <p>Diepe kleuren en maximaal contrast, ideaal voor foto’s.</p>
-        </div>
-        <div class="dp-mat dp-mat--mat">
-          <div class="dp-mat__vlak"><span class="dp-mat__glans"></span></div>
-          <h3>Mat</h3>
-          <p>Chique en rustig, zonder spiegeling. Prettig leesbaar.</p>
-        </div>
-        <div class="dp-mat dp-mat--soft">
-          <div class="dp-mat__vlak"><span class="dp-mat__glans"></span></div>
-          <h3>Soft-touch</h3>
-          <p>Fluweelzacht laminaat dat u wilt blijven vasthouden.</p>
-        </div>
-        <div class="dp-mat dp-mat--folie">
-          <div class="dp-mat__vlak" aria-hidden="true"><span class="dp-mat__folie-tekst">AU</span><span class="dp-mat__glans"></span></div>
-          <h3>Foliedruk</h3>
-          <p>Goud, zilver of koper: metallic accenten die schitteren.</p>
-        </div>
-        <div class="dp-mat dp-mat--relief">
-          <div class="dp-mat__vlak" aria-hidden="true"><span class="dp-mat__relief-tekst">VDH</span><span class="dp-mat__glans"></span></div>
-          <h3>Reliëf &amp; preeg</h3>
-          <p>Verhoogd of verdiept: tekst die u kunt voelen.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WAAROM VAN DEN HERIK ===== -->
-  <section class="dp-waarom">
-    <div class="container">
-            <h2 class="dp-titel dp-titel--licht">Drukwerk is vertrouwen.<br />Dat verdienen wij al generaties.</h2>
-      <div class="dp-waarom__tellers">
-        <div class="dp-teller"><span class="dp-teller__getal" data-teller="1961" data-start="1900">1961</span><span class="dp-teller__label">opgericht in 's-Gravendeel</span></div>
-        <div class="dp-teller"><span class="dp-teller__getal" data-teller="90" data-achtervoegsel="%">90%</span><span class="dp-teller__label">dezelfde werkdag klaar of verstuurd</span></div>
-        <div class="dp-teller"><span class="dp-teller__getal" data-teller="30" data-achtervoegsel="+">30+</span><span class="dp-teller__label">drukwerkproducten uit eigen huis</span></div>
-      </div>
-      <div class="dp-waarom__lijst">
-        <div class="dp-usp"><span class="dp-usp__nr">01</span><div><h3>Eigen productie</h3><p>Geen tussenpersonen: uw drukwerk wordt hier gemaakt, aan de Mijlweg.</p></div></div>
-        <div class="dp-usp"><span class="dp-usp__nr">02</span><div><h3>Zelfde werkdag mogelijk</h3><p>Voor de middag besteld? Vaak kunt u het 's middags al ophalen.</p></div></div>
-        <div class="dp-usp"><span class="dp-usp__nr">03</span><div><h3>Persoonlijk advies</h3><p>U spreekt met mensen die zelf aan de pers staan, geen callcenter.</p></div></div>
-        <div class="dp-usp"><span class="dp-usp__nr">04</span><div><h3>Kleine én grote oplages</h3><p>Vanaf één exemplaar. Bij grotere aantallen daalt de stuksprijs snel.</p></div></div>
-        <div class="dp-usp"><span class="dp-usp__nr">05</span><div><h3>Moderne druktechnieken</h3><p>Digitaal én offset onder één dak, voor elke oplage de beste keuze.</p></div></div>
-        <div class="dp-usp"><span class="dp-usp__nr">06</span><div><h3>FSC®-gecertificeerd</h3><p>Duurzaam papier, plantaardige inkt en energiezuinige productie.</p></div></div>
-      </div>
-      <div class="dp-waarom__bestand">
-        <p><strong>Bestand aanleveren?</strong> PDF met 3&nbsp;mm afloop en 300&nbsp;DPI is perfect.
-        Lukt dat niet, dan maken wij uw bestand drukklaar voor een kleine vergoeding.</p>
-        <a href="contact" class="knop knop--hero-omlijnd">Vraag bestandshulp aan</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FINALE CTA ===== -->
-  <section class="dp-finale">
-    <div class="dp-finale__pers" aria-hidden="true">
-      <div class="dp-pers__baan"></div>
-      <div class="dp-pers__rol dp-pers__rol--1"></div>
-      <div class="dp-pers__rol dp-pers__rol--2"></div>
-      <div class="dp-pers__inkt">
-        <span class="dp-inkt dp-inkt--c"></span>
-        <span class="dp-inkt dp-inkt--m"></span>
-        <span class="dp-inkt dp-inkt--y"></span>
-        <span class="dp-inkt dp-inkt--k"></span>
-      </div>
-    </div>
-    <div class="container dp-finale__inhoud">
-      <h2 class="dp-finale__titel">Uw volgende drukwerk<br /><span class="dp-hero__accent">begint hier.</span></h2>
-      <p class="dp-finale__sub">Vandaag aangevraagd is meestal vandaag beantwoord, en vaak morgen al in productie.</p>
-      <a href="contact" class="knop knop--hero-primair dp-finale__knop">Vraag direct een offerte aan</a>
-      <a href="tel:+31786731266" class="dp-finale__tel">of bel 078 673 12 66</a>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
   </main>
 
+  <!-- ===== FOOTER: het statement ===== -->
   <footer class="footer">
     <div class="container">
+      <p class="footer__statement">Kwaliteits&shy;drukwerk voor elk budget.</p>
       <div class="footer__raster">
         <div>
-          <div class="footer__merk">Drukkerij Van den Herik</div>
-          <p class="footer__beschrijving">
-            Kwaliteitsdrukwerk voor elk budget. Al meer dan 63 jaar de vertrouwde drukkerij
-            van 's-Gravendeel en omgeving.
-          </p>
+          <p class="footer__beschrijving">Al meer dan 63 jaar de vertrouwde drukkerij van <span class="heel">'s-Gravendeel</span> en omgeving.</p>
         </div>
         <div>
-          <div class="footer__koptekst">Navigatie</div>
+          <p class="footer__koptekst">Navigatie</p>
           <ul class="footer__links">
             <li><a href="/">Home</a></li>
             <li><a href="diensten">Wat wij doen</a></li>
@@ -484,24 +315,23 @@
           </ul>
         </div>
         <div>
-          <div class="footer__koptekst">Contact</div>
+          <p class="footer__koptekst">Contact</p>
           <ul class="footer__links">
             <li>Mijlweg 9i</li>
-            <li>3295 KG 's-Gravendeel</li>
+            <li>3295 KG <span class="heel">'s-Gravendeel</span></li>
             <li><a href="tel:+31786731266">078 673 12 66</a></li>
             <li><a href="mailto:info@drukkerijherik.nl">info@drukkerijherik.nl</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bodem">
-        Drukkerij Van den Herik is onderdeel van <strong class="footer__merknaam">'t Papierenhuys</strong><br />&copy; 2026 Drukkerij Van den Herik. Alle rechten voorbehouden.<br /><a href="privacy" class="footer__privacy">Privacyverklaring</a>
+        <span>Drukkerij Van den Herik is onderdeel van <strong class="footer__merknaam">'t Papierenhuys</strong>.</span>
+        <span>&copy; 2026 Drukkerij Van den Herik. Alle rechten voorbehouden.</span>
+        <a href="privacy" class="footer__privacy">Privacyverklaring</a>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/diensten.js"></script>
 </body>
 </html>

@@ -85,31 +85,3 @@ if (hamburger && navMenu) {
     setTimeout(() => banner.remove(), 400);
   });
 })();
-
-// ——— Rustige fade-in op L1-pagina's (contact, privacy) ———
-// (op pagina's met GSAP nemen de paginascripts dit over)
-if (!window.gsap && 'IntersectionObserver' in window &&
-    !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const elementen = document.querySelectorAll('.ct-reveal');
-
-  elementen.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  });
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-
-  elementen.forEach(el => observer.observe(el));
-}
