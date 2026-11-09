@@ -12,11 +12,15 @@
   <meta property="og:title" content="Wat wij doen | Drukkerij Van den Herik" />
   <meta property="og:description" content="Ontdek het volledige dienstenpakket van Drukkerij Van den Herik: visitekaartjes, flyers, brochures, groot formaat, stickers en gelegenheidsdrukwerk." />
   <meta property="og:url" content="https://drukkerijherik.nl/diensten" />
-  <meta property="og:image" content="https://drukkerijherik.nl/logo.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://drukkerijherik.nl/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Drukpers van Drukkerij Van den Herik in volle productie" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Wat wij doen | Drukkerij Van den Herik" />
   <meta name="twitter:description" content="Ontdek het volledige dienstenpakket van Drukkerij Van den Herik: visitekaartjes, flyers, brochures, groot formaat, stickers en gelegenheidsdrukwerk." />
-  <meta name="twitter:image" content="https://drukkerijherik.nl/logo.png" />
+  <meta name="twitter:image" content="https://drukkerijherik.nl/og-image.jpg" />
+  <meta name="twitter:image:alt" content="Drukpers van Drukkerij Van den Herik in volle productie" />
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,7 +56,8 @@
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           "opens": "08:00",
           "closes": "17:30"
-        }]
+        }],
+        "hasOfferCatalog": { "@id": "https://drukkerijherik.nl/diensten#aanbod" }
       },
       {
         "@type": "WebPage",
@@ -62,6 +67,8 @@
         "description": "Ontdek het volledige dienstenpakket van Drukkerij Van den Herik: visitekaartjes, flyers, brochures, groot formaat, stickers en gelegenheidsdrukwerk.",
         "isPartOf": { "@id": "https://drukkerijherik.nl/#website" },
         "about": { "@id": "https://drukkerijherik.nl/#bedrijf" },
+        "mainEntity": { "@id": "https://drukkerijherik.nl/diensten#aanbod" },
+        "primaryImageOfPage": "https://drukkerijherik.nl/foto-visitekaartjes.jpg",
         "inLanguage": "nl-NL"
       },
       {
@@ -70,6 +77,36 @@
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://drukkerijherik.nl/" },
           { "@type": "ListItem", "position": 2, "name": "Wat wij doen", "item": "https://drukkerijherik.nl/diensten" }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "@id": "https://drukkerijherik.nl/diensten#aanbod",
+        "name": "Drukwerk en diensten van Drukkerij Van den Herik",
+        "url": "https://drukkerijherik.nl/diensten",
+        "itemListElement": [
+          { "@type": "Offer", "position": 1, "itemOffered": { "@type": "Service", "name": "Visitekaartjes", "description": "Visitekaartjes van standaard tot ultra-luxe met folie of reliëf.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" }, "image": "https://drukkerijherik.nl/foto-visitekaartjes.jpg" } },
+          { "@type": "Offer", "position": 2, "itemOffered": { "@type": "Service", "name": "Flyers & folders", "description": "Flyers en folders op elk gewicht papier, in elke vouw.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" }, "image": "https://drukkerijherik.nl/foto-flyers.jpg" } },
+          { "@type": "Offer", "position": 3, "itemOffered": { "@type": "Service", "name": "Brochures", "description": "Catalogi, presentaties en jaarverslagen: geniet, gelijmd of geringd, met harde of zachte kaft.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" }, "image": "https://drukkerijherik.nl/foto-brochures.jpg" } },
+          { "@type": "Offer", "position": 4, "itemOffered": { "@type": "Service", "name": "Posters & spandoeken", "description": "Posters, spandoeken en banners in groot formaat, weerbestendig gedrukt voor binnen en buiten.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" }, "image": "https://drukkerijherik.nl/foto-spandoeken.jpg" } },
+          { "@type": "Offer", "position": 5, "itemOffered": { "@type": "Service", "name": "Stickers & etiketten", "description": "Productetiketten en raamstickers in elke vorm, maat en elk materiaal, permanent of verwijderbaar.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" }, "image": "https://drukkerijherik.nl/foto-etiketten.jpg" } },
+          { "@type": "Offer", "position": 6, "itemOffered": { "@type": "Service", "name": "Gelegenheidsdrukwerk", "description": "Kaarten voor geboorte, huwelijk, jubileum en rouw: snel, persoonlijk en met zorg gedrukt.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 7, "itemOffered": { "@type": "Service", "name": "Mailings", "description": "Gepersonaliseerde post op grote schaal.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 8, "itemOffered": { "@type": "Service", "name": "Roll-banners", "description": "Roll-banners van 85 × 200 cm, inclusief cassette en tas.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 9, "itemOffered": { "@type": "Service", "name": "Canvas", "description": "Foto’s op doek, op frame of opgerold.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 10, "itemOffered": { "@type": "Service", "name": "Displays", "description": "Toonbank- en vloerdisplays op maat.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 11, "itemOffered": { "@type": "Service", "name": "Belettering", "description": "Voertuig- en gevelreclame in vinyl.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 12, "itemOffered": { "@type": "Service", "name": "Bouwtekeningen", "description": "Bouwtekeningen in groot formaat, schaalnauwkeurig geprint.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 13, "itemOffered": { "@type": "Service", "name": "Mappen", "description": "Presentatiemappen in uw huisstijl.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 14, "itemOffered": { "@type": "Service", "name": "Sets & bloks", "description": "Formulieren en notitieblokken.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 15, "itemOffered": { "@type": "Service", "name": "Stempels", "description": "Zelfinktende stempels met logo of tekst.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 16, "itemOffered": { "@type": "Service", "name": "Fotoboeken", "description": "Herinneringen professioneel gebonden.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 17, "itemOffered": { "@type": "Service", "name": "Fotoservice", "description": "Fotoprints in elk formaat, glans of mat.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 18, "itemOffered": { "@type": "Service", "name": "Full-colour drukwerk", "description": "Kleurnauwkeurig drukken in CMYK en Pantone.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 19, "itemOffered": { "@type": "Service", "name": "Zwart-wit drukwerk", "description": "Documenten en rapporten, snel en voordelig.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 20, "itemOffered": { "@type": "Service", "name": "Bestandscontrole eigen ontwerp", "description": "Gratis bestandscontrole van uw eigen ontwerp vóór het drukken.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 21, "itemOffered": { "@type": "Service", "name": "Opmaak & layout", "description": "Wij maken uw bestand drukklaar.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } },
+          { "@type": "Offer", "position": 22, "itemOffered": { "@type": "Service", "name": "Afwerking", "description": "Lamineren, rillen, snijden en inbinden in eigen huis.", "provider": { "@id": "https://drukkerijherik.nl/#bedrijf" }, "areaServed": { "@type": "Country", "name": "Nederland" } } }
         ]
       }
     ]
