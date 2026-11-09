@@ -1261,6 +1261,14 @@ body.gsap-actief .reveal {
   place-items: center;
   will-change: transform;
 }
+/* Echte foto in een scène: vult het vak, de zoom-wrapper blijft voor de scroll-animatie */
+.dp-scene--foto .dp-scene__zoom img,
+.op-scene--foto .op-scene__zoom img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* 01 — Visitekaartjes */
 .dp-scene--visite { background: var(--blauw-ijs); }
