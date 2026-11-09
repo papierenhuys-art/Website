@@ -20,7 +20,7 @@
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Sofia+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/style.css" />
   <script type="application/ld+json">
@@ -77,8 +77,6 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Naar de inhoud</a>
-
-  <!-- ===== ICONENSET (lijniconen, één keer gedefinieerd) ===== -->
   <svg class="icoon-sprite" aria-hidden="true" focusable="false" width="0" height="0">
     <symbol id="i-klok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="12" r="9"/><path d="M12 6.8V12l3.4 2"/>
@@ -108,7 +106,6 @@
       <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
     </symbol>
   </svg>
-
   <div id="scroll-voortgang" aria-hidden="true"></div>
 
   <!-- ===== NAVIGATIE ===== -->
@@ -134,290 +131,151 @@
 
   <main id="main">
 
-  <!-- ===== HERO ===== -->
-  <header class="hero hero--premium" id="hero">
-    <div class="hero__achtergrond" aria-hidden="true">
-      <div class="hero__blob hero__blob--1"></div>
-      <div class="hero__blob hero__blob--2"></div>
-      <div class="hero__raster-lijnen"></div>
-      <div class="hero__ruis"></div>
-    </div>
-
-    <div class="container hero__binnen">
-      <div class="hero__inhoud">
-        <h1 class="hero__titel">
-          <span class="hero__regel"><span>Drukwerk dat</span></span>
-          <span class="hero__regel"><span class="hero__accent">indruk maakt.</span></span>
-        </h1>
-        <p class="hero__intro">
-          Van visitekaartje tot billboard: wij verzorgen uw drukwerk razendsnel,
-          met oog voor detail en eerlijke prijzen. In 90% van de gevallen dezelfde
-          werkdag klaar of verstuurd.
-        </p>
-        <div class="hero__knoppen">
-          <a href="diensten" class="knop knop--hero-primair">Bekijk onze diensten</a>
-          <a href="contact" class="knop knop--hero-omlijnd">Vraag een offerte aan</a>
-        </div>
-        <div class="hero__bewijs">
-          <span>Sinds 1961 in 's-Gravendeel</span>
-          <span>FSC®-gecertificeerd</span>
-          <span>Actief in heel Nederland</span>
-        </div>
-      </div>
-
-      <div class="hero__visueel" aria-hidden="true">
-        <div class="hero__glans"></div>
-        <div class="zweef-kaart zweef-kaart--stat" data-diepte="1">
-          <div class="zweef-kaart__binnen">
-            <div class="zweef-stat__getal">90%</div>
-            <div class="zweef-stat__label">dezelfde werkdag<br />klaar of verstuurd</div>
+    <!-- ===== HERO: Index, de producten zijn het beeld ===== -->
+    <header class="hero hero--index" id="hero">
+      <div class="container">
+        <div class="hero__kop">
+          <h1>Drukwerk dat indruk maakt.</h1>
+          <div class="hero__tekst">
+            <p class="lead">Van visitekaartje tot billboard, in 90% van de gevallen dezelfde werkdag klaar.</p>
+            <div class="knoppen">
+              <a href="diensten" class="knop knop--primair">Bekijk onze diensten</a>
+              <a href="contact" class="knop">Vraag een offerte aan</a>
+            </div>
           </div>
         </div>
-        <div class="zweef-kaart zweef-kaart--1" data-diepte="0.55">
-          <div class="zweef-kaart__binnen"><img src="Flyers.png" width="258" height="349" alt="" /><span>Flyers</span></div>
-        </div>
-        <div class="zweef-kaart zweef-kaart--2" data-diepte="0.8">
-          <div class="zweef-kaart__binnen"><img src="Posters.png" width="406" height="521" alt="" /><span>Posters</span></div>
-        </div>
-        <div class="zweef-kaart zweef-kaart--3" data-diepte="0.4">
-          <div class="zweef-kaart__binnen"><img src="Huisstijl.png" width="444" height="403" alt="" /><span>Visitekaartjes</span></div>
-        </div>
-        <div class="zweef-kaart zweef-kaart--4" data-diepte="0.65">
-          <div class="zweef-kaart__binnen"><img src="Spandoeken.png" width="493" height="242" alt="" /><span>Spandoeken</span></div>
-        </div>
-      </div>
-    </div>
 
-    <a href="#intro" class="hero__scrollhint" aria-label="Scroll naar beneden">
-      <span class="hero__scrollhint-lijn"><span></span></span>
-      <span class="hero__scrollhint-tekst">Scroll</span>
-    </a>
-  </header>
-
-  <!-- ===== HET VEL: schuift over de hero heen ===== -->
-  <section class="hp-vel" aria-label="Onze beloften">
-    <div class="hp-manifest" aria-hidden="true">
-      <div class="hp-manifest__baan">
-        <div class="hp-manifest__groep">
-          <span>Visitekaartjes</span><i class="hp-manifest__merk"></i>
-          <span class="hp-manifest__hol">Flyers</span><i class="hp-manifest__merk"></i>
-          <span>Brochures</span><i class="hp-manifest__merk"></i>
-          <span class="hp-manifest__hol">Posters</span><i class="hp-manifest__merk"></i>
-          <span>Spandoeken</span><i class="hp-manifest__merk"></i>
-          <span class="hp-manifest__hol">Stickers</span><i class="hp-manifest__merk"></i>
-        </div>
-        <div class="hp-manifest__groep">
-          <span>Visitekaartjes</span><i class="hp-manifest__merk"></i>
-          <span class="hp-manifest__hol">Flyers</span><i class="hp-manifest__merk"></i>
-          <span>Brochures</span><i class="hp-manifest__merk"></i>
-          <span class="hp-manifest__hol">Posters</span><i class="hp-manifest__merk"></i>
-          <span>Spandoeken</span><i class="hp-manifest__merk"></i>
-          <span class="hp-manifest__hol">Stickers</span><i class="hp-manifest__merk"></i>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <ul class="hp-beloften">
-        <li class="hp-belofte"><svg class="hp-belofte__icoon" aria-hidden="true"><use href="#i-klok"/></svg><span><strong>Zelfde werkdag</strong> klaar of verstuurd</span></li>
-        <li class="hp-belofte"><svg class="hp-belofte__icoon" aria-hidden="true"><use href="#i-zegel"/></svg><span><strong>Topkwaliteit</strong> uit eigen productie</span></li>
-        <li class="hp-belofte"><svg class="hp-belofte__icoon" aria-hidden="true"><use href="#i-gesprek"/></svg><span><strong>Persoonlijk advies</strong> van vakmensen</span></li>
-        <li class="hp-belofte"><svg class="hp-belofte__icoon" aria-hidden="true"><use href="#i-prijs"/></svg><span><strong>Eerlijke prijzen</strong>, geen verrassingen</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===== DIENSTEN (BENTO) ===== -->
-  <section class="hp-diensten" id="intro">
-    <div class="container">
-      <div class="hp-kop">
-                <h2 class="dp-titel kop-onthul">
-          <span class="kop-regel"><span>Uw drukkerij in</span></span>
-          <span class="kop-regel"><span>'s-Gravendeel.</span></span>
-        </h2>
-        <p class="hp-kop__intro" data-woorden>
-          Al meer dan zes decennia staat de naam Van den Herik garant voor betrouwbaar
-          drukwerk op maat. Van kleine oplagen tot grote series: wij leveren altijd kwaliteit.
-        </p>
-      </div>
-
-      <div class="hp-bento">
-        <a href="diensten" class="hp-tegel hp-tegel--groot reveal">
-          <span class="hp-snijtekens" aria-hidden="true"></span>
-          <span class="hp-tegel__beeld" aria-hidden="true">
-            <span class="dp-scene dp-scene--visite dp-scene--foto">
-              <span class="dp-scene__zoom">
-                <img src="foto-visitekaartjes.jpg" width="1200" height="900" alt="" loading="lazy" decoding="async" />
+        <ul class="catalogus" aria-label="Wat wij drukken">
+          <li>
+            <a href="diensten" class="kaart">
+              <span class="foto"><img src="foto-visitekaartjes.jpg" width="1200" height="900" alt="Uitgewaaierde visitekaartjes van Drukkerij Van den Herik" fetchpriority="high" /></span>
+              <span class="kaart__titel">Visitekaartjes</span>
+              <span class="kaart__regel">Van standaard tot luxe met folie of reliëf.</span>
+            </a>
+          </li>
+          <li>
+            <a href="diensten" class="kaart">
+              <span class="foto"><img src="foto-flyers.jpg" width="1200" height="900" alt="Flyer Familiedrukwerk met envelop, pen en kleurwaaier" /></span>
+              <span class="kaart__titel">Flyers &amp; folders</span>
+              <span class="kaart__regel">A3 t/m A6, in elke vouw.</span>
+            </a>
+          </li>
+          <li>
+            <a href="diensten" class="kaart">
+              <span class="foto"><img src="foto-spandoeken.jpg" width="1200" height="900" alt="Twee roll-up banners van Drukkerij Van den Herik" /></span>
+              <span class="kaart__titel">Groot formaat</span>
+              <span class="kaart__regel">Posters, banners en spandoeken tot 1,20&nbsp;m breed.</span>
+            </a>
+          </li>
+          <li>
+            <a href="diensten" class="kaart">
+              <span class="vulling vulling--limoen">
+                <span class="kaart__getal">30+</span>
+                <span class="kaart__titel">Stickers, stempels &amp; meer</span>
               </span>
-            </span>
-          </span>
-          <span class="hp-tegel__tekst">
-            <span class="hp-tegel__nr">01</span>
-            <span class="hp-tegel__titel">Visitekaartjes</span>
-            <span class="hp-tegel__sub">De eerste indruk, perfect gedrukt. Van standaard tot luxe met folie of reliëf.</span>
-            <span class="hp-tegel__pijl" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </span>
-        </a>
-
-        <a href="diensten" class="hp-tegel hp-tegel--breed reveal">
-          <span class="hp-snijtekens" aria-hidden="true"></span>
-          <span class="hp-tegel__tekst">
-            <span class="hp-tegel__nr">02</span>
-            <span class="hp-tegel__titel">Flyers &amp; Folders</span>
-            <span class="hp-tegel__sub">Scherpe kleuren, heldere boodschap. A3 t/m A6, elke vouw.</span>
-            <span class="hp-tegel__pijl" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </span>
-          <span class="hp-tegel__beeld" aria-hidden="true">
-            <span class="dp-scene dp-scene--flyer dp-scene--foto">
-              <span class="dp-scene__zoom">
-                <img src="foto-flyers.jpg" width="1200" height="900" alt="" loading="lazy" decoding="async" />
-              </span>
-            </span>
-          </span>
-        </a>
-
-        <a href="diensten" class="hp-tegel reveal">
-          <span class="hp-snijtekens" aria-hidden="true"></span>
-          <span class="hp-tegel__icoon" aria-hidden="true"><img src="Posters.png" alt="" width="44" height="56" loading="lazy" /></span>
-          <span class="hp-tegel__tekst">
-            <span class="hp-tegel__nr">03</span>
-            <span class="hp-tegel__titel">Groot formaat</span>
-            <span class="hp-tegel__sub">Posters, banners en spandoeken tot 1,20&nbsp;m breed.</span>
-            <span class="hp-tegel__pijl" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </span>
-        </a>
-
-        <a href="diensten" class="hp-tegel hp-tegel--donker reveal">
-          <span class="hp-snijtekens" aria-hidden="true"></span>
-          <span class="hp-tegel__getal" data-teller="30" data-achtervoegsel="+">30+</span>
-          <span class="hp-tegel__tekst">
-            <span class="hp-tegel__titel">Stickers, stempels &amp; meer</span>
-            <span class="hp-tegel__sub">Bekijk alle drukwerkproducten uit eigen huis.</span>
-            <span class="hp-tegel__pijl" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </span>
-        </a>
+              <span class="kaart__regel">Bekijk alle drukwerkproducten uit eigen huis.</span>
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ===== OVER ONS ===== -->
-  <section class="hp-over-sectie">
-    <div class="container hp-over">
-      <div>
-                <h2 class="dp-titel kop-onthul">
-          <span class="kop-regel"><span>Al meer dan 60 jaar</span></span>
-          <span class="kop-regel"><span>met passie gedrukt.</span></span>
-        </h2>
-        <p class="hp-over__alinea" data-woorden>
-          Drukkerij Van den Herik is in 1961 opgericht in de Hoeksche Waard en staat sindsdien
-          voor betrouwbaar drukwerk op maat. Wat begon als een kleine drukkerij is uitgegroeid
-          tot een moderne zaak met digitale én offsetapparatuur.
-        </p>
-        <p class="hp-over__alinea reveal">
-          Wij drukken alles, ongeacht de hoeveelheid. Van één exemplaar tot duizenden stuks,
-          altijd met dezelfde zorg en met eerlijke, vaste prijzen zonder verrassingen.
-        </p>
-        <a href="over-ons" class="hp-link reveal">Lees ons verhaal <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <!-- ===== WAT U VAN ONS KRIJGT: rijen ===== -->
+    <section class="sectie" id="intro">
+      <div class="container raster">
+        <div class="zij">
+          <h2>Uw drukkerij in <span class="heel">'s-Gravendeel.</span></h2>
+          <p>Al meer dan zes decennia staat de naam Van den Herik garant voor betrouwbaar drukwerk op maat. Van kleine oplagen tot grote series: wij leveren altijd kwaliteit.</p>
+          <ul class="tags" aria-label="In het kort">
+            <li class="tag">Sinds 1961 in 's-Gravendeel</li>
+            <li class="tag">FSC®-gecertificeerd</li>
+            <li class="tag">Actief in heel Nederland</li>
+          </ul>
+        </div>
+        <ul class="rijen">
+          <li class="rij"><span class="rij__titel">Zelfde werkdag</span><span class="rij__tekst">Klaar of verstuurd.</span></li>
+          <li class="rij"><span class="rij__titel">Topkwaliteit</span><span class="rij__tekst">Uit eigen productie.</span></li>
+          <li class="rij"><span class="rij__titel">Persoonlijk advies</span><span class="rij__tekst">Van vakmensen.</span></li>
+          <li class="rij"><span class="rij__titel">Eerlijke prijzen</span><span class="rij__tekst">Geen verrassingen.</span></li>
+        </ul>
       </div>
+    </section>
 
-      <dl class="hp-feiten">
-        <div class="hp-feit reveal">
-          <dt class="hp-feit__label">Opgericht in 's-Gravendeel</dt>
-          <dd class="hp-feit__getal" data-teller="1961" data-start="1900">1961</dd>
+    <!-- ===== SINDS 1961: cijfers als gestanste vullingen ===== -->
+    <section class="sectie">
+      <div class="container">
+        <div class="kop kop--split">
+          <h2>Al meer dan 60 jaar met passie gedrukt.</h2>
+          <div class="kop__tekst">
+            <p>Drukkerij Van den Herik is in 1961 opgericht in de Hoeksche Waard en staat sindsdien voor betrouwbaar drukwerk op maat. Wat begon als een kleine drukkerij is uitgegroeid tot een moderne zaak met digitale én offsetapparatuur.</p>
+            <p>Wij drukken alles, ongeacht de hoeveelheid, altijd met eerlijke, vaste prijzen.</p>
+            <a href="over-ons" class="tekstlink">Lees ons verhaal</a>
+          </div>
         </div>
-        <div class="hp-feit reveal">
-          <dt class="hp-feit__label">Dezelfde werkdag klaar of verstuurd</dt>
-          <dd class="hp-feit__getal" data-teller="90" data-achtervoegsel="%">90%</dd>
-        </div>
-        <div class="hp-feit reveal">
-          <dt class="hp-feit__label">Drukwerkproducten uit eigen huis</dt>
-          <dd class="hp-feit__getal" data-teller="30" data-achtervoegsel="+">30+</dd>
-        </div>
-        <div class="hp-feit reveal">
-          <dt class="hp-feit__label">Gecertificeerd duurzaam drukken</dt>
-          <dd class="hp-feit__getal">FSC<sup>®</sup></dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- ===== DUURZAAMHEID ===== -->
-  <section class="hp-groen-sectie">
-    <div class="container hp-groen-raster">
-      <div class="hp-groen-kop">
-                <h2 class="dp-titel kop-onthul">
-          <span class="kop-regel"><span>Kwaliteit die</span></span>
-          <span class="kop-regel"><span>ook morgen klopt.</span></span>
-        </h2>
-        <p class="hp-groen-kop__tekst reveal">
-          Wij kiezen bewust voor milieuvriendelijke materialen en processen,
-          zonder in te leveren op het resultaat.
-        </p>
-        <a href="duurzaamheid" class="hp-link hp-link--groen reveal">Meer over duurzaamheid <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <dl class="cijfers">
+          <div class="cijfer vulling vulling--roze">
+            <dt class="cijfer__label">Opgericht in <span class="heel">'s-Gravendeel</span></dt>
+            <dd class="cijfer__getal">1961</dd>
+          </div>
+          <div class="cijfer vulling vulling--limoen">
+            <dt class="cijfer__label">Dezelfde werkdag klaar of verstuurd</dt>
+            <dd class="cijfer__getal">90%</dd>
+          </div>
+          <div class="cijfer vulling vulling--inkt">
+            <dt class="cijfer__label">Drukwerkproducten uit eigen huis</dt>
+            <dd class="cijfer__getal">30+</dd>
+          </div>
+          <div class="cijfer vulling vulling--wit">
+            <dt class="cijfer__label">Gecertificeerd duurzaam drukken</dt>
+            <dd class="cijfer__getal">FSC<sup>®</sup></dd>
+          </div>
+        </dl>
       </div>
+    </section>
 
-      <ul class="hp-groen-lijst">
-        <li class="hp-groen reveal">
-          <span class="hp-groen__icoon" aria-hidden="true"><svg><use href="#i-boom"/></svg></span>
-          <h3 class="hp-groen__titel">FSC® gecertificeerd</h3>
-          <p class="hp-groen__tekst">Papier uit verantwoord beheerde bossen.</p>
-        </li>
-        <li class="hp-groen reveal">
-          <span class="hp-groen__icoon" aria-hidden="true"><svg><use href="#i-kringloop"/></svg></span>
-          <h3 class="hp-groen__titel">Gerecycled papier</h3>
-          <p class="hp-groen__tekst">Minder grondstoffen, minder CO₂-uitstoot.</p>
-        </li>
-        <li class="hp-groen reveal">
-          <span class="hp-groen__icoon" aria-hidden="true"><svg><use href="#i-blad"/></svg></span>
-          <h3 class="hp-groen__titel">Plantaardige inkten</h3>
-          <p class="hp-groen__tekst">Scherpe kleuren zonder schadelijke emissies.</p>
-        </li>
-        <li class="hp-groen reveal">
-          <span class="hp-groen__icoon" aria-hidden="true"><svg><use href="#i-bliksem"/></svg></span>
-          <h3 class="hp-groen__titel">Energiezuinig</h3>
-          <p class="hp-groen__tekst">Moderne digitale persen, minder verbruik.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===== AFSLUITENDE CTA ===== -->
-  <section class="hp-cta">
-    <div class="hp-cta__decor" aria-hidden="true">
-      <span class="hp-cta__pasmerk hp-cta__pasmerk--1"></span>
-      <span class="hp-cta__pasmerk hp-cta__pasmerk--2"></span>
-      <span class="hp-cta__kleurbalk"><i></i><i></i><i></i><i></i></span>
-    </div>
-    <div class="container hp-cta__inhoud">
-            <h2 class="hp-cta__titel">Klaar om samen<br /><span class="hero__accent">te werken?</span></h2>
-      <p class="hp-cta__sub">
-        Vraag vandaag nog een offerte aan. Wij reageren dezelfde werkdag, meestal binnen enkele uren.
-      </p>
-      <div class="hp-cta__knoppen">
-        <a href="contact" class="knop knop--hero-primair">Offerte aanvragen</a>
-        <a href="tel:+31786731266" class="knop knop--hero-omlijnd">
-          <svg class="hp-knop__icoon" aria-hidden="true"><use href="#i-telefoon"/></svg>
-          078 673 12 66
-        </a>
+    <!-- ===== DUURZAAM: kop opzij, vier kaarten ===== -->
+    <section class="band band--papier">
+      <div class="container raster">
+        <div class="zij">
+          <h2>Kwaliteit die ook morgen klopt.</h2>
+          <p class="lead">Wij kiezen bewust voor milieuvriendelijke materialen en processen, zonder in te leveren op het resultaat.</p>
+          <a href="duurzaamheid" class="tekstlink">Meer over duurzaamheid</a>
+        </div>
+        <ul class="feitkaarten body">
+          <li class="feitkaart diecut"><h3>FSC® gecertificeerd</h3><p>Papier uit verantwoord beheerde bossen.</p></li>
+          <li class="feitkaart diecut"><h3>Gerecycled papier</h3><p>Minder grondstoffen, minder CO₂-uitstoot.</p></li>
+          <li class="feitkaart diecut"><h3>Plantaardige inkten</h3><p>Scherpe kleuren zonder schadelijke emissies.</p></li>
+          <li class="feitkaart diecut"><h3>Energiezuinig</h3><p>Moderne digitale persen, minder verbruik.</p></li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ===== SLOT: limoen veld ===== -->
+    <section class="band band--limoen">
+      <div class="container slot">
+        <h2>Klaar om samen te werken?</h2>
+        <div class="slot__tekst">
+          <p class="lead">Vraag vandaag nog een offerte aan. Wij reageren dezelfde werkdag, meestal binnen enkele uren.</p>
+          <div class="knoppen">
+            <a href="contact" class="knop knop--primair">Offerte aanvragen</a>
+            <a href="tel:+31786731266" class="knop"><svg aria-hidden="true"><use href="#i-telefoon"/></svg>078 673 12 66</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== FOOTER: het statement ===== -->
   <footer class="footer">
     <div class="container">
+      <p class="footer__statement">Kwaliteits&shy;drukwerk voor elk budget.</p>
       <div class="footer__raster">
         <div>
-          <div class="footer__merk">Drukkerij Van den Herik</div>
-          <p class="footer__beschrijving">
-            Kwaliteitsdrukwerk voor elk budget. Al meer dan 63 jaar de vertrouwde drukkerij
-            van 's-Gravendeel en omgeving.
-          </p>
+          <p class="footer__beschrijving">Al meer dan 63 jaar de vertrouwde drukkerij van <span class="heel">'s-Gravendeel</span> en omgeving.</p>
         </div>
         <div>
-          <div class="footer__koptekst">Navigatie</div>
+          <p class="footer__koptekst">Navigatie</p>
           <ul class="footer__links">
             <li><a href="/">Home</a></li>
             <li><a href="diensten">Wat wij doen</a></li>
@@ -427,24 +285,23 @@
           </ul>
         </div>
         <div>
-          <div class="footer__koptekst">Contact</div>
+          <p class="footer__koptekst">Contact</p>
           <ul class="footer__links">
             <li>Mijlweg 9i</li>
-            <li>3295 KG 's-Gravendeel</li>
+            <li>3295 KG <span class="heel">'s-Gravendeel</span></li>
             <li><a href="tel:+31786731266">078 673 12 66</a></li>
             <li><a href="mailto:info@drukkerijherik.nl">info@drukkerijherik.nl</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bodem">
-        Drukkerij Van den Herik is onderdeel van <strong class="footer__merknaam">'t Papierenhuys</strong><br />&copy; 2026 Drukkerij Van den Herik. Alle rechten voorbehouden.<br /><a href="privacy" class="footer__privacy">Privacyverklaring</a>
+        <span>Drukkerij Van den Herik is onderdeel van <strong class="footer__merknaam">'t Papierenhuys</strong>.</span>
+        <span>&copy; 2026 Drukkerij Van den Herik. Alle rechten voorbehouden.</span>
+        <a href="privacy" class="footer__privacy">Privacyverklaring</a>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/hero.js"></script>
 </body>
 </html>
