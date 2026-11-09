@@ -276,7 +276,6 @@ a.index__rij:focus-visible { outline: 3px solid var(--color-focus); outline-offs
 .verhaal__tekst { grid-column: 7 / -1; display: grid; gap: 20px; }
 .verhaal__tekst h2 { font-size: min(var(--text-section), 2.75rem); }
 .verhaal__tekst p { color: var(--color-ink-2); max-width: 60ch; }
-.jaartal { aspect-ratio: 4 / 3; display: flex; align-items: flex-end; font: var(--display-weight) clamp(5rem, 11vw, 10rem)/0.85 var(--font-display); }
 .tellers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); padding-top: var(--space-lg); border-top: var(--rule-bar) dashed var(--color-rule); }
 .teller strong { display: block; font: var(--display-weight) var(--text-2xl)/1 var(--font-display); }
 .teller span { font-size: var(--text-sm); font-weight: 700; color: var(--color-muted); }
@@ -290,6 +289,7 @@ a.index__rij:focus-visible { outline: 3px solid var(--color-focus); outline-offs
 .hero__links { display: grid; gap: var(--space-lg); }
 .hero__beeld { position: relative; }
 .hero__beeld .tag { position: absolute; top: -18px; right: var(--space-lg); rotate: 4deg; }
+.hero__jaar { position: absolute; left: var(--space-lg); bottom: -28px; rotate: -5deg; padding: var(--space-xs) var(--space-lg); font: var(--display-weight) clamp(1.75rem, 3.4vw, 3rem)/1 var(--font-display); white-space: nowrap; }
 .hero--corridor { padding-block: var(--space-3xl) var(--section-gap-s); }
 .hero--corridor h1 { max-width: 14ch; font-size: min(var(--text-display), 4.5rem); }
 .hero--corridor .hero__links { max-width: 760px; }
@@ -441,8 +441,6 @@ a.index__rij:focus-visible { outline: 3px solid var(--color-focus); outline-offs
 .verhaal__beeld { position: relative; }
 .verhaal__tag { position: absolute; top: -16px; left: var(--space-lg); rotate: -3deg; }
 .galerij figcaption h3 { font: 700 var(--text-lg)/1.25 var(--font-body); letter-spacing: 0; }
-.hero--stage .jaartal { min-height: 560px; aspect-ratio: auto; }
-@media (max-width: 60rem) { .hero--stage .jaartal { min-height: 260px; } }
 .teller dt { order: 2; }
 .teller { display: flex; flex-direction: column-reverse; gap: var(--space-2xs); }
 
@@ -506,7 +504,6 @@ a.index__rij:focus-visible { outline: 3px solid var(--color-focus); outline-offs
   h1, .hero__kop h1, .hero--stage h1, .hero--corridor h1 { font-size: 2.25rem; }
   h2, .slot h2, .product h2, .verhaal__tekst h2, .zij h2 { font-size: 1.875rem; }
   .footer__statement { font-size: 1.75rem; }
-  .jaartal { font-size: 4.5rem; }
 }
 @media (max-width: 60rem) { .hero--stage .hero__raster:not(.hero__raster--counter) { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 60rem) { .stappen { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
