@@ -1,6 +1,0 @@
-# Hallmark audit and render records: screenshots and page records are local working files
-.hallmark/before/
-.hallmark/shots/
-.hallmark/before.json
-.hallmark/before.txt
-.hallmark/compare.html
