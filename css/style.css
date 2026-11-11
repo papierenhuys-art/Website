@@ -12,6 +12,9 @@
 /* Hallmark · waive 44c · the posture puts the visual under or beside the head on purpose · on the print shop pages the Index hero sets the product cards under the head (/), and the Banner heroes on /diensten, /contact and /privacy end early so the first section shows above the fold */
 /* Hallmark · dismissed 23 · the lime field is the Sticker theme's one allowed field band with ink type, once a page as the close, and #scroll-voortgang is a 4px bar, not a fill */
 /* Hallmark · answered F15 · one column gap (--gap-columns, 32px) for every grid below the hero; the hero grid keeps its own 96px gap between text and visual as layout.md asks */
+/* Hallmark · dropped Geen beloftes, maar meetbare keuzes., FSC- of PEFC-papier, Plastic verpakkingen, Minder energieverbruik, 40% · the owner doubts the 0 plastic and the 40% energy claims on /duurzaamheid, so they go, and the band of figures they filled goes with them */
+/* Hallmark · reworded "Energiezuinig drukken" to "Digitaal drukken" · the step on /duurzaamheid lost its 40% figure with the owner's doubted energy claim */
+/* Hallmark · dismissed 77 · /contact holds the call, the mail, the address, the hours, the route and the drukwerk questions; /privacy is the Privacyverklaring, read top to bottom */
 @import url("./tokens.css");
 @import url("./base.css");
 
@@ -23,17 +26,13 @@
    ========================================= */
 
 :root {
-  /* Materiaalstalen (alleen in de stalen op /diensten en /duurzaamheid) */
+  /* Materiaalstalen (alleen in de stalen op /diensten) */
   --color-folie-licht: oklch(88% 0.12 92);
   --color-folie: oklch(72% 0.13 82);
   --color-folie-donker: oklch(52% 0.1 75);
   --color-glans-a: oklch(42% 0.12 252);
   --color-glans-b: oklch(70% 0.1 235);
   --color-soft: oklch(91% 0.03 300);
-  --color-staal-gerecycled: oklch(88% 0.035 140);
-  --color-staal-agro: oklch(88% 0.05 90);
-  --color-staal-inkt: oklch(84% 0.05 165);
-  --color-staal-verpakking: oklch(82% 0.05 70);
   --rotate-l: -1.6deg;
   --rotate-r: 1.3deg;
   --nav-h: 76px;
@@ -153,12 +152,12 @@ main :where(p, dd) > a:not([class]) { text-decoration: underline; text-decoratio
 .hero__kop { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); align-items: end; margin-bottom: 56px; }
 .hero__kop h1 { grid-column: 1 / span 7; font-size: min(var(--text-display), 4rem); }
 .hero__merk { grid-column: 1 / span 7; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-xl); }
-.hero__logo { width: clamp(180px, 20vw, 260px); height: auto; padding: 12px 16px; }
+.hero__logo { width: clamp(180px, 20vw, 260px); height: auto; padding: var(--space-sm) var(--space-md); }
 .hero__tekst { grid-column: 8 / -1; display: grid; gap: 20px; }
 .hero__tekst .lead { max-width: 34ch; }
 /* Index-hero met baliekaart: kop, intro en knoppen links, voordelen en contact rechts */
-.hero--index:has(.hero__kop--balie) { padding-top: var(--space-xl); }
-.hero__kop--balie { align-items: center; margin-bottom: 48px; }
+.hero--index:has(.hero__kop--balie) { padding-block: var(--space-xl); }
+.hero__kop--balie { align-items: center; margin-bottom: var(--space-xl); }
 .hero__kop--balie .hero__merk { gap: var(--space-lg); }
 .hero__kop--balie .hero__logo { width: clamp(180px, 16vw, 230px); margin-bottom: var(--space-xs); }
 .hero__kop--balie .lead { max-width: 44ch; }
@@ -467,8 +466,9 @@ a.index__rij:focus-visible { outline: 3px solid var(--color-focus); outline-offs
 .teller dt { order: 2; }
 .teller { display: flex; flex-direction: column-reverse; gap: var(--space-2xs); }
 
-/* ——— Duurzaamheid: stickervel, certificaten, stalen ——— */
-.stickervel { display: flex; flex-direction: column; align-items: center; gap: 32px; padding-block: var(--space-xl); }
+/* ——— Duurzaamheid: stickervel en certificaten ——— */
+.stickervel { display: flex; flex-direction: column; align-items: center; gap: var(--space-xl); padding-block: var(--space-xl); }
+@media (min-width: 75rem) { .stickervel .tag--groot { min-height: 100px; padding-inline: 44px; font-size: var(--text-2xl); } }
 .tag--groot { min-height: 84px; padding: 0 36px; font-size: var(--text-xl); border-width: 6px; box-shadow: var(--shadow-card); }
 .stickervel > :nth-child(odd) { translate: -48px 0; }
 .stickervel > :nth-child(even) { translate: 56px 0; }
@@ -476,7 +476,6 @@ a.index__rij:focus-visible { outline: 3px solid var(--color-focus); outline-offs
 .stickervel > :nth-child(2) { rotate: 3deg; }
 .stickervel > :nth-child(3) { rotate: -2deg; }
 .stickervel > :nth-child(4) { rotate: 5deg; }
-.stickervel > :nth-child(5) { rotate: -3deg; }
 .tag--roze { background: var(--color-accent); color: var(--color-accent-ink); }
 .tag--wit { background: var(--color-white); color: var(--color-ink); }
 .tag--inkt { background: var(--color-ink); color: var(--color-paper); }
@@ -491,14 +490,8 @@ a.index__rij:focus-visible { outline: 3px solid var(--color-focus); outline-offs
 .cert__naam h3 { font-size: var(--text-2xl); }
 .cert__tekst { grid-column: 4 / span 5; color: var(--color-ink-2); }
 .cert__punten { grid-column: 9 / -1; align-content: start; }
-.stalen--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.staal--gerecycled .staal__vlak { background: var(--color-staal-gerecycled); }
-.staal--agro .staal__vlak { background: var(--color-staal-agro); }
-.staal--inkt .staal__vlak { background: var(--color-staal-inkt); }
-.staal--verpakking .staal__vlak { background: var(--color-staal-verpakking); }
-@media (max-width: 75rem) { .stalen--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 60rem) { .cert__naam, .cert__tekst, .cert__punten { grid-column: 1 / -1; } .cert { grid-template-columns: minmax(0, 1fr); } .stickervel { align-items: flex-start; padding: 0; } .stickervel > * { translate: none !important; } }
-@media (max-width: 40rem) { .stalen--4 { grid-template-columns: minmax(0, 1fr); } .tag--groot { min-height: 52px; font-size: var(--text-md); } }
+@media (max-width: 40rem) { .tag--groot { min-height: 52px; font-size: var(--text-md); } }
 
 /* ——— Contact en privacy ——— */
 .contact__tekst { grid-column: 1 / span 6; display: grid; gap: var(--space-lg); align-content: start; }
@@ -521,6 +514,12 @@ a.index__rij:focus-visible { outline: 3px solid var(--color-focus); outline-offs
 /* ——— Brede Bowlby-koppen: kolommen en telefoonmaten ——— */
 .zij h2 { font-size: min(var(--text-section), 2.5rem); }
 .hero--stage .hero__raster:not(.hero__raster--counter) { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
+/* /over-ons: de foto van het oude pand draagt de hero, dus op brede schermen krijgt hij de grootste kolom */
+@media (min-width: 85rem) {
+  .hero--stage:has(.hero__raster--pand) { padding-block: var(--space-2xl); }
+  .hero--stage .hero__raster.hero__raster--pand { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-xl); }
+}
+.hero__raster--pand .foto img { object-position: 85% 50%; }
 .hero--stage h1 { font-size: min(var(--text-display), 4rem); }
 .stappen { row-gap: var(--space-3xl); }
 @media (max-width: 40rem) {
